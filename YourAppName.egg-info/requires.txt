@@ -1,0 +1,6 @@
+askbot
+django-celery
+importlib
+amqp
+oauth2
+django-appconf

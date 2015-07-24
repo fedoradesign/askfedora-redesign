@@ -1,0 +1,126 @@
+<!-- template footer.html -->
+{% import "macros.html" as macros%}
+<div id="ground">
+    <!--<div class="content-wrapper content-wrapper-footer">-->
+    <div id="footer-container" class="content-wrapper-footer">
+        {% if settings.USE_LICENSE %}{# could be factored out into separate template #}
+            {% if settings.LICENSE_USE_URL %}
+            <!--<div class="copyright">-->
+            <div id="copyright-container">
+                {% if settings.LICENSE_USE_LOGO %}
+                <a href="{{ settings.LICENSE_URL}}">
+                        <img
+                            class="license-logo"
+                            src="{{settings.LICENSE_LOGO_URL|media }}"
+                            title="{{settings.LICENSE_ACRONYM}}"
+                            alt="{{settings.LICENSE_ACRONYM}}"
+                        />
+                </a>
+                {% endif %}
+                <!--{{settings.APP_COPYRIGHT}} {% trans 
+                    license_title=settings.LICENSE_TITLE,
+                    license_url=settings.LICENSE_URL
+                %}Content on this site is licensed under a <a href="{{license_url}}">{{license_title}}</a> license.{% endtrans %}-->
+
+            </div>
+            {% else %}
+            <!--<div class="copyright">-->
+            <div id="copyright-container">
+                {% if settings.LICENSE_USE_LOGO %}
+                <img 
+                    class="license-logo"
+                    src="{{settings.LICENSE_LOGO_URL|media }}"
+                    title="{{settings.LICENSE_ACRONYM}}"
+                    alt="{{settings.LICENSE_ACRONYM}}"
+                />
+                {% endif %}
+                <!--{{settings.APP_COPYRIGHT}} {% trans license=settings.LICENSE_TITLE %}Content on this site is licensed under a {{license}}{% endtrans %}-->
+            </div>
+            {% endif %}
+        {% endif %}
+
+
+
+        <!--<div class="footer-links" >
+            <a href="{% url about %}">{% trans %}about{% endtrans %}</a><span class="link-separator"> </span>
+            <a href="{% url faq %}">{% trans %}faq{% endtrans %}</a><span class="link-separator"> </span>
+            <a href="{% url help %}" title="{% trans %}help{% endtrans %}">{% trans %}help{% endtrans %}</a>
+            <span class="link-separator"> </span>
+            <a href="{% url privacy %}">{% trans %}privacy policy{% endtrans %}</a><span class="link-separator"> </span>
+            {% spaceless %}
+            <a href=
+                        {% if settings.FEEDBACK_SITE_URL %}
+                            "{{settings.FEEDBACK_SITE_URL}}"
+                            target="_blank">
+                        {% else %}
+                            "{% url feedback %}?next={{request.path|escape}}">
+                        {% endif %}
+                        {% trans %}give feedback{% endtrans %}
+                    </a>
+                    {% endspaceless %}
+        </div>-->
+        <!--<div class="footer-links" >-->
+        <div id="footer-links-container">
+            <div class="link"><a 
+              id="navTags"
+              href="{% url tags %}"
+              {% if active_tab == 'tags' %}class="on"{% endif %}
+            >{% trans %}TAGS{% endtrans %}</a></div>
+
+            <div class="link">
+                {% if settings.GROUPS_ENABLED %}
+                <span class="dropdown">
+                <a
+                  id="navGroups" 
+                  {% if active_tab == 'groups' %}class="on"{% endif %}
+                  href="{% url groups %}" data-target="#" >
+                  {% trans %}PEOPLE & GROUPS{% endtrans %}
+                </a>
+                </span>
+                {%else%}
+                <a 
+                  id="navUsers"
+                  href="{% url users %}"
+                  {% if active_tab == 'users' %}class="on"{% endif %}
+                >{% trans %}USERS{% endtrans %}</a>
+                {% endif %}
+            </div>
+
+            <div class="link">
+                {% if settings.BADGES_MODE == 'public' %}
+                <a 
+                  id="navBadges"
+                  href="{% url badges %}"
+                  {% if active_tab == 'badges' %}class="on"{% endif %}
+                >{% trans %}BADGES{% endtrans %}</a>
+                {% endif %}
+            </div>
+
+            <div class="link"><a href="{% url about %}">{% trans %}ABOUT{% endtrans %}</a></div>
+            <div class="link"><a href="{% url faq %}">{% trans %}FAQ{% endtrans %}</a></div>
+
+            <!--<div class="link"><a href="{% url help %}" title="{% trans %}help{% endtrans %}">{% trans %}HELP{% endtrans %}</a></div>
+            <div class="link"><a href="{% url privacy %}">{% trans %}PRIVACY POLICY{% endtrans %}</a></div>
+            {% spaceless %}
+            <div class="link"><a href=
+                        {% if settings.FEEDBACK_SITE_URL %}
+                            "{{settings.FEEDBACK_SITE_URL}}"
+                            target="_blank">
+                        {% else %}
+                            "{% url feedback %}?next={{request.path|escape}}">
+                        {% endif %}
+                        {% trans %}FEEDBACK{% endtrans %}
+                    </a>
+            </div>
+                    {% endspaceless %}-->
+        </div>
+        <!--<div class="powered-link">
+            <a href="http://askbot.com" target="_blank">
+                Powered by Askbot version {{settings.ASKBOT_VERSION}}
+            </a>
+        </div>-->
+        <div class="clean"></div>
+    </div>
+    <!--</div>-->
+</div>
+<!-- end template footer.html -->

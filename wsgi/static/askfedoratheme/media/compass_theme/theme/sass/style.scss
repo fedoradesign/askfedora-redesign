@@ -1,0 +1,7410 @@
+@import "compass/reset";
+@import "susy";
+@import "breakpoint";
+
+//default colors
+$color_japanese_laurel_approx: #008800;
+$color_navy_blue_approx: #000088;
+$color_red_berry_approx: #880000;
+$color_pompadour_approx: #660066;
+$color_blue_stone_approx: #006666;
+$color_spicy_mustard_approx: #666600;
+$red: #ff0000;
+$color_arapawa_approx: #006;
+$color_lonestar_approx: #600;
+$color_loulou_approx: #404;
+$color_aqua_deep_approx: #004444;
+$color_bronze_olive_approx: #444400;
+$color_deco_approx: #d0e296;
+$white: #fff;
+$color_storm_dust_approx: #666;
+$color_celeste_approx: #ccccce;
+$color_dove_gray_approx: #707070;
+$color_jagged_ice_approx: #cce6ec;
+$color_gallery_approx: #f0f0f0;
+$black_7: rgba(0, 0, 0, 0.075);
+$color_mariner_approx: #1b79bd;
+$color_wild_sand_approx: #f5f5f5;
+$color_nutmeg_approx: #763333;
+$color_goldenrod_approx: #f5dd69;
+$color_cape_cod_approx: #424242;
+$color_alto_approx: #ddd;
+$color_mountain_mist_approx: #929292;
+$color_antique_bronze_approx: #735005;
+$color_hunter_green_approx: #16160f;
+$gray: grey;
+$color_heathered_gray_approx: #b5b593;
+$color_honeysuckle_approx: #ebff88;
+$color_hampton_approx: #e2e2ae;
+$color_tall_poppy_approx: #b02b2c;
+$color_foggy_gray_approx: #c9c9b5;
+$color_tundora_approx: #464646;
+$color_green_white_approx: #e9e9e1;
+$color_swirl_approx: #d3d3c2;
+$color_alabaster_approx: #fcfcfc;
+$color_bud_approx: #afaf9e;
+$color_boulder_approx: #7a7a7b;
+$color_tapa_approx: #7a7a6b;
+$color_gravel_approx: #484848;
+$color_westar_approx: #dadad4;
+$color_lochmara_approx: #08c;
+$color_silver_chalice_approx: #aaa;
+$color_glade_green_approx: #5b9058;
+$color_valencia_approx: #d84040;
+$color_aqua_squeeze_approx: #eaf2f3;
+$color_bismark_approx: #4a757f;
+$color_ziggurat_approx: #c6d9dd;
+$color_geyser_approx: #d1e2e5;
+$color_opal_approx: #a9c2c7;
+$color_botticelli_approx: #cde5e9;
+$color_gull_gray_approx: #94b3ba;
+$color_chicago_approx: #5a5a5a;
+$color_cararra_approx: #eceeeb;
+$color_catskill_white_approx: #eff5f6;
+$color_gulf_stream_approx: #7ea9b3;
+$color_chilean_fire_approx: #f57900;
+$color_sea_buckthorn_approx: #f4a731;
+$color_moon_mist_approx: #dddbce;
+$color_fuscous_gray_approx: #555;
+$color_bombay_approx: #b1b5b6;
+$color_tulip_tree_approx: #eab243;
+$color_grenadier_approx: #d33f00;
+$color_forest_green_approx: #338333;
+$color_gossip_approx: #d0f5a9;
+$yellow: yellow;
+$color_half_baked_approx: #8ebcc7;
+$color_stack_approx: #8c8c8c;
+$color_bon_jour_approx: #e1e1e1;
+$color_iron_approx: #d3d6d7;
+$color_nebula_approx: #cfdbdb;
+$color_fedora_approx: #717179;
+$color_rangoon_green_approx: #1a1a1a;
+$color_loblolly_approx: #bbcdcd;
+$color_granny_smith_approx: #7ea0a0;
+$color_well_read_approx: #b32f2f;
+$color_jungle_mist_approx: #b8d0d5;
+$color_mongoose_approx: #b6a475;
+$color_sapling_approx: #d8d2a9;
+$color_mexican_red_approx: brown;
+$color_quill_gray_approx: #d4d4d4;
+$color_silver_approx: #bfbfbf;
+$color_wheatfield_approx: #f5f0c9;
+$color_sycamore_approx: #988e4c;
+$gallery: #efefef;
+$color_chestnut_approx: #bc564b;
+$color_pipi_approx: #fef7cc;
+$color_anzac_approx: #e1c04a;
+$color_corn_field_approx: #f7fecc;
+$color_granny_smith_apple_approx: #9bd59b;
+$color_barberry_approx: #e1e818;
+$color_titan_white_approx: #f1f1ff;
+$black: black;
+$color_beeswax_approx: #fff8c6;
+$color_mine_shaft_approx: #333;
+$color_wild_rice_approx: #e7e296;
+$color_earls_green_approx: #d1ca3d;
+$color_sweet_corn_approx: #fde785;
+$color_turmeric_approx: #cfb852;
+$color_tia_maria_approx: #c34719;
+$color_primrose_approx: #e6f0a2;
+$red_berry: #8e0000;
+$color_chocolate_approx: #370000;
+$color_pumpkin_approx: #fb7321;
+$color_double_colonial_white_approx: #e7e8a8;
+$color_dawn_pink_approx: #f4e7e7;
+$magenta_fuchsia: #f0f;
+$cyan_aqua: #0ff;
+$color_supernova_approx: #ffcc00;
+$color_hokey_pokey_approx: #cc9933;
+$color_oregon_approx: #993300;
+$color_bright_red_approx: #ae0000;
+$color_blue_ribbon_approx: #145bff;
+$color_suva_gray_approx: #888888;
+$color_totem_pole_approx: #990e08;
+$color_solitaire_approx: #fcf8e3;
+$color_tussock_approx: #c09853;
+$color_gray_nurse_approx: #eaeaea;
+$color_sunset_orange_approx: #ff4747;
+
+//new colors
+$navigation_blue: #3c6eb4;
+$text_background: #f5f5f5;
+$fedora-blue: #3c6eb4;
+$button-green: #42a500;
+$border-green: #ffffff;
+$badge-gold: #ffcc00;
+$badge-bronze: #cc9933;
+$tag-orange: #e59728;
+$dark-gray: #494949;
+$gray: #666666;
+$forty-gray: #999999;
+$light-gray: #dedede;
+$five-gray: #f2f2f2;
+$two-gray: #f9f9f9;
+
+//breakpoints
+$small: 600px;
+$medium: 800px;
+$large: 1200px;
+
+//fonts
+$base_font: Open Sans, sans-serif;
+$font_0: $base_font;
+$font_1: $base_font;
+$font_2: $base_font;
+$font_3: $base_font;
+$font_4: $base_font;
+$font_5: $base_font;
+$font_6: $base_font;
+$font_7: $base_font;
+$font_8: $base_font;
+$font_9: $base_font;
+$font_10: $base_font;
+$font_11: $base_font;
+$font_12: $base_font;
+$font_13: $base_font;
+$font_14: $base_font;
+$font_15: $base_font;
+$font_16: $base_font;
+/*$font_0: Arial;
+$font_1: Trebuchet MS;
+$font_2: segoe ui;
+$font_3: Helvetica;
+$font_4: Tahoma;
+$font_5: Verdana;
+$font_6: MingLiu;
+$font_7: PMingLiu;
+$font_8: sans-serif;
+$font_9: Consolas;
+$font_10: Monaco;
+$font_11: Liberation Mono;
+$font_12: Lucida Console;
+$font_13: Monospace;
+$font_14: Open Sans Condensed;
+$font_15: Georgia;
+$font_16: serif;*/
+
+//urls
+$url_0: url(../images/sprites.png);
+$url_1: url(../images/scopearrow.png);
+$url_2: url(../images/contributorsback.png);
+$url_3: url(../images/feed-icon-small.png);
+$url_4: url(../images/summary-background.png);
+$url_5: url(../images/vote-background.png);
+$url_6: url(../images/answers-background.png);
+$url_7: url(../images/view-background.png);
+$url_8: url(../images/accept.png);
+$url_9: url(../images/attachment.png);
+$url_10: url(../images/dialog-warning.png);
+$url_11: url(../images/background-user-info.png);
+$url_12: url(../images/delete.png);
+$url_13: url(../images/flag.png);
+$url_14: url(../images/publish.png);
+$url_15: url(../images/unpublish.png);
+$url_16: url(../images/edit2.png);
+$url_17: url(../images/retag.png);
+$url_18: url(../images/close.png);
+$url_19: url(../images/merge.png);
+$url_20: url(../images/link.png);
+$url_21: url(../images/vote-favorite-on.png);
+$url_22: url(../images/comment.png);
+$url_23: url(../images/close-small.png);
+$url_24: url(../images/go-up-grey.png);
+$url_25: url(../images/go-up-orange.png);
+$url_26: url(../images/vote-accepted.png);
+$url_27: url(../images/vote-accepted-on.png);
+$url_28: url(../images/vote-arrow-up-new.png);
+$url_29: url(../images/vote-arrow-down-new.png);
+$url_30: url(../images/vote-arrow-up-on-new.png);
+$url_31: url(../images/vote-arrow-down-on-new.png);
+$url_32: url(../images/socialsprite.png);
+$url_33: url(../images/small-button-cancel.png);
+$url_34: url(../images/openid.gif);
+$url_35: url(../images/medala.gif);
+$url_36: url(../images/medala_on.gif);
+$url_37: url(../images/vote-arrow-up-on.png);
+$url_38: url(../images/vote-arrow-down-on.png);
+$url_39: url(../images/notification.png);
+$url_40: url(../images/close-small-hover.png);
+$url_41: url(../images/indicator.gif);
+
+//new urls
+$url_header: url(../images/header.png);
+
+//@extend-elements
+//original selectors
+//h1, h2, h3, h4, h5, h6, ul, li, dl, dt, dd, form, img, p
+%extend_1 {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+//original selectors
+//input, select, textarea
+%extend_2 {
+	vertical-align: middle;
+	font-family: $font_1, $font_2, $font_3, $font_4, $font_5, $font_6, $font_7, $font_0, $font_8;
+	margin-left: 0;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+
+//original selectors
+//input[type="text"], input[type="password"], select, textarea, #askFormBar .questionTitleInput, .wmd-container, .js-simple-editor, .folded-editor, .mock-editor
+%extend_3 {
+	border: $color_jagged_ice_approx 3px solid;
+	height: 22px;
+	font-size: 13px;
+	padding: 0 5px;
+}
+
+//original selectors
+//.clearfix:after, .paginator:after
+%extend_4 {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+//original selectors
+//button, input[type="submit"], input[type="button"], input[type="reset"], .button, .btn
+%extend_5 {
+	/*border: 0 !important;
+	border-top: $color_aqua_squeeze_approx 1px solid;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	cursor: pointer;
+	color: $color_bismark_approx;
+	font-family: $font_14, $font_0, $font_8;
+	font-size: 14px;
+	font-weight: bold;
+	height: 27px;
+	margin-right: 10px;
+	text-align: center;
+	text-decoration: none;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: 0 1px 0 $color_ziggurat_approx;
+	background-color: $color_geyser_approx;
+	background-repeat: no-repeat;
+	background-image: linear-gradient($color_geyser_approx, $color_geyser_approx 25%, $color_opal_approx);
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 1px 1px 2px $color_storm_dust_approx;*/
+  	cursor: pointer;
+  	margin-top: 1.9em;
+  	box-shadow: 0px 3px 2px -2px #666666;
+  	background-color: #42a500;
+  	-webkit-border-radius: 9px;
+  	-moz-border-radius: 9px;
+  	border-radius: 9px;
+  	border: 3px solid #128c1e;
+  	color: #ffffff;
+  	font-size: 1.4em;
+  	font-style: normal;
+}
+#interestingTagAdd, #ignoredTagAdd{
+	margin-top: 0.5em;
+}
+
+//original selectors
+//button.large, input[type="submit"].large, input[type="button"].large, input[type="reset"].large, .button.large
+%extend_6 {
+	font-size: 20px;
+	height: 35px;
+	line-height: 35px;
+	padding: 0 10px;
+}
+
+//original selectors
+//button:hover, input[type="submit"]:hover, .button:hover, .btn:hover
+%extend_7 {
+	/*background-position: 0 0 !important;
+	background-color: $color_botticelli_approx;
+	background-repeat: no-repeat;
+	background-image: linear-gradient($color_botticelli_approx, $color_botticelli_approx 25%, $color_gull_gray_approx);
+	text-decoration: none;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: 0 1px 0 $color_ziggurat_approx;*/
+}
+
+//original selectors
+//form.ajax-file-upload input[type="file"], form.ajax-file-upload input.fake-file-input
+%extend_8 {
+	cursor: pointer;
+	height: 32px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+//original selectors
+//form.ajax-file-upload label, form.ajax-file-upload img.spinner
+%extend_9 {
+	bottom: 0;
+	left: 3px;
+	position: absolute;
+}
+
+.delete-icon{
+	background-color: $light-gray;
+	cursor: pointer;
+	padding-left: 0.65em;
+	padding-right: 0.39em;
+	padding-top: 0.19em;
+	padding-bottom: 0.5em;
+	z-index: -1;
+	margin-left: -1em;
+	border-bottom-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-webkit-border-top-right-radius: 4px;
+	border-top-right-radius: 4px;
+	/*font-weight: bold;*/
+}
+
+//original selectors
+//.box .inputs #interestingTagInput, .box .inputs #ignoredTagInput, .box .inputs #subscribedTagInput, .box .inputs #ab-tag-search
+%extend_10 {
+	/*width: 147px;
+	padding-left: 5px;
+	border: $color_foggy_gray_approx 1px solid;
+	height: 25px;
+	line-height: 25px;
+	font-size: 14px;*/
+	width: 100%;
+  	height: 30%;
+  	/*margin-top: 2.9em;*/
+  	background: #f5f5f5;
+  	font-size: 0.8rem;
+  	-moz-border-radius: 3px;
+  	-webkit-border-radius: 3px;
+  	border-radius: 3px;
+  	border: none;
+  	padding: 10px 10px;
+  	font-size: 15px;
+  	box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.3);
+  	clear: both;
+  	color: #494949;
+  	.tag{
+  		margin-bottom: 0.5em;
+  		margin-right: 0em;
+  	}
+}
+
+.tabsA a, .tabsC a{
+	color: $dark-gray;
+}
+
+.tabsA a:hover, .tabsC a:hover{
+	color: $fedora-blue;
+	text-decoration: none;
+}
+//original selectors
+//.tabsA, .tabsC
+%extend_11 {
+	/*float: right;*/
+	position: relative;
+	display: block;
+	height: 20px;
+}
+
+//original selectors
+//.tabsA a, .tabsC a
+%extend_12 {
+	/*border-left: 1px solid $color_geyser_approx;
+	color: $color_gulf_stream_approx;*/
+	display: block;
+	float: left;
+	height: 20px;
+	line-height: 20px;
+	padding: 4px 7px;
+	text-decoration: none;
+}
+
+//original selectors
+//.tabsA .label, .tabsC .label
+%extend_13 {
+	float: left;
+	/*color: $color_storm_dust_approx;*/
+	/*color: $dark-gray;*/
+	font-weight: bold;
+	margin: 4px 5px 0 8px;
+}
+
+//original selectors
+//.short-summary .userinfo .timeago, .short-summary span.anonymous
+%extend_14 {
+	font-size: 11px;
+	clear: both;
+	font-weight: normal;
+	color: $color_fuscous_gray_approx;
+}
+
+//original selectors
+//.short-summary .counts .votes div, .short-summary .counts .views div, .short-summary .counts .answers div, .short-summary .counts .favorites div
+%extend_15 {
+	margin-top: 3px;
+	font-size: 2em;
+	line-height: 14px;
+	color: $color_storm_dust_approx;
+}
+
+//original selectors
+//.short-summary .votes, .short-summary .answers, .short-summary .favorites, .short-summary .views
+%extend_16 {
+	text-align: center;
+	margin: 0 3px;
+	padding: 8px 2px 0;
+	width: 51px;
+	float: right;
+	height: 44px;
+	/*border: $color_westar_approx 1px solid;*/
+}
+
+.short-summary a:hover{
+	color: $fedora-blue;
+	text-decoration: none;
+}
+
+//original selectors
+//.paginator .prev a, .paginator .prev a:visited, .paginator .next a, .paginator .next a:visited
+%extend_17 {
+	background-color: $white;
+	color: $color_tapa_approx;
+	padding: 0 0.25em;
+}
+
+//original selectors
+//.paginator .page a:hover, .paginator .prev a:hover, .paginator .next a:hover
+%extend_18 {
+	color: $color_stack_approx;
+	background-color: $color_bon_jour_approx;
+	text-decoration: none;
+}
+
+//original selectors
+//ul.tags, ul.tags.marked-tags, ul.js-related-tags
+%extend_19 {
+	list-style: none;
+	margin: 0;
+	padding: 0 0 0 0;
+	line-height: 170%;
+	display: block;
+}
+
+//original selectors
+//.tags-page ul.tags li, ul#ab-user-tags li
+%extend_20 {
+	/*width: 160px;*/
+	width: 32%;
+	@include breakpoint($small){
+		width: 24%;
+	}
+	margin: 5px;
+	margin-bottom: 1em;
+	margin-left: 0;
+	.tag{
+		font-size: 1em;
+	}
+}
+
+//original selectors
+//.moderate-tags-page th, .moderate-tags-page tr
+%extend_21 {
+	vertical-align: top;
+	text-align: left;
+	padding-right: 20px;
+}
+
+//original selectors
+//.ask-page div#question-list h2, .edit-question-page div#question-list h2
+%extend_22 {
+	font-size: 13px;
+	padding-bottom: 0;
+	color: $color_mariner_approx;
+	border-top: $color_gallery_approx 1px solid;
+	border-left: $color_gallery_approx 1px solid;
+	min-height: 30px;
+	line-height: 30px;
+	font-weight: normal;
+}
+
+//original selectors
+//.ask-page div#question-list span, .edit-question-page div#question-list span
+%extend_23 {
+	width: 28px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	margin-right: 10px;
+	float: left;
+	display: block;
+	color: $white;
+	background: $color_jungle_mist_approx;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 3px;
+}
+
+//original selectors
+//.ask-page #id_tags, .edit-question-page #id_tags
+%extend_24 {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	height: 31px;
+	padding-left: 5px;
+	font-size: 14px;
+	width: 100%;
+	max-width: 395px;
+}
+
+//original selectors
+//.ask-page #id_post_author_username, .question-page #id_post_author_username, .edit-question-page #id_post_author_username, .edit-answer-page #id_post_author_username, .ask-page #id_post_author_email, .question-page #id_post_author_email, .edit-question-page #id_post_author_email, .edit-answer-page #id_post_author_email
+%extend_25 {
+	height: 25px;
+	line-height: 25px;
+	padding-left: 5px;
+	font-size: 14px;
+	width: 186px;
+}
+
+//original selectors
+//.ask-page table.proxy-user-info, .question-page table.proxy-user-info, .edit-question-page table.proxy-user-info, .edit-answer-page table.proxy-user-info
+%extend_26 {
+	border-spacing: 0;
+	margin-bottom: 12px;
+	width: 100%;
+}
+
+//original selectors
+//.groups-input, .users-input
+%extend_27 {
+	width: 140px;
+	padding-left: 5px;
+	border: $color_foggy_gray_approx 1px solid;
+	height: 25px;
+	font-size: 14px;
+}
+
+//original selectors
+//#id_user, #id_user_author
+%extend_28 {
+	height: 25px;
+	padding-left: 5px;
+	width: 395px;
+	font-size: 14px;
+}
+
+//original selectors
+//.ask-page .title-desc, .question-page .title-desc, .ask-page .tags-desc, .question-page .tags-desc
+%extend_29 {
+	color: $color_dove_gray_approx;
+	font-style: italic;
+	font-size: 16px;
+}
+
+//original selectors
+//#fmanswer input.submit, .ask-page input.submit, .edit-question-page input.submit
+%extend_30 {
+	float: left;
+	font-weight: normal;
+	height: 35px;
+	font-size: 20px;
+	margin-top: 3px;
+	margin-right: 7px;
+}
+
+//original selectors
+//.folded-editor, .mock-editor
+%extend_31 {
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: inset 0 0 3px 1px $color_silver_chalice_approx;
+	cursor: text;
+	height: 100px;
+	outline: none;
+	width: 100%;
+}
+
+//original selectors
+//.users-page .wmd-container, .users-page .js-simple-editor
+%extend_32 {
+	height: 120px;
+	padding: 0;
+	width: auto;
+}
+
+//original selectors
+//.users-page .wmd-container textarea, .users-page .js-simple-editor textarea
+%extend_33 {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	height: 90px;
+	width: 100%;
+}
+
+//original selectors
+//.ask-page .wmd-container, .question-page .wmd-container, .edit-question-page .wmd-container, .edit-answer-page .wmd-container, .ask-page .js-simple-editor, .question-page .js-simple-editor, .edit-question-page .js-simple-editor, .edit-answer-page .js-simple-editor
+%extend_34 {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	height: auto;
+	padding: 0;
+	width: 723px;
+	width: 100%;
+}
+
+//original selectors
+//.ask-page #editor, .question-page #editor, .edit-question-page #editor, .edit-answer-page #editor
+%extend_35 {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	padding: 6px;
+}
+
+//original selectors
+//.edit-question-page #id_revision, #fmedit #id_revision, .wmd-preview #id_revision
+%extend_36 {
+	font-size: 14px;
+	margin: 12px 0 5px;
+	width: 100%;
+}
+
+//original selectors
+//.edit-question-page #id_title, #fmedit #id_title, .wmd-preview #id_title
+%extend_37 {
+	font-size: 24px;
+	line-height: 24px;
+	height: 36px;
+	margin: 0;
+	padding: 0 0 0 5px;
+	width: 100%;
+	margin-bottom: 10px;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+}
+
+//original selectors
+//.edit-question-page #id_summary, #fmedit #id_summary, .wmd-preview #id_summary
+%extend_38 {
+	height: 25px;
+	padding-left: 5px;
+	width: 395px;
+	font-size: 14px;
+}
+
+//original selectors
+//.answer .moderated, .js-question .moderated
+%extend_39 {
+	font-weight: bold;
+	background: $url_10 2px 0 no-repeat;
+	text-decoration: underline;
+	line-height: 16px !important;
+	margin-bottom: -2px !important;
+	padding-left: 24px !important;
+}
+
+//original selectors
+//.answer .comment .moderated, .js-question .comment .moderated
+%extend_40 {
+	background-position: 4px 0;
+	margin-bottom: -5px !important;
+	padding-left: 24px !important;
+}
+
+//original selectors
+//.question-page .post-controls a, .question-page .post-controls span.dropdown-toggle
+%extend_41 {
+	color: $color_tapa_approx;
+	padding: 0 7px 3px 18px;
+	cursor: pointer;
+	border: none;
+	font-size: 12px;
+	font-family: $font_0;
+	text-decoration: none;
+	height: 18px;
+	line-height: 18px;
+	margin-top: -2px;
+	margin-left: 4px;
+}
+
+//original selectors
+//.question-page .post-controls span.dropdown-toggle:hover .dropdown-menu li, .question-page .post-controls span.dropdown-toggle:hover .dropdown-menu li:hover
+%extend_42 {
+	display: block !important;
+	margin: 0;
+	padding: 0;
+	width: 100% !important;
+}
+
+//original selectors
+//.question-page .post-controls .answer-convert input, .question-page .answer-controls .answer-convert input
+%extend_43 {
+	font-size: 12px;
+	color: $color_tapa_approx;
+	font-family: $font_0;
+	text-decoration: none;
+	display: inline;
+	white-space: nowrap;
+	padding-left: 0;
+	background: none;
+	border: none;
+	padding: 0 7px 3px 18px;
+	float: right;
+	height: 18px;
+	line-height: 18px;
+	margin-top: -2px;
+	margin-left: 4px;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 0 0 $color_mountain_mist_approx;
+}
+
+//original selectors
+//.question-page .comments .js-open-editor-btn, .question-page .comments .js-load-comments-btn
+%extend_44 {
+	color: $color_sycamore_approx;
+	font-size: 11px;
+	padding: 3px;
+	cursor: pointer;
+}
+
+//original selectors
+//.question-img-upvote, .question-img-downvote, .answer-img-upvote, .answer-img-downvote
+%extend_45 {
+	width: 25px;
+	height: 20px;
+	cursor: pointer;
+}
+
+//original selectors
+//.facebook-share.icon, .twitter-share.icon, .linkedin-share.icon, .identica-share.icon
+%extend_46 {
+	background: $url_32 no-repeat;
+	display: block;
+	text-indent: -100em;
+	height: 25px;
+	width: 25px;
+	margin-bottom: 3px;
+}
+
+//original selectors
+//.openid-signin input[type="text"], .openid-signin input[type="password"]
+%extend_47 {
+	color: $color_fuscous_gray_approx;
+	font-size: 12px;
+	line-height: 25px;
+	height: 25px;
+	margin: 0;
+	padding: 0 5px;
+	width: 200px;
+}
+
+//original selectors
+//.openid-signin, .meta, .user-profile-edit-page
+%extend_48 {
+	font-size: 13px;
+	line-height: 1.3;
+	color: $color_fuscous_gray_approx;
+}
+
+//original selectors
+//.openid-signin p, .meta p, .user-profile-edit-page p
+%extend_49 {
+	font-size: 13px;
+	color: $color_dove_gray_approx;
+	line-height: 1.3;
+	font-family: $font_0;
+	color: $color_fuscous_gray_approx;
+	margin-bottom: 12px;
+}
+
+//original selectors
+//.openid-signin h2, .meta h2, .user-profile-edit-page h2
+%extend_50 {
+	color: $color_fuscous_gray_approx;
+	padding-left: 0;
+	font-size: 16px;
+}
+
+//original selectors
+//.meta input[type="text"], .users-page input[type="text"], .user-profile-edit-page input[type="text"], .user-profile-page input[type="text"], .meta input[type="password"], .users-page input[type="password"], .user-profile-edit-page input[type="password"], .user-profile-page input[type="password"], .meta select, .users-page select, .user-profile-edit-page select, .user-profile-page select
+%extend_51 {
+	height: 25px;
+	line-height: 25px;
+	padding-left: 5px;
+	width: 395px;
+	font-size: 14px;
+}
+
+//original selectors
+//.meta textarea, .users-page textarea, .user-profile-edit-page textarea, .user-profile-page textarea
+%extend_52 {
+	padding-left: 5px;
+	padding-top: 5px;
+	width: 395px;
+	font-size: 14px;
+}
+
+//original selectors
+//#local_login_buttons input[type="text"], #password-fs input[type="text"], #openid-fs input[type="text"], #signup-form input[type="text"], #local_login_buttons input[type="password"], #password-fs input[type="password"], #openid-fs input[type="password"], #signup-form input[type="password"]
+%extend_53 {
+	color: $color_fuscous_gray_approx;
+	font-size: 12px;
+	line-height: 25px;
+	height: 25px;
+	margin: 0;
+	padding: 0 5px;
+	width: 200px;
+}
+
+//original selectors
+//.user-profile-page .up-votes, .user-profile-page .down-votes
+%extend_54 {
+	display: inline-block;
+	font-size: 18px;
+	font-weight: bold;
+	height: 30px;
+	padding-left: 27px;
+	line-height: 22px;
+	margin: 0 15px 0 2px;
+}
+
+//original selectors
+//.ask-page label + .form-error ul.errorlist, .edit-question-page label + .form-error ul.errorlist, .edit-answer-page label + .form-error ul.errorlist
+%extend_55 {
+	color: $color_red_berry_approx;
+	display: inline-block;
+	font-size: 16px;
+	margin-left: 0;
+	padding-bottom: 2px;
+	vertical-align: bottom;
+}
+
+//original selectors
+//.error, .openid-signin p.error
+%extend_56 {
+	color: $color_red_berry_approx;
+	margin: 0;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+}
+
+//original selectors
+//.tag-editor input.new-tags-input, .tag-editor input.new-tags-input:focus
+%extend_57 {
+	border: none;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+	font-size: 14px;
+	font-color: $color_dove_gray_approx;
+	height: 16px;
+	line-height: 16px;
+	margin: 9px 0 0 -6px;
+	padding: 0 0 0 6px;
+}
+
+//original selectors
+//#metaNav a#navUsers, #metaNav a#navTags, #metaNav a#navGroups
+%extend_58 {
+	background: none;
+	color: $color_deco_approx;
+	font-size: 16px;
+	text-decoration: underline;
+	margin-left: 20px;
+	padding-left: 0;
+}
+
+
+.border-box {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+}
+body {
+	@include container(100%);
+	background: $two-gray;
+	font-size: 14px;
+	line-height: 150%;
+	/*margin: 0;
+	padding: 0;*/
+	color: $color_storm_dust_approx;
+	font-family: $font_0;
+	&.user-messages {
+		margin-top: 2.4em;
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+	}
+	&.lang-zh {
+		.box {
+			.inputs {
+				#interestingTagInput {
+					width: 140px;
+				}
+				#ignoredTagInput {
+					width: 140px;
+				}
+				#subscribedTagInput {
+					width: 140px;
+				}
+				#ab-tag-search {
+					width: 140px;
+				}
+			}
+			a {
+				&.followed {
+					line-height: 34px !important;
+				}
+				&.follow {
+					line-height: 34px !important;
+				}
+			}
+		}
+		button {
+			line-height: 24px;
+		}
+		input[type="submit"] {
+			line-height: 24px;
+		}
+		input[type="button"] {
+			line-height: 24px;
+		}
+		input[type="reset"] {
+			line-height: 24px;
+		}
+		.button {
+			line-height: 24px;
+		}
+		&.question-page a.submit {
+			line-height: 30px !important;
+		}
+	}
+	&.lang-zh_CN {
+		.box {
+			.inputs {
+				#interestingTagInput {
+					width: 140px;
+				}
+				#ignoredTagInput {
+					width: 140px;
+				}
+				#subscribedTagInput {
+					width: 140px;
+				}
+				#ab-tag-search {
+					width: 140px;
+				}
+			}
+			a {
+				&.followed {
+					line-height: 34px !important;
+				}
+				&.follow {
+					line-height: 34px !important;
+				}
+			}
+		}
+		button {
+			line-height: 24px;
+		}
+		input[type="submit"] {
+			line-height: 24px;
+		}
+		input[type="button"] {
+			line-height: 24px;
+		}
+		input[type="reset"] {
+			line-height: 24px;
+		}
+		.button {
+			line-height: 24px;
+		}
+		&.question-page a.submit {
+			line-height: 30px !important;
+		}
+	}
+	&.lang-zh-cn {
+		.box {
+			.inputs {
+				#interestingTagInput {
+					width: 140px;
+				}
+				#ignoredTagInput {
+					width: 140px;
+				}
+				#subscribedTagInput {
+					width: 140px;
+				}
+				#ab-tag-search {
+					width: 140px;
+				}
+			}
+			a {
+				&.followed {
+					line-height: 34px !important;
+				}
+				&.follow {
+					line-height: 34px !important;
+				}
+			}
+		}
+		button {
+			line-height: 24px;
+		}
+		input[type="submit"] {
+			line-height: 24px;
+		}
+		input[type="button"] {
+			line-height: 24px;
+		}
+		input[type="reset"] {
+			line-height: 24px;
+		}
+		.button {
+			line-height: 24px;
+		}
+		&.question-page a.submit {
+			line-height: 30px !important;
+		}
+	}
+	&.lang-zh-tw {
+		.box {
+			.inputs {
+				#interestingTagInput {
+					width: 140px;
+				}
+				#ignoredTagInput {
+					width: 140px;
+				}
+				#subscribedTagInput {
+					width: 140px;
+				}
+				#ab-tag-search {
+					width: 140px;
+				}
+			}
+			a {
+				&.followed {
+					line-height: 34px !important;
+				}
+				&.follow {
+					line-height: 34px !important;
+				}
+			}
+		}
+		button {
+			line-height: 24px;
+		}
+		input[type="submit"] {
+			line-height: 24px;
+		}
+		input[type="button"] {
+			line-height: 24px;
+		}
+		input[type="reset"] {
+			line-height: 24px;
+		}
+		.button {
+			line-height: 24px;
+		}
+		&.question-page a.submit {
+			line-height: 30px !important;
+		}
+	}
+	&.lang-zh_TW {
+		.box {
+			.inputs {
+				#interestingTagInput {
+					width: 140px;
+				}
+				#ignoredTagInput {
+					width: 140px;
+				}
+				#subscribedTagInput {
+					width: 140px;
+				}
+				#ab-tag-search {
+					width: 140px;
+				}
+			}
+			a {
+				&.followed {
+					line-height: 34px !important;
+				}
+				&.follow {
+					line-height: 34px !important;
+				}
+			}
+		}
+		button {
+			line-height: 24px;
+		}
+		input[type="submit"] {
+			line-height: 24px;
+		}
+		input[type="button"] {
+			line-height: 24px;
+		}
+		input[type="reset"] {
+			line-height: 24px;
+		}
+		.button {
+			line-height: 24px;
+		}
+		&.question-page a.submit {
+			line-height: 30px !important;
+		}
+	}
+	&.lang-hu {
+		.scope-selector {
+			font-size: 17px;
+			margin-left: 10px;
+		}
+		#searchBar {
+			margin-left: 252px;
+		}
+		.search-drop-menu {
+			margin-left: 252px;
+		}
+		.users-input {
+			width: 100px;
+		}
+		.groups-input {
+			width: 100px;
+		}
+		.box .inputs {
+			#interestingTagInput {
+				width: 111px;
+			}
+			#ignoredTagInput {
+				width: 111px;
+			}
+			#subscribedTagInput {
+				width: 111px;
+			}
+			#ab-tag-search {
+				width: 111px;
+			}
+		}
+	}
+	&.lang-es {
+		.scope-selector {
+			font-size: 18px;
+		}
+		.users-input {
+			width: 130px;
+		}
+		.groups-input {
+			width: 130px;
+		}
+		.box .inputs {
+			#interestingTagInput {
+				width: 130px;
+			}
+			#ignoredTagInput {
+				width: 130px;
+			}
+		}
+		.short-summary .counts {
+			.answers div {
+				font-size: 10px;
+			}
+			.views div {
+				font-size: 10px;
+			}
+			.votes div {
+				font-size: 10px;
+			}
+		}
+	}
+	&.lang-de {
+		.scope-selector {
+			font-size: 17px;
+		}
+		.box {
+			h2 {
+				font-size: 17px !important;
+			}
+			.inputs {
+				#interestingTagInput {
+					width: 153px;
+				}
+				#ignoredTagInput {
+					width: 153px;
+				}
+				#subscribedTagInput {
+					width: 153px;
+				}
+				#ab-tag-search {
+					width: 153px;
+				}
+			}
+		}
+		#metaNav a {
+			font-size: 16px;
+		}
+	}
+	&.lang-fr {
+		.box .inputs {
+			#interestingTagInput {
+				width: 127px;
+			}
+			#ignoredTagInput {
+				width: 127px;
+			}
+			#subscribedTagInput {
+				width: 127px;
+			}
+			#ab-tag-search {
+				width: 127px;
+			}
+		}
+		#metaNav a {
+			font-size: 16px;
+		}
+	}
+	&.lang-fi {
+		#scopeNav {
+			width: 315px;
+		}
+		.scope-selector {
+			font-size: 17px;
+		}
+		.box .inputs {
+			#interestingTagInput {
+				width: 142px;
+			}
+			#ignoredTagInput {
+				width: 142px;
+			}
+			#subscribedTagInput {
+				width: 142px;
+			}
+			#ab-tag-search {
+				width: 142px;
+			}
+		}
+	}
+	&.lang-ru {
+		.scope-selector {
+			font-size: 17px;
+		}
+		.box .inputs {
+			#interestingTagInput {
+				width: 146px;
+			}
+			#ignoredTagInput {
+				width: 146px;
+			}
+			#subscribedTagInput {
+				width: 146px;
+			}
+			#ab-tag-search {
+				width: 146px;
+			}
+		}
+	}
+	&.lang-ko {
+		#scopeNav {
+			width: 315px;
+		}
+		.box .inputs {
+			#interestingTagInput {
+				width: 144px;
+			}
+			#ignoredTagInput {
+				width: 144px;
+			}
+			#subscribedTagInput {
+				width: 144px;
+			}
+			#ab-tag-search {
+				width: 144px;
+			}
+		}
+	}
+	&.anon.ask-page .search-drop-menu {
+		padding: 5px 10px 6px 0;
+	}
+	&.question-page ins {
+		background: transparent;
+	}
+	&.main-page ins {
+		background: transparent;
+	}
+	&.lang-gl .box .inputs {
+		#interestingTagInput {
+			width: 127px;
+		}
+		#ignoredTagInput {
+			width: 127px;
+		}
+		#subscribedTagInput {
+			width: 127px;
+		}
+		#ab-tag-search {
+			width: 127px;
+		}
+	}
+	&.lang-pt_BR .box .inputs {
+		#interestingTagInput {
+			width: 116px;
+		}
+		#ignoredTagInput {
+			width: 116px;
+		}
+		#subscribedTagInput {
+			width: 116px;
+		}
+		#ab-tag-search {
+			width: 116px;
+		}
+	}
+	&.lang-nb_NO .box .inputs {
+		#interestingTagInput {
+			width: 133px;
+			width: 133px;
+		}
+		#ignoredTagInput {
+			width: 133px;
+			width: 133px;
+		}
+		#subscribedTagInput {
+			width: 133px;
+			width: 133px;
+		}
+		#ab-tag-search {
+			width: 133px;
+			width: 133px;
+		}
+	}
+}
+div {
+	margin: 0 auto;
+	padding: 0;
+}
+h1 {
+	@extend %extend_1;
+	font-size: 24px;
+	padding: 0 0 5px 0;
+}
+h2 {
+	@extend %extend_1;
+	font-size: 21px;
+	padding: 3px 0 3px 5px;
+}
+h3 {
+	@extend %extend_1;
+	font-size: 19px;
+	padding: 3px 0 3px 5px;
+}
+h4 {
+	@extend %extend_1;
+}
+h5 {
+	@extend %extend_1;
+}
+h6 {
+	@extend %extend_1;
+}
+ul {
+	@extend %extend_1;
+	list-style: disc;
+	margin-left: 20px;
+	padding-left: 0;
+	margin-bottom: 1em;
+	&#searchTags {
+		display: inline-block;
+		margin-left: 6px;
+		min-width: 43px;
+	}
+	&.tags {
+		@extend %extend_19;
+		&.marked-tags {
+			@extend %extend_19;
+			li {
+				margin-bottom: 1em;
+			}
+		}
+		li {
+			float: left;
+			display: block;
+			margin: 0 8px 8px 0;
+			padding: 0;
+			height: 20px;
+		}
+	}
+	&.js-related-tags {
+		@extend %extend_19;
+		li {
+			margin: 0 5px 8px 0;
+			float: left;
+			clear: left;
+		}
+	}
+	&.errorlist {
+		margin: 0;
+		list-style: none;
+		font-size: 12px;
+		color: $color_red_berry_approx;
+		li {
+			line-height: 16px;
+		}
+	}
+	&.form-horizontal-rows {
+		list-style: none;
+		margin: 0;
+		li {
+			position: relative;
+			height: 40px;
+			input {
+				position: absolute;
+				bottom: 0;
+				left: 180px;
+				margin: 0;
+			}
+		}
+		label {
+			display: inline-block;
+			position: absolute;
+			left: 0;
+			bottom: 6px;
+			margin: 0;
+			line-height: 12px;
+			font-size: 12px;
+		}
+		ul.errorlist {
+			list-style: none;
+			color: $color_red_berry_approx;
+			font-size: 10px;
+			line-height: 10px;
+			position: absolute;
+			top: -4px;
+			left: 180px;
+			text-align: left;
+			margin: 0;
+			li {
+				height: 10px;
+			}
+		}
+	}
+	&.post-tags {
+		margin: 2px 0 0 3px;
+		li {
+			margin-top: 4px;
+			margin-bottom: 3px;
+		}
+	}
+	&.post-retag {
+		margin-bottom: 0;
+		margin-left: 5px;
+		input {
+			width: 400px;
+			height: 22px;
+			margin: 3px 0 0 -5px;
+			padding: 0 5px;
+		}
+	}
+	&#ab-user-tags li {
+		@extend %extend_20;
+	}
+}
+li {
+	@extend %extend_1;
+	input {
+		margin: 3px 3px 4px 3px;
+	}
+	&.L0 {
+		list-style-type: none;
+	}
+	&.L1 {
+		list-style-type: none;
+		background: $color_gallery_approx;
+	}
+	&.L2 {
+		list-style-type: none;
+	}
+	&.L3 {
+		list-style-type: none;
+		background: $color_gallery_approx;
+	}
+	&.L5 {
+		list-style-type: none;
+		background: $color_gallery_approx;
+	}
+	&.L6 {
+		list-style-type: none;
+	}
+	&.L7 {
+		list-style-type: none;
+		background: $color_gallery_approx;
+	}
+	&.L8 {
+		list-style-type: none;
+	}
+	&.L9 {
+		background: $color_gallery_approx;
+	}
+}
+dl {
+	@extend %extend_1;
+}
+dt {
+	@extend %extend_1;
+}
+dd {
+	@extend %extend_1;
+}
+form {
+	@extend %extend_1;
+	&.ajax-file-upload {
+		height: 60px;
+		position: relative;
+		input[type="file"] {
+			@extend %extend_8;
+			z-index: 2;
+			filter: alpha(opacity=0);
+			opacity: 0;
+		}
+		label {
+			@extend %extend_9;
+		}
+		input.fake-file-input {
+			@extend %extend_8;
+			z-index: 1;
+		}
+		img.spinner {
+			@extend %extend_9;
+			bottom: 6px;
+			left: 10px;
+		}
+	}
+}
+img {
+	@extend %extend_1;
+	&.flag {
+		border: 1px solid $color_gallery_approx;
+		vertical-align: text-top;
+	}
+	&.group-logo {
+		height: 60px;
+	}
+}
+p {
+	@extend %extend_1;
+	font-size: 14px;
+	line-height: 140%;
+	margin-bottom: 6px;
+	&.form-item {
+		margin: 0;
+	}
+	&.space-above {
+		margin-top: 10px;
+	}
+	&.signup_p {
+		margin: 20px 0 0;
+	}
+}
+label {
+	vertical-align: middle;
+	&.retag-error {
+		color: $color_red_berry_approx;
+		padding-left: 5px;
+		font-size: 10px;
+	}
+	+ .form-error {
+		padding-left: 8px;
+	}
+}
+hr {
+	border: none;
+	border-top: 1px dashed $color_celeste_approx;
+}
+input {
+	@extend %extend_2;
+	&.tipped-input {
+		padding-left: 5px;
+		&.blank {
+			color: $color_dove_gray_approx;
+		}
+	}
+	&:focus {
+		outline: none;
+	}
+}
+select {
+	@extend %extend_2;
+	width: 100%;
+	@extend %extend_3;
+}
+textarea {
+	@extend %extend_2;
+	@extend %extend_3;
+	&:focus {
+		outline: none;
+	}
+	&.tipped-input {
+		padding-left: 5px;
+	}
+}
+input[type="radio"] {
+	margin: 2px 3px 0 0;
+}
+input[type="checkbox"] {
+}
+input[type="text"] {
+	@extend %extend_3;
+	&.prompt {
+		color: $color_dove_gray_approx;
+	}
+}
+input[type="password"] {
+	@extend %extend_3;
+	&.prompt {
+		color: $color_dove_gray_approx;
+	}
+}
+#askFormBar {
+	display: inline-block;
+	padding: 4px 0 0;
+	margin-top: 0;
+	width: 100%;
+	position: relative;
+	.questionTitleInput {
+		@extend %extend_3;
+		font-size: 24px;
+		height: 36px;
+		/*line-height: 36px;*/
+		margin: 0;
+		padding-left: 5px;
+		width: 100%;
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+	}
+	p {
+		margin: 0 0 5px 0;
+		font-size: 14px;
+		color: $color_fuscous_gray_approx;
+		line-height: 1.4;
+	}
+}
+.wmd-container {
+	@extend %extend_3;
+	textarea {
+		border: none;
+	}
+}
+.js-simple-editor {
+	@extend %extend_3;
+	textarea {
+		border: none;
+	}
+}
+.folded-editor {
+	@extend %extend_3;
+	@extend %extend_31;
+	.editor-proper {
+		display: none;
+	}
+	&.unfolded {
+		cursor: default;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 0 0;
+		border: none;
+		height: auto;
+		.editor-proper {
+			display: block;
+		}
+	}
+	p.prompt {
+		margin: 5px 4px;
+		display: block;
+	}
+}
+.mock-editor {
+	@extend %extend_3;
+	@extend %extend_31;
+	.editor-proper {
+		display: none;
+	}
+	&.unfolded {
+		cursor: default;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 0 0;
+	}
+	p.prompt {
+		margin: 5px 4px;
+		display: block;
+	}
+}
+.tos {
+	margin: 20px 0 10px;
+	.tos-content {
+		background: $color_gallery_approx;
+		border: $color_jagged_ice_approx 3px solid;
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: inset 0 1px 1px $black_7;
+		margin: 0;
+		overflow-y: auto;
+		padding: 3px 5px;
+		width: 398px;
+	}
+}
+iframe {
+	border: none;
+}
+a {
+	color: $color_mariner_approx;
+	text-decoration: none;
+	cursor: pointer;
+	&:hover {
+		text-decoration: none;
+		/*&.medal {
+			color: $color_mine_shaft_approx;
+			text-decoration: none;
+			background: $url_36 no-repeat;
+			border-left: 1px solid $color_wild_rice_approx;
+			border-top: 1px solid $color_wild_rice_approx;
+			border-bottom: 1px solid $color_earls_green_approx;
+			border-right: 1px solid $color_earls_green_approx;
+		}*/
+	}
+	&.medal {
+		/*font-size: 17px;
+		line-height: 250%;
+		margin-right: 5px;
+		color: $color_mine_shaft_approx;
+		text-decoration: none;
+		background: $url_35 no-repeat;
+		border-left: 1px solid $color_gallery_approx;
+		border-top: 1px solid $color_gallery_approx;
+		border-bottom: 1px solid $color_celeste_approx;
+		border-right: 1px solid $color_celeste_approx;
+		padding: 4px 12px 4px 6px;*/
+		float: left;
+		height: 24px;
+		line-height: 23px;
+		position: relative;
+		font-size: 11px;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-top: 10px;
+		padding: 0 7px 0 10px;
+		background: #6d6d6d;
+		color: #fff;
+		text-decoration: none;
+		-moz-border-radius-bottomright: 4px;
+		-webkit-border-bottom-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		-moz-border-radius-topright: 4px;
+		-webkit-border-top-right-radius: 4px;
+		border-top-right-radius: 4px;
+	}
+	&.medal:before{
+	  content: "";
+	  float: left;
+	  position: absolute;
+	  left: -12px;
+	  border-color: transparent #6d6d6d transparent transparent;
+	  border-style: solid;
+	  border-width: 12px 12px 12px 0;
+	}
+
+	&.medal:hover:before{
+	    border-color: transparent $dark-gray transparent transparent;
+	}
+
+	&.medal:link{
+	    color: #fff;
+	}
+
+	&.medal:visited{
+	     color: #fff;
+	}
+
+	&.medal:hover{
+	    cursor: pointer;
+	    color: #fff;
+	    background: $dark-gray;
+	}
+
+	&.medal:active{
+	     color: #fff;
+	}
+
+
+	&.medal:after{
+	  content: "";
+	  position: absolute;
+	  top: 10px;
+	  left: 0;
+	  float: left;
+	  width: 5px;
+	  height: 5px;
+	  -moz-border-radius: 2px;
+	  -webkit-border-radius: 2px;
+	  border-radius: 2px;
+	  background: #fff;
+	  -moz-box-shadow: -1px -1px 2px #424242;
+	  -webkit-box-shadow: -1px -1px 2px #424242;
+	  box-shadow: -1px -1px 2px #424242;
+	}
+	&.badge1:after{
+	    background: $badge-gold;
+	    -moz-box-shadow: -1px -1px 2px #CD6600;
+	    -webkit-box-shadow: -1px -1px 2px #CD6600;
+	    box-shadow: -1px -1px 2px #CD6600;
+	}
+
+	&.badge2:after{
+	    background: $light-gray;
+	    -moz-box-shadow: -1px -1px 2px #666666;
+	    -webkit-box-shadow: -1px -1px 2px #666666;
+	    box-shadow: -1px -1px 2px #666666;
+	}
+
+	&.badge3:after{
+	    background: $badge-bronze;
+	    -moz-box-shadow: -1px -1px 2px #8B4513;
+	    -webkit-box-shadow: -1px -1px 2px #8B4513;
+	    box-shadow: -1px -1px 2px #8B4513;
+	}
+	&.comment {
+		background: $color_gallery_approx;
+		color: $color_oregon_approx;
+		padding: 5px;
+	}
+	&.offensive {
+		color: $color_mountain_mist_approx;
+	}
+	&.edit {
+		padding-left: 3px;
+		color: $color_blue_ribbon_approx;
+	}
+	&.primary-group-name {
+		color: $color_totem_pole_approx;
+		font-weight: bold;
+	}
+}
+ol {
+	list-style: decimal;
+	margin-left: 30px;
+	margin-bottom: 1em;
+	padding-left: 0;
+	&.linenums {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+td {
+	ul {
+		vertical-align: middle;
+	}
+	&.setting-label {
+		width: 30%;
+		span.lang {
+			color: $color_sunset_orange_approx;
+		}
+	}
+	&.setting-input {
+		padding-left: 10px;
+		width: 70%;
+		input[type="text"] {
+			font-size: 13px;
+			height: 28px;
+			line-height: 28px;
+			padding-left: 5px;
+			width: 50%;
+		}
+		select {
+			width: 50%;
+		}
+		textarea {
+			padding: 3px 2px;
+			width: 100%;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: inset 0 1px 1px $black_7;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: border linear 0.2s, box-shadow linear 0.2s;
+		}
+	}
+}
+pre {
+	font-family: $font_9, $font_10, $font_11, $font_12, $font_13;
+	font-size: 100%;
+	margin-bottom: 10px;
+	background-color: $color_wild_sand_approx;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	&.prettyprint {
+		padding: 2px;
+		border: 1px solid $color_suva_gray_approx;
+	}
+}
+code {
+	font-family: $font_9, $font_10, $font_11, $font_12, $font_13;
+	font-size: 100%;
+}
+blockquote {
+	margin-bottom: 10px;
+	margin-right: 15px;
+	padding: 10px 0 1px 10px;
+	background-color: $color_wild_sand_approx;
+}
+html {
+	overflow-y: scroll;
+}
+.paginator {
+	padding-top: 5px;
+	font-size: 13px;
+	&:after {
+		@extend %extend_4;
+	}
+	.prev {
+		margin-right: .5em;
+		a {
+			@extend %extend_17;
+			&:visited {
+				@extend %extend_17;
+			}
+			&:hover {
+				@extend %extend_18;
+			}
+		}
+	}
+	.next {
+		margin-right: .5em;
+		a {
+			@extend %extend_17;
+			&:visited {
+				@extend %extend_17;
+			}
+			&:hover {
+				@extend %extend_18;
+			}
+		}
+	}
+	a {
+		color: $color_gulf_stream_approx;
+	}
+	.curr {
+		padding: 0 .25em;
+		margin: 0 .15em 0 0;
+		color: $white;
+		font-weight: bold;
+		a {
+			background: $color_half_baked_approx;
+			color: $white;
+		}
+		&.page a:hover {
+			background: $color_half_baked_approx;
+			color: $white;
+			padding: 0 0.25em;
+		}
+	}
+	.text {
+		color: $color_tapa_approx;
+		padding: .3em;
+	}
+	.paginator-container-left {
+		padding: 5px 0 10px;
+	}
+	.page a {
+		padding: 0 .25em;
+		margin: 0 .15em 0 0;
+		&:visited {
+			padding: 0 .25em;
+			margin: 0 .15em 0 0;
+		}
+		&:hover {
+			@extend %extend_18;
+		}
+	}
+}
+.invisible {
+	margin: -1px 0 0 -1px;
+	height: 1px;
+	overflow: hidden;
+	width: 1px;
+}
+.badges {
+	a {
+		color: $color_nutmeg_approx;
+		text-decoration: underline;
+	}
+	.tag-number {
+		float: none;
+		display: inline;
+		padding-right: 15px;
+	}
+}
+.js-avatar-box {
+	text-decoration: none;
+	width: 32px;
+	height: 32px;
+}
+.box {
+	/*background: $white;*/
+	padding: 4px 2px 10px;
+	width: 100%;
+	overflow: hidden;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	.js-avatar {
+		height: 48px;
+		width: 48px;
+	}
+	p {
+		margin-bottom: 4px;
+		color: $color_dove_gray_approx;
+		font-family: $font_14, $font_0, $font_8;
+		font-size: 13px;
+		&.info-box-follow-up-links {
+			text-align: right;
+			margin: 0;
+		}
+	}
+	h2 {
+		padding-left: 0;
+		/*background: $color_cararra_approx;*/
+		line-height: 30px;
+		/*text-align: right;*/
+		text-align: left;
+		font-size: 1.2em;
+		font-weight: bold;
+		color: #787878;
+		padding-right: 10px;
+		margin-bottom: 0.4em;
+		font-family: $font_14, $font_0, $font_8;
+		width: 190px;
+	}
+	h3 {
+		/*color: $color_bismark_approx;*/
+		font-size: 18px;
+		text-align: left;
+		font-weight: normal;
+		font-family: $font_14, $font_0, $font_8;
+		padding-left: 0;
+	}
+	.contributorback {
+		/*background: $color_cararra_approx $url_2 no-repeat center left;*/
+	}
+	form {
+		margin: 0;
+	}
+	label {
+		color: $color_dove_gray_approx;
+		font-size: 15px;
+		vertical-align: bottom;
+		display: inline;
+		text-align: left;
+		font-family: $font_14, $font_0, $font_8;
+	}
+	#displayTagFilterControl {
+		label {
+			width: 160px;
+		}
+		p label {
+			color: $color_dove_gray_approx;
+			font-size: 15px;
+		}
+	}
+	ul {
+		margin-left: 22px;
+		&.tags {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			line-height: 170%;
+			display: block;
+		}
+	}
+	li {
+		list-style-type: disc;
+		font-size: 13px;
+		line-height: 20px;
+		margin-bottom: 10px;
+		color: $color_dove_gray_approx;
+	}
+	.inputs {
+		#interestingTagInput {
+			@extend %extend_10;
+		}
+		#ignoredTagInput {
+			@extend %extend_10;
+		}
+		#subscribedTagInput {
+			@extend %extend_10;
+		}
+		#ab-tag-search {
+			@extend %extend_10;
+			width: 138px;
+		}
+		#interestingTagAdd {
+			border: 0;
+			margin: -2px 0 0;
+		}
+		#ignoredTagAdd {
+			border: 0;
+			margin: -2px 0 0;
+		}
+		#subscribedTagAdd {
+			border: 0;
+			margin: -2px 0 0;
+		}
+		#ab-tag-search-add {
+			border: 0;
+			margin: -2px 0 0;
+			width: 47px;
+		}
+	}
+	.js-question-follower-count {
+		padding: 5px 0 0 5px;
+		font-size: 100%;
+		font-family: $font_0;
+		font-weight: bold;
+		color: $color_tapa_approx;
+		text-align: center;
+	}
+	&.vote-buttons {
+		display: block;
+		width: 100% !important;
+	}
+	#emailTagFilterControl label {
+		width: 160px;
+	}
+	img.gravatar {
+		margin: 1px 1px 0 0;
+	}
+	.notify-sidebar #question-subscribe-sidebar {
+		margin: 0 0 0 3px;
+	}
+	&.badge1:after{
+	    background: $badge-gold;
+	    -moz-box-shadow: -1px -1px 2px #CD6600;
+	    -webkit-box-shadow: -1px -1px 2px #CD6600;
+	    box-shadow: -1px -1px 2px #CD6600;
+	}
+
+	&.badge2:after{
+	    background: $light-gray;
+	    -moz-box-shadow: -1px -1px 2px #666666;
+	    -webkit-box-shadow: -1px -1px 2px #666666;
+	    box-shadow: -1px -1px 2px #666666;
+	}
+
+	&.badge3:after{
+	    background: $badge-bronze;
+	    -moz-box-shadow: -1px -1px 2px #8B4513;
+	    -webkit-box-shadow: -1px -1px 2px #8B4513;
+	    box-shadow: -1px -1px 2px #8B4513;
+	}
+}
+.user-card {
+	display: inline-block;
+	height: 35px;
+	width: 166px;
+	overflow: hidden;
+	.js-avatar {
+		height: 32px !important;
+		width: 32px;
+	}
+	.js-avatar-box {
+		float: left;
+		margin: 0 6px 0 2px;
+	}
+	.info {
+		height: 32px;
+		width: 134px;
+	}
+}
+.message {
+	.js-avatar {
+		height: 16px;
+		width: 16px;
+	}
+	h1 {
+		padding-top: 0;
+		font-size: 15px;
+	}
+	p {
+		margin-bottom: 0;
+	}
+}
+.user-info-table {
+	margin: 10px 0;
+	border-spacing: 0;
+	display: table;
+	.js-avatar {
+		height: 128px;
+		width: 128px;
+	}
+	.col1 {
+		display: table-cell;
+		vertical-align: top;
+		width: 140px;
+		text-align: center;
+	}
+	.col2 {
+		display: table-cell;
+		vertical-align: top;
+		padding: 0 0 0 10px;
+		width: 400px;
+	}
+	.col3 {
+		display: table-cell;
+		vertical-align: top;
+		width: 460px;
+	}
+	.gravatar {
+		margin: 0;
+	}
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.clean {
+	clear: both;
+}
+.center {
+	margin: 0 auto;
+	padding: 0;
+}
+.sr-only {
+	display: none;
+}
+.notify {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100000;
+	padding: 0;
+	text-align: center;
+	background-color: $color_goldenrod_approx;
+	font-family: $font_14, $font_0, $font_8;
+	.notification {
+		color: $color_cape_cod_approx;
+		font-size: 16px;
+		line-height: 34px;
+		margin: 0 !important;
+	}
+}
+.wait-icon-box {
+	text-align: center;
+	margin: 5px 0 8px;
+}
+.hovercard {
+	background: $white;
+	border: 3px solid $color_alto_approx;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 0 3px $color_mountain_mist_approx;
+	font-size: 13px;
+	display: block;
+	max-width: 250px;
+	padding: 10px;
+	position: absolute;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px;
+	z-index: 1001;
+	ul {
+		margin-bottom: 0;
+		li {
+			font-size: 13px;
+			line-height: 16px;
+			margin: 5px 0;
+		}
+	}
+	.triangle {
+		border-left: 5px solid transparent;
+		border-right: 10px solid transparent;
+		border-bottom: 10px solid $color_alto_approx;
+		height: 0;
+		margin: -20px 0 10px;
+		width: 0;
+	}
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+#closeNotify {
+	position: absolute;
+	right: 5px;
+	top: 7px;
+	color: $color_antique_bronze_approx;
+	text-decoration: none;
+	line-height: 18px;
+	background: -6px -5px $url_0 no-repeat;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	&:hover {
+		background: -26px -5px $url_0 no-repeat;
+	}
+}
+#header {
+	margin-top: 0;
+	/*background: $color_hunter_green_approx;
+	font-family: $font_14, $font_0, $font_8;*/
+	/*position:fixed;*/
+    width: 100%;
+    background: gray;
+    background: -moz-linear-gradient(top, #fafafa 0%, #f0f0f0 28%, #dbdbdb 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #fafafa), color-stop(28%, #f0f0f0), color-stop(100%, #dbdbdb));
+    background: -webkit-linear-gradient(top, #fafafa 0%, #f0f0f0 28%, #dbdbdb 100%);
+    background: -o-linear-gradient(top, #fafafa 0%, #f0f0f0 28%, #dbdbdb 100%);
+    background: -ms-linear-gradient(top, #fafafa 0%, #f0f0f0 28%, #dbdbdb 100%);
+    background: linear-gradient(to bottom, #fafafa 0%, #f0f0f0 28%, #dbdbdb 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#dbdbdb', GradientType=0 );
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
+    color: #6F6C6A;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+    font-size: 1.7em;
+    z-index: 1000;
+    height: 2em;
+
+	&.with-logo #userToolsNav {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+	&.without-logo #userToolsNav {
+		float: right;
+		margin-top: 9px;
+	}
+}
+.content-wrapper {
+	/*@include container(100%);
+	@include span(15 of 15);*/
+	width: 960px;
+	margin: auto;
+	/*margin-left: 1em;
+	margin-right: 1em;*/
+	position: relative;
+	/*@include breakpoint($small){
+		margin: auto;
+	}*/
+}
+.content-wrapper-footer{
+	@include container(100%);
+}
+.lang-nav {
+	position: relative;
+	text-align: right;
+	margin-left: 20px;
+	text-transform: lowercase;
+	color: $color_deco_approx;
+	.curr-lang {
+		text-decoration: underline;
+	}
+	.toggle {
+		font-size: 10px;
+		vertical-align: middle;
+	}
+	.fa {
+		font-size: 14px;
+		vertical-align: middle;
+	}
+	a {
+		background: $gray;
+		height: 22px !important;
+		text-align: left !important;
+		&:hover {
+			background: $color_storm_dust_approx !important;
+		}
+	}
+	ul {
+		background: $gray;
+		display: none;
+		list-style: none;
+		margin: 0;
+		min-width: initial !important;
+		z-index: 10000;
+		&:hover {
+			display: block;
+			position: absolute;
+		}
+	}
+	li {
+		background: $gray;
+		color: $color_dove_gray_approx;
+		display: block;
+	}
+	&:hover ul {
+		display: block;
+		position: absolute;
+	}
+}
+.select-language {
+	margin-top: 6px;
+}
+#userToolsNav {
+	height: 20px;
+	padding-bottom: 5px;
+	white-space: nowrap;
+	font-size: 16px;
+	a {
+		height: 35px;
+		text-align: right;
+		margin-left: 20px;
+		/*text-decoration: underline;*/
+		text-decoration: none;
+		/*color: $color_deco_approx;*/
+		color: #6f6c6a;
+		&:first-child {
+			margin-left: 0;
+		}
+		&#ab-responses {
+			margin-left: 20px;
+		}
+		img {
+			vertical-align: middle;
+			margin-bottom: 2px;
+		}
+		&:hover {
+			/*color: $color_honeysuckle_approx;*/
+			color: $fedora-blue;
+		}
+	}
+	.user-info {
+		/*color: $color_heathered_gray_approx;*/
+		color: #6f6c6a;
+		a {
+			margin: 0;
+			text-decoration: none;
+		}
+	}
+	.user-micro-info {
+		/*color: $color_heathered_gray_approx;*/
+		color: #6f6c6a;
+	}
+	#signin-form {
+		display: inline-block;
+		margin: 0;
+		input {
+			background: transparent;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: none;
+			color: $color_deco_approx;
+			font-size: 16px;
+			height: 21px;
+			line-height: 21px;
+			margin: 0;
+			outline: none;
+			//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			text-shadow: none;
+			text-decoration: underline;
+			vertical-align: text-top;
+			&:hover {
+				color: $color_honeysuckle_approx;
+			}
+		}
+	}
+}
+#metaNav {
+	float: right;
+	margin-right: 7px;
+	a {
+		color: $color_hampton_approx;
+		padding: 0 0 0 35px;
+		height: 35px;
+		line-height: 25px;
+		margin: 5px 0 0 10px;
+		font-size: 18px;
+		font-weight: 100;
+		text-decoration: none;
+		display: block;
+		float: left;
+		&:hover {
+			text-decoration: underline;
+			color: $color_honeysuckle_approx;
+		}
+		&.on {
+			font-weight: bold;
+			color: $white;
+			text-decoration: none;
+		}
+		&.special {
+			font-size: 18px;
+			color: $color_tall_poppy_approx;
+			font-weight: bold;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		&.group-name {
+			padding: 0;
+			float: none;
+			margin: 5px 10px;
+			&:hover {
+				background-color: transparent;
+			}
+		}
+	}
+	#navTags {
+		background: 0 -95px $url_0 no-repeat;
+	}
+	#navUsers {
+		background: 3px -133px $url_0 no-repeat;
+	}
+	#navGroups {
+		background: 3px -133px $url_0 no-repeat;
+	}
+	#navBadges {
+		background: 3px -170px $url_0 no-repeat;
+	}
+	.dropdown {
+		float: left;
+	}
+	.dropdown-menu {
+		border-top: none;
+		left: 33px;
+		z-index: 10100;
+		a {
+			color: $color_storm_dust_approx;
+			height: 25px;
+		}
+	}
+	input.group-name {
+		border: 1px solid $color_foggy_gray_approx;
+		color: $color_tundora_approx;
+		display: block;
+		font-size: 14px;
+		height: 25px;
+		margin: 0 10px 5px;
+		padding: 0 5px;
+	}
+	span.dropdown:hover ul.dropdown-menu {
+		display: block;
+	}
+	div.dropdown-container:hover ul.dropdown-menu {
+		display: block;
+	}
+}
+#secondaryHeader {
+	/*height: 55px;
+	background: $color_green_white_approx;
+	border-bottom: $color_swirl_approx 1px solid;
+	border-top: $color_alabaster_approx 1px solid;
+	margin-bottom: 10px;
+	font-family: $font_14, $font_0, $font_8;*/
+	@include container(100%);
+	background-color: $navigation_blue;
+  	background-image: $url_header;
+  	height: 9em;
+  	line-height: 8em;
+  	align-items: center;
+  	justify-content: center;
+  	/*margin-top: 3.8em;*/
+
+	//Instead of the line below you could use @include box-sizing($bs)
+	/*box-sizing: border-box;*/
+	td {
+		padding: 0;
+		&.search-bar {
+			padding: 0 32px 0 15px;
+			position: relative;
+		}
+	}
+}
+#question-header-tags{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+#homeButton {
+	border-right: $color_bud_approx 1px solid;
+	/*height: 54px;*/
+	height: 3.4em;
+	width: 43px;
+	display: block;
+	float: left;
+	background-color: green;
+  	margin-top: 2.6em;
+	i {
+		color: $color_boulder_approx;
+		font-size: 26px;
+		line-height: 54px;
+		margin-left: 5px;
+		&:hover {
+			color: $color_tundora_approx;
+		}
+	}
+}
+.scope-selector {
+	/*display: inline-block;*/
+	font-size: 20px;
+	color: $color_tapa_approx;
+	/*height: 55px;
+	line-height: 55px;
+	margin-left: 16px;*/
+	&.on {
+		background: $url_1 no-repeat center 41px;
+	}
+	&.ask-message {
+		font-size: 24px;
+	}
+}
+.validate-email-page {
+	label {
+		color: $color_dove_gray_approx;
+		line-height: 1.35;
+		display: block;
+		margin: 10px 0;
+	}
+	#validation-code {
+		padding-left: 5px;
+		height: 25px;
+		font-size: 14px;
+		width: 200px;
+	}
+	form {
+		margin-bottom: 30px;
+	}
+}
+#searchBar {
+	border: 1px solid $color_foggy_gray_approx;
+	background: $white;
+	height: 41px;
+	/*z-index: 1000;*/
+	position: relative;
+	width: 100%;
+	margin-top: 3em;
+
+	background: $text_background;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.3);
+    clear: both;
+    color: $dark-gray;
+
+	/*width: 100%;
+    height: 1.8em;
+    margin-top: 2.5em;
+    background: $text_background;
+    font-size: 0.8rem;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    padding: 10px 10px;
+    font-size: 15px;
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.3);
+    clear: both;
+    color: $dark-gray;*/
+
+	input.searchInput {
+		position: absolute;
+		z-index: 100;
+		z-index: 99;
+		font-size: 22px;
+		/*height: 26px;*/
+		height: 32px;
+		line-height: 26px;
+		font-weight: 300;
+		background: transparent;
+		border: 0;
+		color: $color_gravel_approx;
+		font-family: $font_0;
+		width: 100%;
+		margin: 8px 0 6px;
+		padding: 0 80px 0 8px;
+		top: 0;
+		left: 0;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 0 $color_mountain_mist_approx;
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+	}
+	div.input-tool-tip {
+		position: absolute;
+		z-index: 100;
+		padding: 0 0 0 10px;
+		height: 41px;
+		line-height: 41px;
+		font-size: 20px;
+		font-style: italic;
+		bottom: 0;
+		left: 0;
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+		width: 100%;
+	}
+	input[type="submit"].searchBtn {
+		position: absolute;
+		z-index: 100;
+		right: 0;
+		top: 0;
+	}
+	input[type="button"].cancelSearchBtn {
+		position: absolute;
+		z-index: 100;
+		/*right: 39px;*/
+		right: 49px;
+		top: 0;
+		margin-top: 2px;
+	}
+}
+.search-drop-menu {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	background: whitesmoke;
+	border-top: none;
+	top: 42px;
+	margin: 0;
+	outline: 1px solid $color_westar_approx;
+	position: absolute;
+	z-index: 10000;
+	width: 100%;
+	ul {
+		list-style: none;
+		overflow: auto;
+		padding: 0;
+		margin: 0;
+		position: relative;
+		width: 100%;
+		li {
+			padding: 5px 10px;
+			position: relative;
+			a {
+				text-decoration: none;
+			}
+			&.selected {
+				background: $color_lochmara_approx;
+				a {
+					color: whitesmoke;
+				}
+			}
+		}
+	}
+	.footer {
+		text-align: center;
+		margin: 0 0 1px 0;
+		padding: 4px 0 10px;
+	}
+	&.empty {
+		.footer {
+			padding-top: 9px;
+		}
+		ul {
+			padding: 1px;
+			margin: 0;
+		}
+	}
+}
+.input-tool-tip {
+	color: $color_mountain_mist_approx;
+	&.dimmed {
+		color: $color_celeste_approx;
+	}
+}
+input[type="submit"] {
+	@extend %extend_5;
+	&.searchBtn {
+		font-size: 10px;
+		color: $color_storm_dust_approx;
+		background-color: $color_gallery_approx;
+		height: 41px;
+		border: $white 1px solid;
+		line-height: 22px;
+		text-align: center;
+		margin: 0;
+		width: 48px;
+		background: -98px -36px $url_0 no-repeat;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 0 $color_mountain_mist_approx;
+		cursor: pointer;
+		z-index: 10001;
+		&:hover {
+			background-image: none;
+			background: $url_0 no-repeat -146px -36px !important;
+		}
+	}
+	&:focus {
+		outline: none !important;
+	}
+	&.large {
+		@extend %extend_6;
+	}
+	&:hover {
+		@extend %extend_7;
+	}
+	&.link {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 0 $color_mountain_mist_approx;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 0 0 $color_mountain_mist_approx;
+		font-weight: normal;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+.groups-page {
+	th {
+		padding-bottom: 5px;
+		font-weight: normal;
+	}
+	h1 {
+		float: left;
+	}
+	#groups-list {
+		th {
+			padding-right: 20px;
+			font-weight: bold;
+			&:nth-child(2) {
+				text-align: center;
+			}
+		}
+		td {
+			padding-right: 20px;
+			&:nth-child(2) {
+				text-align: center;
+			}
+		}
+	}
+	input[type="submit"].searchBtn {
+		margin-top: 1px;
+	}
+}
+.user-profile-page {
+	color: $color_fuscous_gray_approx;
+	input[name="send_message"] {
+		margin: 10px 0 20px;
+	}
+	form {
+		margin-bottom: 15px;
+		margin-bottom: 0;
+	}
+	input[type="text"] {
+		@extend %extend_51;
+	}
+	input[type="password"] {
+		@extend %extend_51;
+	}
+	select {
+		@extend %extend_51;
+		width: 405px;
+		height: 30px;
+	}
+	textarea {
+		@extend %extend_52;
+	}
+	.cancel {
+		background: $url_33 repeat-x top !important;
+		color: $color_fuscous_gray_approx !important;
+		&:hover {
+			background: $url_33 repeat-x bottom !important;
+		}
+	}
+	.re {
+		float: left;
+		width: 960px;
+	}
+	&.inbox-group-join-requests {
+		form {
+			margin-bottom: 0;
+		}
+		table {
+			margin-bottom: 13px;
+		}
+		td {
+			padding-right: 10px;
+		}
+	}
+	&.inbox-forum {
+		h2 {
+			line-height: 24px;
+			padding-bottom: 6px;
+		}
+		.message {
+			border-bottom: 1px solid $color_celeste_approx;
+			padding: 6px;
+			&:last-child {
+				border: none;
+			}
+		}
+		.new {
+			background: $color_beeswax_approx;
+		}
+		.js-delete {
+			margin-right: 12px;
+		}
+	}
+	&.inbox-flags {
+		h2 {
+			line-height: 24px;
+			padding-bottom: 6px;
+		}
+		.message {
+			border-bottom: 1px solid $color_celeste_approx;
+			padding: 6px;
+			&:last-child {
+				border: none;
+			}
+		}
+	}
+	p {
+		font-size: 13px;
+		line-height: 1.3;
+		color: $color_fuscous_gray_approx;
+	}
+	.avatar {
+		img {
+			border: $color_gallery_approx 1px solid;
+			padding: 5px;
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
+	h2 {
+		padding: 4px 0 10px;
+		font-family: $font_14, $font_0, $font_8;
+	}
+	h3 {
+		padding: 0;
+		margin-top: -3px;
+	}
+	.submit-row {
+		margin-bottom: 0;
+	}
+	.user-stats-table {
+		h2 {
+			padding-top: 10px;
+		}
+		&.badges {
+			margin-bottom: 30px;
+		}
+	}
+	.up-votes {
+		@extend %extend_54;
+		background: $url_37 no-repeat;
+	}
+	.down-votes {
+		@extend %extend_54;
+		background: $url_38 no-repeat;
+	}
+	.inputs {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.pager {
+		margin-bottom: 0;
+	}
+	.paginator {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	.users-questions {
+		margin-top: -10px;
+	}
+	input[type="submit"].searchBtn {
+		margin-top: 1px;
+	}
+	input.submit {
+		font-weight: normal;
+		margin: 5px 0;
+	}
+	ul.avatars {
+		list-style: none;
+		margin-left: 0;
+		li {
+			display: inline-block;
+			max-width: 128px;
+			position: relative;
+			vertical-align: top;
+		}
+		img {
+			height: 128px;
+			width: 128px;
+		}
+		.avatar-delete {
+			margin-right: 5px;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		form {
+			text-align: center;
+		}
+		label[for="id_avatar"] {
+			display: none;
+		}
+	}
+	table.form-as-table {
+		margin: 5px 0 12px;
+	}
+	.tabBar a#stats {
+		margin-left: 0;
+	}
+	img.gravatar {
+		margin: 2px 0 3px;
+	}
+	.vote-notification h3 {
+		padding: 10px;
+	}
+}
+.meta {
+	@extend %extend_48;
+	p {
+		@extend %extend_49;
+	}
+	h2 {
+		@extend %extend_50;
+	}
+	form {
+		margin-bottom: 15px;
+	}
+	input[type="text"] {
+		@extend %extend_51;
+	}
+	input[type="password"] {
+		@extend %extend_51;
+	}
+	select {
+		@extend %extend_51;
+		width: 405px;
+		height: 30px;
+	}
+	textarea {
+		@extend %extend_52;
+	}
+	.cancel {
+		background: $url_33 repeat-x top !important;
+		color: $color_fuscous_gray_approx !important;
+		&:hover {
+			background: $url_33 repeat-x bottom !important;
+		}
+	}
+	.re {
+		float: left;
+		width: 960px;
+	}
+	input[type="submit"].searchBtn {
+		margin-top: 1px;
+	}
+	input.submit {
+		font-weight: normal;
+		margin: 5px 0;
+	}
+}
+.openid-signin {
+	@extend %extend_48;
+	input[type="text"] {
+		@extend %extend_47;
+	}
+	input[type="password"] {
+		@extend %extend_47;
+	}
+	.form-group {
+		margin-bottom: 10px;
+	}
+	p {
+		@extend %extend_49;
+		&.error {
+			@extend %extend_56;
+		}
+	}
+	h2 {
+		@extend %extend_50;
+	}
+	form {
+		margin-bottom: 5px;
+	}
+	input[type="submit"].searchBtn {
+		margin-top: 1px;
+	}
+}
+.users-page {
+	th {
+		padding-bottom: 5px;
+		font-weight: normal;
+	}
+	h1 {
+		float: left;
+	}
+	.wmd-container {
+		@extend %extend_32;
+		textarea {
+			@extend %extend_33;
+		}
+	}
+	.js-simple-editor {
+		@extend %extend_32;
+		textarea {
+			@extend %extend_33;
+		}
+	}
+	#editor {
+		width: 187px;
+	}
+	form {
+		margin-bottom: 15px;
+	}
+	input[type="text"] {
+		@extend %extend_51;
+	}
+	input[type="password"] {
+		@extend %extend_51;
+	}
+	select {
+		@extend %extend_51;
+		width: 405px;
+		height: 30px;
+	}
+	textarea {
+		@extend %extend_52;
+	}
+	.cancel {
+		background: $url_33 repeat-x top !important;
+		color: $color_fuscous_gray_approx !important;
+		&:hover {
+			background: $url_33 repeat-x bottom !important;
+		}
+	}
+	.re {
+		float: left;
+		width: 960px;
+	}
+	#group-openness-selector {
+		width: 100%;
+	}
+	.wmd-prompt-dialog {
+		background: $color_celeste_approx;
+	}
+	input[type="submit"].searchBtn {
+		margin-top: 1px;
+	}
+	.box label {
+		display: inline;
+		float: none;
+	}
+	input.submit {
+		font-weight: normal;
+		margin: 5px 0;
+	}
+}
+.badge-ctnr {
+	clear: both;
+	line-height: 30px;
+}
+.badge-awarded {
+	color: $color_glade_green_approx;
+	font-size: 175%;
+	height: 30px;
+	min-width: 30px;
+	padding-right: 5px;
+	text-align: left;
+	display: inline-block;
+}
+.badge-item {
+	width: 230px;
+	display: inline-block;
+}
+.badge-description {
+	margin-top: 8px;
+	display: inline-block;
+}
+.ask-page {
+	.input-tool-tip {
+		color: $white;
+		height: 0;
+		z-index: 0;
+		position: absolute;
+		left: -1000px;
+	}
+	.search-drop-menu {
+		top: 37px;
+		padding: 5px 10px 6px 0;
+		&.empty {
+			border: none;
+			outline: none;
+			padding: 0 !important;
+			ul {
+				padding: 0 !important;
+			}
+		}
+	}
+	#askFormBar {
+		padding: 0 0 6px 0;
+	}
+	.checkbox {
+		margin: 0;
+	}
+	label[for="editor"] {
+		font-size: 16px;
+		font-style: italic;
+	}
+	label[for="id_title"] {
+		font-size: 16px;
+		font-style: italic;
+	}
+	label[for="id_tags"] {
+		font-size: 16px;
+		font-style: italic;
+	}
+	.form-error {
+		font-size: 16px;
+		font-style: italic;
+	}
+	label {
+		color: $color_fuscous_gray_approx;
+		font-size: 13px;
+		+ .form-error ul.errorlist {
+			@extend %extend_55;
+		}
+	}
+	#id_tags {
+		@extend %extend_24;
+	}
+	.lang-selector {
+		margin: 9px 0 0;
+		select {
+			margin: 3px 0;
+		}
+	}
+	#id_post_author_username {
+		@extend %extend_25;
+	}
+	#id_post_author_email {
+		@extend %extend_25;
+		margin-left: 10px;
+	}
+	.title-desc {
+		@extend %extend_29;
+	}
+	.tags-desc {
+		@extend %extend_29;
+	}
+	.folded-editor {
+		border: none;
+		padding: 0;
+		height: 0;
+	}
+	.wmd-container {
+		@extend %extend_34;
+	}
+	.js-simple-editor {
+		@extend %extend_34;
+	}
+	.post-comments {
+		.wmd-container {
+			margin-bottom: 8px;
+			margin-left: -2px;
+		}
+		.js-simple-editor {
+			margin-bottom: 8px;
+			margin-left: -2px;
+		}
+	}
+	#editor {
+		@extend %extend_35;
+	}
+	input[type="submit"].searchBtn {
+		display: none;
+	}
+	div#question-list {
+		border-bottom: $color_gallery_approx 1px solid;
+		float: none;
+		a {
+			line-height: 30px;
+		}
+		h2 {
+			@extend %extend_22;
+		}
+		span {
+			@extend %extend_23;
+		}
+	}
+	table.proxy-user-info {
+		@extend %extend_26;
+		.form-item {
+			float: left;
+		}
+	}
+	input.submit {
+		@extend %extend_30;
+	}
+	.retagger-buttons button {
+		margin: 8px 10px 5px 0;
+	}
+}
+input[type="button"] {
+	@extend %extend_5;
+	&.cancelSearchBtn {
+		font-size: 30px !important;
+		color: $color_silver_chalice_approx;
+		background: $white !important;
+		height: 37px !important;
+		line-height: 37px;
+		border: 0;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 0 $color_mountain_mist_approx;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		text-align: center;
+		width: 35px !important;
+		cursor: pointer;
+		z-index: 10001;
+	}
+	&:focus {
+		outline: none !important;
+	}
+	&.large {
+		@extend %extend_6;
+	}
+}
+button {
+	@extend %extend_5;
+	&:focus {
+		outline: none !important;
+	}
+	&.large {
+		@extend %extend_6;
+	}
+	&:hover {
+		@extend %extend_7;
+	}
+}
+input[type="reset"] {
+	@extend %extend_5;
+	&:focus {
+		outline: none !important;
+	}
+	&.large {
+		@extend %extend_6;
+	}
+}
+.button {
+	@extend %extend_5;
+	&:focus {
+		outline: none !important;
+	}
+	&.large {
+		@extend %extend_6;
+	}
+	&:hover {
+		@extend %extend_7;
+	}
+}
+.btn {
+	@extend %extend_5;
+	&:focus {
+		outline: none !important;
+	}
+	&:hover {
+		@extend %extend_7;
+	}
+}
+#askButton {
+	float: right;
+	font-size: 20px;
+	height: 42px;
+	line-height: 1.9em;
+	margin: -1px 0 0;
+	text-transform: uppercase;
+	width: 100%;
+	margin-top: 2em;
+	text-align: center;
+}
+#askButton:hover{
+	text-decoration: none;
+	color: $white;
+}
+#scopeNav {
+	height: 54px;
+	display: inline-block;
+	white-space: nowrap;
+	a:hover {
+		color: $color_chicago_approx;
+	}
+}
+#ContentLeft {
+	@include span(15 of 15);
+	@include breakpoint($medium){
+		@include span(12 of 15);
+	}
+	/*padding-bottom: 20px;
+	width: 730px;*/
+	float: left;
+	position: relative;
+	.clearfix{
+		/*background: #dbdbdb;*/
+  		height: 3em;
+  		margin-bottom: 1.5em;
+	}
+}
+#ContentRight {
+	/*display: inline;
+	padding-bottom: 20px;
+	width: 200px;
+	float: right;*/
+	display: none;
+	@include breakpoint($medium){
+		@include span(3 at 13 of 15);
+		display: inline;
+	}
+}
+#ContentFull {
+	padding-bottom: 20px;
+	float: left;
+	width: 960px;
+}
+.questions-related {
+	word-wrap: break-word;
+	p {
+		line-height: 20px;
+		padding: 4px 0 9px;
+		font-size: 16px;
+		font-weight: normal;
+		border-bottom: $color_celeste_approx 1px solid;
+		&:first-child {
+			margin-top: -4px;
+		}
+		&:last-child {
+			border: none;
+		}
+	}
+	a {
+		font-size: 13px;
+		line-height: 1.3;
+	}
+}
+.question-instructions {
+	background: $color_green_white_approx;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 1px 1px 3px $color_mountain_mist_approx;
+	padding: 7px 10px 9px 0;
+	margin-bottom: 10px;
+	width: 100%;
+	ul {
+		margin: 0 0 0 27px;
+	}
+}
+#markdownHelp {
+	li {
+		color: $color_dove_gray_approx;
+		font-size: 13px;
+	}
+	a {
+		font-size: 16px;
+	}
+}
+.tabBar {
+	/*background-color: $color_catskill_white_approx;*/
+	height: 30px;
+	/*margin-bottom: 3px;*/
+	/*margin-top: 3px;*/
+	/*margin-top: 0.4em;*/
+	/*float: right;*/
+	font-family: $font_15, $font_16;
+	font-size: 16px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px;
+	h2 {
+		float: left;
+	}
+	@include container(100%);
+	#sort_tabs{
+		@include container(100%);
+		.tab-link{
+			@include gallery(3 of 15);
+		}
+		height: 100%;
+	}
+}
+.tabsA {
+	@extend %extend_11;
+	/*float: right;*/
+	a {
+		@extend %extend_12;
+		&.on {
+			/*color: $color_bismark_approx;*/
+			font-weight: bold;
+		}
+		&:hover {
+			/*color: $color_bismark_approx;*/
+			color: $fedora-blue;
+		}
+	}
+	.label {
+		@extend %extend_13;
+	}
+}
+.tabsC {
+	@extend %extend_11;
+	float: left;
+	a {
+		@extend %extend_12;
+		&.on {
+			/*color: $color_bismark_approx;*/
+			font-weight: bold;
+		}
+		&:hover {
+			/*color: $color_bismark_approx;*/
+			color: $fedora-blue;
+		}
+	}
+	.label {
+		@extend %extend_13;
+	}
+	.first {
+		border: none;
+	}
+}
+.main-page {
+	.pager {
+		margin-bottom: 0;
+	}
+	h1 {
+		margin-right: 5px;
+	}
+	.tabsA .label {
+		margin-left: 8px;
+	}
+	img.flag {
+		vertical-align: text-bottom;
+	}
+}
+.rss {
+	color: $color_chilean_fire_approx;
+	margin: 5px 0 3px 7px;
+	width: 52px;
+	padding-left: 2px;
+	padding-top: 3px;
+	background: $url_3 no-repeat center right;
+	float: right;
+	font-family: $font_15, $font_16;
+	font-size: 16px;
+	&:hover {
+		color: $color_sea_buckthorn_approx !important;
+	}
+}
+#questionCount {
+	font-weight: bold;
+	font-size: 20px;
+	/*color: $color_gulf_stream_approx;*/
+	float: left;
+	/*margin-bottom: 6px;
+	padding-top: 6px;*/
+	margin-top: 0.38em;
+	font-family: $font_14, $font_0, $font_8;
+}
+#listSearchTags {
+	margin-top: 3px;
+	color: $color_dove_gray_approx;
+	font-size: 16px;
+	font-family: $font_14, $font_0, $font_8;
+	ul.tags li {
+		margin: 0 5px 0 0;
+		padding: 0;
+		float: none;
+		display: inline-block;
+	}
+}
+.search-tips {
+	font-size: 16px;
+	line-height: 17px;
+	color: $color_dove_gray_approx;
+	margin: 5px 0 10px;
+	padding: 0;
+	float: left;
+	font-family: $font_14, $font_0, $font_8;
+	a {
+		text-decoration: underline;
+		color: $color_mariner_approx;
+	}
+}
+#question-list {
+	float: left;
+	position: relative;
+	padding: 0;
+	width: 100%;
+	margin-top: 2em;
+}
+.short-summary {
+	/*position: relative;
+	filter: inherit;
+	padding: 10px 0 3px;
+	border-bottom: 1px solid $color_moon_mist_approx;
+	margin-bottom: 1px;
+	overflow: hidden;
+	width: 733px;
+	float: left;*/
+	width: 100%;
+    /*padding: 0.5em 0.5em 0.5em 0;*/
+    padding: 0 0.5em 1em 0;
+    border-radius: 0.5em;
+    background-color: #f1f1f1;
+    border: solid 0.1em #dbdbdb;
+    display: flex;
+    webkit-box-shadow: 0px 6px 4px -4px rgba(0, 0, 0, 0.8), 0px 10px 0px 0px #D4D4D4;
+    -moz-box-shadow: 0px 6px 4px -4px rgba(0, 0, 0, 0.8), 0px 10px 0px 0px #D4D4D4;
+    box-shadow: 0px 6px 4px -4px rgba(0, 0, 0, 0.8), 0px 24px 0px 0px #D4D4D4;
+    margin-bottom: 3em;
+
+    #question-table{
+    	width: 100%;
+    }
+
+	h2 {
+		font-size: 20px;
+		font-weight: normal;
+		/*line-height: 26px;*/
+		padding-left: 0;
+		/*margin-bottom: 7px;*/
+		height: 2em;
+		display: block;
+		font-family: $font_14, $font_0, $font_8;
+	}
+	a {
+		color: $color_tundora_approx;
+	}
+	.userinfo {
+		text-align: right;
+		line-height: 16px;
+		font-family: $font_0;
+		padding-right: 4px;
+		.timeago {
+			@extend %extend_14;
+		}
+		a {
+			font-weight: bold;
+			font-size: 11px;
+		}
+	}
+	.counts {
+		float: right;
+		/*margin: 4px 0 0 5px;*/
+		font-family: $font_14, $font_0, $font_8;
+		.item-count {
+			padding: 0 5px;
+			font-size: 25px;
+			font-family: $font_14, $font_0, $font_8;
+		}
+		.votes div {
+			@extend %extend_15;
+		}
+		.views div {
+			@extend %extend_15;
+		}
+		.answers div {
+			@extend %extend_15;
+		}
+		.favorites div {
+			@extend %extend_15;
+		}
+	}
+	.tags {
+		margin: 0 0 0 1px;
+	}
+	.votes {
+		@extend %extend_16;
+		/*background: $url_5 repeat-x;*/
+	}
+	.answers {
+		@extend %extend_16;
+		/*background: $url_6 repeat-x;*/
+	}
+	.favorites {
+		@extend %extend_16;
+	}
+	.views {
+		@extend %extend_16;
+		/*background: $url_7 repeat-x;*/
+	}
+	span.anonymous {
+		@extend %extend_14;
+	}
+	.no-votes .item-count {
+		/*color: $color_bombay_approx;*/
+		font-size: 2.5em;
+	}
+	.some-votes .item-count {
+		/*color: $color_bismark_approx;*/
+		font-size: 2.5em;
+	}
+	.no-answers .item-count {
+		/*color: $color_bombay_approx;*/
+		font-size: 2.5em;
+	}
+	.some-answers .item-count {
+		/*color: $color_tulip_tree_approx;*/
+		font-size: 2.5em;
+	}
+	.no-views .item-count {
+		/*color: $color_bombay_approx;*/
+		font-size: 2.5em;
+	}
+	.some-views .item-count {
+		/*color: $color_grenadier_approx;*/
+		font-size: 2.5em;
+	}
+	.accepted .item-count {
+		background: $url_8 no-repeat top right;
+		display: block;
+		text-align: center;
+		width: 40px;
+		/*color: $color_tulip_tree_approx;*/
+		font-size: 2.5em;
+	}
+	.some-favorites .item-count {
+		/*background: $color_forest_green_approx;*/
+		/*color: $color_gossip_approx;*/
+		font-size: 2.5em;
+	}
+	.no-favorites .item-count {
+		/*background: $color_tulip_tree_approx;*/
+		/*color: $yellow;*/
+		font-size: 2.5em;
+	}
+}
+.evenMore {
+	font-size: 13px;
+	color: $color_dove_gray_approx;
+	padding: 15px 0 10px;
+	clear: both;
+	a {
+		text-decoration: underline;
+		color: $color_mariner_approx;
+	}
+}
+.pager {
+	margin: 10px 0;
+}
+.pagesize {
+	margin-top: 10px;
+	margin-bottom: 16px;
+	float: right;
+}
+.tag-size-1 {
+	font-size: 12px;
+}
+.tag-size-2 {
+	font-size: 13px;
+}
+.tag-size-3 {
+	font-size: 14px;
+}
+.tag-size-4 {
+	font-size: 15px;
+}
+.tag-size-5 {
+	font-size: 16px;
+}
+.tag-size-6 {
+	font-size: 17px;
+}
+.tag-size-7 {
+	font-size: 18px;
+}
+.tag-size-8 {
+	font-size: 19px;
+}
+.tag-size-9 {
+	font-size: 20px;
+}
+.tag-size-10 {
+	font-size: 21px;
+}
+.wildcard-tags {
+	clear: both;
+	ul.tags li {
+		margin-bottom: 5px;
+	}
+}
+#tagSelector {
+	padding-bottom: 2px;
+	margin-bottom: 0;
+	div.inputs {
+		margin: 6px 0 12px;
+	}
+}
+.tags-page {
+	th {
+		padding-bottom: 5px;
+		font-weight: normal;
+	}
+	h1 {
+		float: left;
+	}
+	ul.tags {
+		margin-left: 5px;
+		li {
+			@extend %extend_20;
+		}
+	}
+}
+.js-tag {
+	display: block;
+	height: 17px;
+	margin: 0 5px 0 0;
+	padding: 0;
+	.js-delete-icon {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 5px $color_iron_approx;
+		border-top: none;
+		//Instead of the line below you could use @include border-top-right-radius($radius)
+		border-top-right-radius: 4px;
+		//Instead of the line below you could use @include border-bottom-right-radius($radius)
+		border-bottom-right-radius: 4px;
+	}
+	.tag-number {
+		float: none;
+	}
+}
+.js-tag-extra-content {
+	padding-left: 4px;
+	vertical-align: text-top;
+}
+.js-tag-name {
+	cursor: pointer;
+	background: $color_wild_sand_approx;
+	border: $white 1px solid;
+	border-top: $white 2px solid;
+	outline: $color_nebula_approx 1px solid !important;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 0 5px $color_iron_approx;
+	display: inline-block;
+	height: 17px;
+	line-height: 17px;
+	font-weight: normal;
+	font-size: 11px;
+	padding: 0 8px;
+	text-decoration: none;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	font-family: $font_0;
+	color: $color_fedora_approx;
+}
+.js-deletable-tag {
+	margin-right: 3px;
+	white-space: nowrap;
+}
+.tags {
+	a {
+		&.js-tag-name {
+			color: $color_chicago_approx;
+			text-decoration: none;
+		}
+		&:hover {
+			/*color: $color_rangoon_green_approx;*/
+			color: $white;
+		}
+	}
+	span.js-tag-name {
+		color: $color_chicago_approx;
+		text-decoration: none;
+	}
+}
+.moderate-tags-page {
+	th {
+		padding-bottom: 5px;
+		font-weight: normal;
+		font-style: italic;
+		@extend %extend_21;
+		&.tags-col {
+			width: 100px;
+		}
+		&.users-col {
+			width: 100px;
+		}
+		&.decision-col {
+			width: 140px;
+		}
+	}
+	h1 {
+		float: left;
+	}
+	button {
+		line-height: 18px;
+	}
+	table {
+		border-spacing: 0;
+		&.suggested-tags-table {
+			width: 100%;
+		}
+	}
+	tr {
+		@extend %extend_21;
+		&.per-tag-controls {
+			height: 30px;
+			text-align: center;
+		}
+		&.thread-info {
+			a {
+				line-height: 18px;
+			}
+			td {
+				padding-bottom: 5px;
+			}
+		}
+	}
+	td {
+		&.per-thread-controls {
+			width: 160px;
+			height: 30px;
+			button {
+				display: none;
+			}
+		}
+		&.tags-col {
+			padding-top: 7px;
+		}
+		&.users-col {
+			padding-top: 7px;
+		}
+		&.thread-links-col {
+			padding-top: 5px;
+		}
+	}
+}
+.mod-queue-info {
+	margin: 12px 0 12px 20px;
+}
+.js-delete-icon {
+	height: 21px;
+	width: 18px;
+	display: inline-block;
+	line-height: 20px;
+	text-align: center;
+	background: $color_loblolly_approx;
+	cursor: default;
+	color: $white;
+	border-top: $color_nebula_approx 1px solid;
+	font-family: $font_0;
+	//Instead of the line below you could use @include border-top-right-radius($radius)
+	border-top-right-radius: 4px;
+	//Instead of the line below you could use @include border-bottom-right-radius($radius)
+	border-bottom-right-radius: 4px;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: 0 1px 0 $color_granny_smith_approx;
+	&:hover {
+		background: $color_well_read_approx;
+	}
+}
+.tag-number {
+	font-weight: normal;
+	float: left;
+	font-size: 16px;
+	color: $color_chicago_approx;
+	margin-left: -0.2em;
+  	line-height: 1.6em;
+}
+.section-title {
+	/*color: $color_gulf_stream_approx;
+	font-family: $font_14, $font_0, $font_8;*/
+	font-weight: bold;
+	/*font-size: 24px;*/
+	font-size: 1.8em;
+}
+#fmask {
+	margin-bottom: 30px;
+	width: 100%;
+}
+.edit-question-page {
+	color: $color_fuscous_gray_approx;
+	label[for="editor"] {
+		font-size: 16px;
+		font-style: italic;
+	}
+	label[for="id_title"] {
+		font-size: 16px;
+		font-style: italic;
+	}
+	label[for="id_tags"] {
+		font-size: 16px;
+		font-style: italic;
+	}
+	.form-error {
+		font-size: 16px;
+		font-style: italic;
+	}
+	label {
+		color: $color_fuscous_gray_approx;
+		font-size: 13px;
+		+ .form-error ul.errorlist {
+			@extend %extend_55;
+		}
+	}
+	#id_tags {
+		@extend %extend_24;
+	}
+	.lang-selector {
+		margin: 9px 0 0;
+		select {
+			margin: 3px 0;
+		}
+	}
+	#id_post_author_username {
+		@extend %extend_25;
+	}
+	#id_post_author_email {
+		@extend %extend_25;
+		margin-left: 10px;
+	}
+	.wmd-container {
+		@extend %extend_34;
+	}
+	.js-simple-editor {
+		@extend %extend_34;
+	}
+	.post-comments {
+		.wmd-container {
+			margin-bottom: 8px;
+			margin-left: -2px;
+		}
+		.js-simple-editor {
+			margin-bottom: 8px;
+			margin-left: -2px;
+		}
+	}
+	#editor {
+		@extend %extend_35;
+	}
+	#id_revision {
+		@extend %extend_36;
+	}
+	#id_title {
+		@extend %extend_37;
+	}
+	#id_summary {
+		@extend %extend_38;
+	}
+	.title-desc {
+		margin-bottom: 10px;
+	}
+	div#question-list {
+		border-bottom: $color_gallery_approx 1px solid;
+		float: none;
+		a {
+			line-height: 30px;
+		}
+		h2 {
+			@extend %extend_22;
+		}
+		span {
+			@extend %extend_23;
+		}
+	}
+	table.proxy-user-info {
+		@extend %extend_26;
+		.form-item {
+			float: left;
+		}
+	}
+	input.submit {
+		@extend %extend_30;
+	}
+	.retagger-buttons button {
+		margin: 8px 10px 5px 0;
+	}
+}
+.question-page {
+	#id_post_author_username {
+		@extend %extend_25;
+	}
+	#id_post_author_email {
+		@extend %extend_25;
+		margin-left: 10px;
+	}
+	.title-desc {
+		@extend %extend_29;
+	}
+	.tags-desc {
+		@extend %extend_29;
+	}
+	.wmd-container {
+		@extend %extend_34;
+	}
+	.js-simple-editor {
+		@extend %extend_34;
+	}
+	.post-comments {
+		.wmd-container {
+			margin-bottom: 8px;
+			margin-left: -2px;
+		}
+		.js-simple-editor {
+			margin-bottom: 8px;
+			margin-left: -2px;
+		}
+	}
+	#editor {
+		@extend %extend_35;
+	}
+	h1 {
+		padding-top: 0;
+		font-family: $font_14, $font_0, $font_8;
+		a {
+			color: $color_tundora_approx;
+			font-size: 26px;
+			font-weight: normal;
+			line-height: 1;
+		}
+	}
+	.post {
+		display: table;
+		padding: 3px;
+		margin-bottom: 16px;
+		width: 100%;
+		pre {
+			clear: both;
+		}
+		code {
+			clear: both;
+		}
+		.mceEditor td {
+			width: auto;
+		}
+	}
+	.post-content {
+		display: table-cell;
+		border-spacing: 0;
+		padding-left: 14px;
+		vertical-align: top;
+		width: auto;
+	}
+	.js-question {
+		.post-content {
+			margin-bottom: 10px;
+		}
+		.post-body {
+			margin-top: 8px;
+			border-top: $color_gallery_approx 1px solid;
+			padding-top: 10px;
+		}
+	}
+	.answer {
+		.post-content {
+			border-bottom: 1px solid $color_quill_gray_approx;
+		}
+		.post-update-info a {
+			color: $color_tundora_approx;
+		}
+	}
+	.post-body {
+		overflow: auto;
+		font-family: $font_0;
+		color: $color_gravel_approx;
+		word-wrap: break-word;
+		max-width: 683px;
+		a {
+			color: $color_mariner_approx;
+		}
+		img {
+			max-width: 685px;
+		}
+		li {
+			margin-bottom: 7px;
+		}
+		p {
+			margin-bottom: 14px;
+			line-height: 1.4;
+			font-size: 14px;
+			padding: 0 5px 5px 0;
+		}
+	}
+	.post-update-info-container {
+		float: right;
+		width: 175px;
+	}
+	.post-update-info {
+		background: $white $url_11 repeat-x bottom;
+		float: right;
+		font-size: 9px;
+		font-family: $font_0;
+		line-height: 12px;
+		margin: 0 0 5px 5px;
+		padding: 4px;
+		width: 166px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 4px;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 2px 1px $color_silver_approx;
+		p {
+			line-height: 13px;
+			font-size: 11px;
+			margin: 0 0 2px 1px;
+			padding: 0;
+			&.tip {
+				color: $color_tundora_approx;
+				line-height: 13px;
+				font-size: 10px;
+			}
+		}
+		a {
+			color: $color_tundora_approx;
+			&.primary-group-name {
+				color: $color_totem_pole_approx;
+				font-weight: bold;
+			}
+		}
+		.gravatar {
+			float: left;
+			margin-right: 4px;
+		}
+	}
+	.post-controls {
+		clear: left;
+		float: right;
+		font-size: 11px;
+		height: 18px;
+		line-height: 18px;
+		margin-top: 10px;
+		margin-bottom: 8px;
+		min-width: 200px;
+		padding-left: 5px;
+		text-align: right;
+		a {
+			@extend %extend_41;
+			&:hover {
+				background-color: $color_wheatfield_approx;
+			}
+		}
+		.sep {
+			color: $color_celeste_approx;
+			float: right;
+			height: 18px;
+			font-size: 18px;
+		}
+		.question-delete {
+			background: $url_12 no-repeat left -1px;
+			padding-left: 11px;
+		}
+		.question-flag {
+			background: $url_13 no-repeat 2px 0;
+		}
+		.answer-publish {
+			background: $url_14 no-repeat center left;
+		}
+		.answer-unpublish {
+			background: $url_15 no-repeat 2px center;
+		}
+		.question-edit {
+			background: $url_16 no-repeat 3px 1px;
+		}
+		.question-retag {
+			background: $url_17 no-repeat center left;
+		}
+		.question-close {
+			background: $url_18 no-repeat center left;
+		}
+		.question-merge {
+			background: $url_19 no-repeat;
+		}
+		.permant-link {
+			background: $url_20 no-repeat 2px 1px;
+		}
+		.answer-convert {
+			float: right;
+			clear: left;
+			input {
+				@extend %extend_43;
+				&:hover {
+					background-color: $color_wheatfield_approx;
+					//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+					border-radius: 3px;
+				}
+			}
+		}
+		span.dropdown-toggle {
+			@extend %extend_41;
+			background: $url_0 no-repeat -7px -242px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 3px;
+			position: relative;
+			&:hover {
+				background-color: $color_wheatfield_approx;
+				padding-right: 0;
+				background: $url_0 no-repeat -7px -274px;
+				form {
+					margin: 0;
+				}
+				input {
+					display: block !important;
+					height: 20px !important;
+					line-height: 20px !important;
+					margin: 0;
+					padding: 0 5px;
+					//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+					border-radius: 0;
+					width: 100% !important;
+				}
+				.dropdown-menu {
+					display: block;
+					padding: 5px 0;
+					right: -5px !important;
+					left: auto;
+					li {
+						@extend %extend_42;
+						&:hover {
+							@extend %extend_42;
+							background-color: $color_wheatfield_approx;
+						}
+					}
+				}
+			}
+		}
+	}
+	.answer-controls {
+		.question-delete {
+			background: $url_12 no-repeat left -1px;
+			padding-left: 11px;
+		}
+		.question-flag {
+			background: $url_13 no-repeat 2px 0;
+		}
+		.answer-publish {
+			background: $url_14 no-repeat center left;
+		}
+		.answer-unpublish {
+			background: $url_15 no-repeat 2px center;
+		}
+		.question-edit {
+			background: $url_16 no-repeat 3px 1px;
+		}
+		.question-retag {
+			background: $url_17 no-repeat center left;
+		}
+		.question-close {
+			background: $url_18 no-repeat center left;
+		}
+		.question-merge {
+			background: $url_19 no-repeat;
+		}
+		.permant-link {
+			background: $url_20 no-repeat 2px 1px;
+		}
+		.answer-convert {
+			float: right;
+			clear: left;
+			input {
+				@extend %extend_43;
+				&:hover {
+					background-color: $color_wheatfield_approx;
+					//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+					border-radius: 3px;
+				}
+			}
+		}
+	}
+	.tabBar {
+		width: 100%;
+	}
+	#questionCount {
+		float: left;
+		font-family: $font_14, $font_0, $font_8;
+		line-height: 15px;
+	}
+	#fmanswer_button {
+		margin: 8px 0;
+	}
+	.comments {
+		font-size: 12px;
+		clear: both;
+		padding: 0;
+		div {
+			&.controls {
+				width: 100%;
+				margin: 3px 0 20px 5px;
+				padding-left: 30px;
+			}
+			&.comment:hover {
+				background-color: $gallery;
+			}
+		}
+		.edit-comment-buttons {
+			margin-left: -4px;
+			.checkbox {
+				margin: 3px;
+			}
+		}
+		.js-open-editor-btn {
+			@extend %extend_44;
+			&.new-comment-box {
+				padding: 0 14px 0 29px;
+				.mock-editor {
+					height: 50px;
+				}
+			}
+		}
+		.js-load-comments-btn {
+			@extend %extend_44;
+		}
+		a {
+			background-color: inherit;
+			color: $color_mariner_approx;
+			padding: 0;
+			&.author {
+				background-color: inherit;
+				color: $color_mariner_approx;
+				padding: 0;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		textarea {
+			//Instead of the line below you could use @include box-sizing($bs)
+			box-sizing: border-box;
+			color: $color_storm_dust_approx;
+			font-family: $font_0;
+			font-size: 13px;
+			height: 54px;
+			line-height: 1.3;
+			margin: 0;
+			outline: none;
+			overflow: auto;
+			padding: 5px 19px 2px 6px;
+			width: 100%;
+		}
+		input {
+			margin-left: 10px;
+			margin-top: 1px;
+			vertical-align: top;
+			width: 100px;
+		}
+		input[name="suppress_email"] {
+			margin: 4px 5px 0 0;
+			width: auto;
+		}
+		label[for="suppress_email"] {
+			vertical-align: top;
+		}
+		.counter {
+			display: inline-block;
+			width: auto;
+			vertical-align: top;
+			font-family: $font_0;
+			float: right;
+			text-align: right;
+		}
+		.comment {
+			border-bottom: 1px solid $color_cararra_approx;
+			display: table;
+			font-family: $font_0;
+			font-size: 11px;
+			margin: 0;
+			min-height: 25px;
+			overflow: auto;
+			padding-bottom: 4px;
+			width: 100%;
+			.comment-votes {
+				display: table-cell;
+				vertical-align: top;
+				width: 25px;
+			}
+			.comment-content {
+				display: table-cell;
+				vertical-align: top;
+				width: auto;
+			}
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+		.content {
+			margin-bottom: 7px;
+		}
+		.comment-votes {
+			line-height: 130%;
+			padding: 6px 5px 6px 3px;
+		}
+		.comment-body {
+			line-height: 1.3;
+			margin: 3px 26px 0 0;
+			padding: 5px 3px 0;
+			color: $color_storm_dust_approx;
+			font-size: 13px;
+			p {
+				font-size: 13px;
+				line-height: 1.3;
+				margin-bottom: 3px;
+				padding: 0;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		.comment-controls {
+			padding-left: 3px;
+			.js-avatar-box {
+				margin-right: 4px;
+			}
+		}
+		.js-edit {
+			padding-left: 6px;
+		}
+		.convert-comment {
+			display: inline;
+			white-space: nowrap;
+			padding-left: 0;
+			input {
+				background: none;
+				padding: 0;
+				color: $color_mariner_approx;
+				border: none;
+				height: 13px;
+				width: auto;
+				font-family: $font_0;
+				font-size: 11px;
+				font-weight: normal;
+				line-height: 15px;
+				margin: 0 0 3px 8px;
+				vertical-align: middle;
+				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				box-shadow: 0 0 0 $color_mountain_mist_approx;
+				//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				text-shadow: 0 0 0 $color_mountain_mist_approx;
+				&:hover {
+					text-decoration: underline;
+					cursor: pointer;
+				}
+			}
+		}
+		.comment-delete {
+			float: right;
+			width: 14px;
+			line-height: 130%;
+			padding: 8px 0;
+		}
+		.upvote {
+			margin: 0;
+			padding-right: 11px;
+			padding-top: 2px;
+			text-align: left;
+			height: 20px;
+			font-size: 13px;
+			font-weight: bold;
+			color: $color_tapa_approx;
+			&.upvoted {
+				color: $color_grenadier_approx;
+			}
+			&.hover {
+				background: $url_24 no-repeat;
+				background-position: right 1px;
+			}
+			&:hover {
+				background: $url_25 no-repeat;
+				background-position: right 1px;
+			}
+		}
+		.help-text {
+			float: right;
+			text-align: right;
+			color: $gray;
+			margin-bottom: 0;
+			margin-top: 0;
+			line-height: 50%;
+		}
+		&.empty.ordering-forward {
+			margin-top: -35px;
+			float: left;
+		}
+		.truncated-post:nth-last-child(3) {
+			float: left;
+		}
+		.controls a {
+			border: none;
+			color: $color_sycamore_approx;
+			padding: 0 3px 5px 22px;
+			font-family: $font_0;
+			font-size: 13px;
+			font-weight: normal;
+			background: $url_22 no-repeat center left;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 0 0 $color_mountain_mist_approx;
+			//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			text-shadow: 0 0 0 $color_mountain_mist_approx;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		form.post-comments {
+			padding: 1px 6px 7px 31px;
+			border-bottom: 1px solid $color_cararra_approx;
+			margin-bottom: 0;
+		}
+		.wmd-container textarea {
+			border: none;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: inset 0 0 3px 1px $color_silver_chalice_approx;
+		}
+		.js-simple-editor textarea {
+			border: none;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: inset 0 0 3px 1px $color_silver_chalice_approx;
+		}
+		button.submit {
+			margin-right: 6px;
+		}
+		span.js-delete-icon {
+			background: $url_23 no-repeat;
+			border: 0;
+			width: 14px;
+			height: 14px;
+			&:hover {
+				border: $color_chestnut_approx 2px solid;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 10px;
+				margin: -3px 0 0 -2px;
+			}
+		}
+	}
+	#questionTools {
+		font-size: 22px;
+		margin-top: 11px;
+		text-align: left;
+	}
+	.question-status {
+		margin-top: 10px;
+		margin-bottom: 15px;
+		padding: 20px;
+		background-color: $color_pipi_approx;
+		text-align: center;
+		border: $color_anzac_approx 1px solid;
+		h3 {
+			font-size: 20px;
+			color: $color_dove_gray_approx;
+			font-weight: normal;
+		}
+	}
+	.tabBar-answer {
+		padding-left: 7px;
+		width: 723px;
+		margin-top: 10px;
+	}
+	.accepted-answer {
+		background-color: $color_corn_field_approx;
+		border-bottom-color: $color_granny_smith_apple_approx;
+		.answer-img-accept {
+			background: $url_27;
+		}
+	}
+	.answered {
+		background: $color_celeste_approx;
+		color: $color_mountain_mist_approx;
+	}
+	.answered-accepted {
+		background: $color_alto_approx;
+		color: $color_nutmeg_approx;
+		strong {
+			color: $color_barberry_approx;
+		}
+	}
+	.answered-by-owner {
+		background: $color_titan_white_approx;
+		.comments {
+			background-color: $color_titan_white_approx;
+			.js-load-comments-btn {
+				background-color: $color_titan_white_approx;
+			}
+			.js-open-editor-btn {
+				background-color: $color_titan_white_approx;
+			}
+		}
+	}
+	.answer-img-accept {
+		background: $url_26;
+		width: 23px;
+		height: 23px;
+		&:hover {
+			background: $url_27;
+		}
+	}
+	#fmanswer {
+		color: $color_dove_gray_approx;
+		line-height: 1.2;
+		margin-top: 10px;
+		h2 {
+			font-family: $font_14, $font_0, $font_8;
+			color: $color_gulf_stream_approx;
+			font-size: 24px;
+		}
+		label {
+			font-size: 13px;
+		}
+	}
+	.message {
+		padding: 5px;
+		margin: 0 0 10px 0;
+	}
+	.tag-editor {
+		width: 660px;
+		margin-left: 0;
+	}
+	table.proxy-user-info {
+		@extend %extend_26;
+		.form-item {
+			float: left;
+		}
+	}
+	.retagger-buttons button {
+		margin: 8px 10px 5px 0;
+	}
+	p.rss {
+		float: none;
+		clear: both;
+		display: inline-block;
+		padding: 3px 0 3px 20px;
+		font-size: 15px;
+		width: auto;
+		background-position: center left;
+		a {
+			font-family: $font_14, $font_0, $font_8;
+			vertical-align: top;
+		}
+	}
+	.question-img-favorite:hover {
+		background: $url_21;
+	}
+	h2.comment-title {
+		color: $color_gulf_stream_approx;
+		font-weight: bold;
+		font-size: 23px;
+		font-family: $font_14, $font_0, $font_8;
+		float: left;
+		padding-left: 0;
+		width: 200px;
+	}
+	.vote-buttons .notify-sidebar {
+		text-align: center;
+		margin: 6px auto 0;
+		label {
+			vertical-align: top;
+		}
+	}
+	a.submit {
+		display: inline-block;
+		line-height: 30px;
+		padding: 0 5px;
+		*display: inline;
+	}
+	.category-selector ul.select-box {
+		width: 217px;
+		input {
+			width: 95px;
+		}
+	}
+}
+.edit-answer-page {
+	#id_post_author_username {
+		@extend %extend_25;
+	}
+	#id_post_author_email {
+		@extend %extend_25;
+		margin-left: 10px;
+	}
+	.wmd-container {
+		@extend %extend_34;
+	}
+	.js-simple-editor {
+		@extend %extend_34;
+	}
+	.post-comments {
+		.wmd-container {
+			margin-bottom: 8px;
+			margin-left: -2px;
+		}
+		.js-simple-editor {
+			margin-bottom: 8px;
+			margin-left: -2px;
+		}
+	}
+	#editor {
+		@extend %extend_35;
+	}
+	table.proxy-user-info {
+		@extend %extend_26;
+		.form-item {
+			float: left;
+		}
+	}
+	.retagger-buttons button {
+		margin: 8px 10px 5px 0;
+	}
+	label + .form-error ul.errorlist {
+		@extend %extend_55;
+	}
+}
+.groups-input {
+	@extend %extend_27;
+}
+.users-input {
+	@extend %extend_27;
+}
+.add-groups {
+	border: 0;
+	margin: -2px 0 0 0 !important;
+}
+.add-users {
+	border: 0;
+	margin: -2px 0 0 0 !important;
+}
+.share-input-col {
+	width: 160px;
+	text-align: center;
+}
+.add-everyone-group {
+	text-align: center;
+	margin: auto;
+	display: block;
+	padding: 0 10px;
+	height: 25px;
+}
+#id_user {
+	@extend %extend_28;
+}
+#id_user_author {
+	@extend %extend_28;
+}
+.title-desc {
+	color: $color_dove_gray_approx;
+	font-size: 13px;
+	margin-bottom: 5px;
+}
+#editor {
+	display: block;
+	font-size: 100%;
+	min-height: 210px;
+	line-height: 18px;
+	margin: 0;
+	border: 0;
+}
+#id_title {
+	width: 100%;
+}
+.wmd-preview {
+	color: $color_fuscous_gray_approx;
+	margin: 0 0 8px 0;
+	padding: 5px;
+	background-color: $color_wild_sand_approx;
+	min-height: 20px;
+	overflow: auto;
+	font-size: 13px;
+	font-family: $font_0;
+	color: $color_fuscous_gray_approx;
+	p {
+		margin-bottom: 14px;
+		line-height: 1.4;
+		font-size: 14px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	pre {
+		background-color: $color_aqua_squeeze_approx;
+	}
+	blockquote {
+		background-color: $color_gallery_approx;
+	}
+	img {
+		max-width: 600px;
+	}
+	a {
+		color: $color_mariner_approx;
+	}
+	li {
+		margin-bottom: 7px;
+		font-size: 14px;
+	}
+	#id_revision {
+		@extend %extend_36;
+	}
+	#id_title {
+		@extend %extend_37;
+	}
+	#id_summary {
+		@extend %extend_38;
+	}
+	.title-desc {
+		margin-bottom: 10px;
+	}
+}
+.defaultSkin {
+	span {
+		&.mce_askbot_imageuploader {
+			background-position: -380px 0;
+		}
+		&.mce_askbot_attachment {
+			background-image: $url_9;
+			background-position: 0 0;
+		}
+	}
+	table.mceLayout {
+		border: none;
+		tr {
+			&.mceFirst td {
+				border: none;
+			}
+			&.mceLast td {
+				border-bottom: none;
+			}
+		}
+	}
+}
+.mceStatusbar {
+	height: 5px;
+	background: $white;
+}
+.preview-toggle {
+	color: $color_mongoose_approx;
+	line-height: 28px;
+	text-align: left;
+	width: 100%;
+	span:hover {
+		cursor: pointer;
+	}
+}
+.checkbox {
+	margin-left: 5px;
+	font-weight: normal;
+	cursor: help;
+	.errorlist {
+		margin-bottom: -5px;
+	}
+}
+.question-options {
+	margin-top: 1px;
+	color: $color_storm_dust_approx;
+	line-height: 13px;
+	margin-bottom: 5px;
+}
+.edit-content-html {
+	border-top: 1px dotted $color_sapling_approx;
+	border-bottom: 1px dotted $color_sapling_approx;
+	margin: 5px 0;
+}
+#fmedit {
+	color: $color_fuscous_gray_approx;
+	#id_revision {
+		@extend %extend_36;
+	}
+	#id_title {
+		@extend %extend_37;
+	}
+	#id_summary {
+		@extend %extend_38;
+	}
+	.title-desc {
+		margin-bottom: 10px;
+	}
+}
+.moderated-item {
+	background: $color_celeste_approx;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px;
+	padding: 3px;
+	.fa {
+		color: $color_mexican_red_approx;
+	}
+}
+.answer {
+	.moderated {
+		@extend %extend_39;
+	}
+	.comment .moderated {
+		@extend %extend_40;
+	}
+}
+.js-question {
+	.moderated {
+		@extend %extend_39;
+	}
+	.comment .moderated {
+		@extend %extend_40;
+	}
+}
+.vote-buttons {
+	display: table-cell;
+	text-align: center;
+	padding-top: 2px;
+	width: 25px;
+	margin-right: 13px;
+	*margin: 0;
+	*height: 210px;
+	*width: 30px;
+	* {
+		margin: 0;
+	}
+}
+.question-img-upvote {
+	@extend %extend_45;
+	background: $url_28 no-repeat;
+	&:hover {
+		background: $url_30 no-repeat;
+	}
+	&.on {
+		background: $url_30 no-repeat;
+	}
+}
+.question-img-downvote {
+	@extend %extend_45;
+	background: $url_29 no-repeat;
+	&:hover {
+		background: $url_31 no-repeat;
+	}
+	&.on {
+		background: $url_31 no-repeat;
+	}
+}
+.answer-img-upvote {
+	@extend %extend_45;
+	background: $url_28 no-repeat;
+	&:hover {
+		background: $url_30 no-repeat;
+	}
+	&.on {
+		background: $url_30 no-repeat;
+	}
+}
+.answer-img-downvote {
+	@extend %extend_45;
+	background: $url_29 no-repeat;
+	&:hover {
+		background: $url_31 no-repeat;
+	}
+	&.on {
+		background: $url_31 no-repeat;
+	}
+}
+.vote-number {
+	font-family: $font_14, $font_0, $font_8;
+	padding: 2px 0 5px;
+	font-size: 25px;
+	font-weight: bold;
+	color: $color_tapa_approx;
+}
+.registration-page {
+	.form-group {
+		margin-bottom: 10px;
+	}
+	.submit-row {
+		padding: 0;
+	}
+	.login input[type="text"] {
+		height: 22px;
+		font-size: 12px;
+		line-height: 22px;
+		color: $color_fuscous_gray_approx;
+		padding: 0 5px;
+		width: 200px;
+	}
+}
+.user-profile-edit-page {
+	@extend %extend_48;
+	p {
+		@extend %extend_49;
+	}
+	h2 {
+		@extend %extend_50;
+	}
+	form {
+		margin-bottom: 15px;
+	}
+	input[type="text"] {
+		@extend %extend_51;
+	}
+	input[type="password"] {
+		@extend %extend_51;
+	}
+	select {
+		@extend %extend_51;
+		width: 405px;
+		height: 30px;
+	}
+	textarea {
+		@extend %extend_52;
+	}
+	.cancel {
+		background: $url_33 repeat-x top !important;
+		color: $color_fuscous_gray_approx !important;
+		&:hover {
+			background: $url_33 repeat-x bottom !important;
+		}
+	}
+	.re {
+		float: left;
+		width: 960px;
+	}
+	input.submit {
+		font-weight: normal;
+		margin: 5px 0;
+	}
+}
+.avatar-label {
+	background: $black;
+	color: $white !important;
+	cursor: help;
+	padding: 5px;
+	position: absolute;
+}
+.avatar-primary-label {
+	height: 28px;
+	line-height: 28px !important;
+	margin: 3px 0 0;
+	text-align: center;
+}
+.reject-reason-title {
+	margin-bottom: 12px;
+}
+.moderation-queue-page {
+	.re {
+		width: 810px;
+	}
+	.post-moderation-controls {
+		float: left;
+		width: 150px;
+		margin-top: 23px;
+		text-align: right;
+	}
+	.dropdown {
+		display: inline-block;
+		height: 17px;
+		&:hover ul.dropdown-menu {
+			display: block;
+			margin-top: 9px;
+		}
+	}
+	.highlight {
+		background: transparent;
+	}
+	.messages {
+		margin-bottom: 14px;
+	}
+	.message {
+		margin: 12px 0;
+	}
+	.select-items {
+		margin-bottom: 10px;
+	}
+	#responses div.face {
+		display: none;
+	}
+}
+#local_login_buttons {
+	input[type="text"] {
+		@extend %extend_53;
+	}
+	input[type="password"] {
+		@extend %extend_53;
+	}
+}
+#password-fs {
+	margin-top: 10px;
+	input[type="text"] {
+		@extend %extend_53;
+	}
+	input[type="password"] {
+		@extend %extend_53;
+	}
+}
+#openid-fs {
+	margin-top: 10px;
+	input[type="text"] {
+		@extend %extend_53;
+	}
+	input[type="password"] {
+		@extend %extend_53;
+	}
+}
+#signup-form {
+	input[type="text"] {
+		@extend %extend_53;
+	}
+	input[type="password"] {
+		@extend %extend_53;
+	}
+}
+#email-input-fs {
+	margin-top: 10px;
+}
+.openid-input {
+	background: $url_34 no-repeat;
+	padding-left: 15px;
+	cursor: pointer;
+}
+.openid-login-input {
+	background-position: center left;
+	background: $url_34 no-repeat 0 50%;
+	padding: 5px 5px 5px 15px;
+	cursor: pointer;
+	font-family: $font_1;
+	font-weight: 300;
+	font-size: 150%;
+	width: 500px;
+}
+.openid-login-submit {
+	height: 40px;
+	width: 80px;
+	line-height: 40px;
+	cursor: pointer;
+	border: 1px solid $color_tapa_approx;
+	font-weight: bold;
+	font-size: 120%;
+}
+.user {
+	padding: 5px 10px 5px 0;
+	line-height: 140%;
+	width: 166px;
+	height: 32px;
+	margin-bottom: 5px;
+	.user-micro-info {
+		color: $color_fuscous_gray_approx;
+	}
+	ul {
+		margin: 0;
+		list-style-type: none;
+	}
+	.thumb {
+		clear: both;
+		float: left;
+		margin-right: 4px;
+		display: inline;
+	}
+}
+.tabBar-tags {
+	margin-bottom: 15px;
+}
+.tabBar-profile {
+	width: 100%;
+	margin-bottom: 5px;
+	float: left;
+}
+.user-details {
+	font-size: 13px;
+	h3 {
+		font-size: 16px;
+	}
+	td {
+		padding-right: 10px;
+		vertical-align: top;
+	}
+}
+.user-about {
+	background-color: $color_gallery_approx;
+	height: 200px;
+	line-height: 20px;
+	overflow: auto;
+	padding: 10px;
+	width: 90%;
+	p {
+		font-size: 13px;
+	}
+}
+.submit {
+	line-height: 26px;
+	margin-top: -2px;
+	cursor: pointer;
+	background-color: $color_celeste_approx;
+	height: 30px;
+	border: 1px solid $color_tapa_approx;
+	font-weight: bold;
+	font-size: 120%;
+	&:hover {
+		text-decoration: none !important;
+		text-decoration: underline;
+	}
+	&.small {
+		margin-right: 5px;
+		height: 20px;
+		font-weight: normal;
+		font-size: 12px;
+		padding: 1px 5px;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+.count {
+	font-family: $font_14, $font_0, $font_8;
+	font-size: 200%;
+	font-weight: 700;
+	color: $color_tapa_approx;
+}
+.scoreNumber {
+	font-family: $font_14, $font_0, $font_8;
+	font-size: 35px;
+	font-weight: 800;
+	color: $color_tapa_approx;
+	line-height: 40px;
+	margin-top: 3px;
+}
+.vote-count {
+	font-family: $font_0;
+	font-size: 160%;
+	font-weight: 700;
+	color: $color_tapa_approx;
+}
+.answer-summary {
+	display: block;
+	clear: both;
+	padding: 3px;
+}
+.answer-votes {
+	background-color: $color_gallery_approx;
+	color: $color_fuscous_gray_approx;
+	float: left;
+	font-family: $font_0;
+	font-size: 15px;
+	font-weight: bold;
+	height: 17px;
+	padding: 2px 4px 5px;
+	text-align: center;
+	text-decoration: none;
+	width: 20px;
+	margin-right: 10px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px;
+}
+.karma-summary {
+	padding: 5px;
+	font-size: 13px;
+	h3 {
+		text-align: center;
+		font-weight: bold;
+		padding: 5px;
+	}
+}
+.karma-diagram {
+	width: 477px;
+	height: 300px;
+	float: left;
+	margin-right: 10px;
+}
+.karma-details {
+	float: right;
+	width: 450px;
+	height: 250px;
+	overflow-y: auto;
+	word-wrap: break-word;
+	p {
+		margin-bottom: 10px;
+	}
+}
+.karma-gained {
+	font-weight: bold;
+	background: $color_gallery_approx;
+	width: 25px;
+	margin-right: 5px;
+	color: $color_japanese_laurel_approx;
+	padding: 3px;
+	display: block;
+	float: left;
+	text-align: center;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 3px;
+}
+.karma-lost {
+	font-weight: bold;
+	background: $color_gallery_approx;
+	width: 25px;
+	color: $red;
+	padding: 3px;
+	display: block;
+	margin-right: 5px;
+	float: left;
+	text-align: center;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 3px;
+}
+.submit-row {
+	margin-bottom: 10px;
+	line-height: 30px;
+	padding-top: 10px;
+	display: block;
+	clear: both;
+}
+.revision {
+	margin: 10px 0;
+	font-size: 13px;
+	color: $color_fuscous_gray_approx;
+	p {
+		font-size: 13px;
+		line-height: 1.3;
+		color: $color_fuscous_gray_approx;
+	}
+	h3 {
+		font-family: $font_14, $font_0, $font_8;
+		font-size: 21px;
+		padding-left: 0;
+	}
+	.header {
+		background-color: $color_wild_sand_approx;
+		padding: 5px;
+		cursor: pointer;
+	}
+	.author {
+		background-color: $color_aqua_squeeze_approx;
+	}
+	.summary {
+		padding: 5px 0 10px;
+		span {
+			background-color: $color_sweet_corn_approx;
+			padding: 6px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 4px;
+			display: inline;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 1px 1px 4px $color_turmeric_approx;
+		}
+	}
+	.answerbody {
+		padding: 10px 0 5px 10px;
+	}
+	.revision-mark {
+		width: 150px;
+		text-align: left;
+		display: inline-block;
+		font-size: 11px;
+		overflow: hidden;
+		.gravatar {
+			float: left;
+			margin-right: 4px;
+			padding-top: 5px;
+		}
+	}
+	.revision-number {
+		font-size: 300%;
+		font-weight: bold;
+		font-family: $font_8;
+	}
+}
+del {
+	color: $color_tia_maria_approx;
+	.post-tag {
+		color: $color_tia_maria_approx;
+	}
+}
+ins {
+	background-color: $color_primrose_approx;
+	.post-tag {
+		background-color: $color_primrose_approx;
+	}
+	p {
+		background-color: $color_primrose_approx;
+	}
+}
+.vote-notification {
+	z-index: 1;
+	background-color: $red_berry;
+	color: $white;
+	cursor: pointer;
+	display: none;
+	font-family: $font_0;
+	font-size: 14px;
+	font-weight: normal;
+	min-width: 200px;
+	padding-bottom: 10px;
+	position: absolute;
+	text-align: center;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 2px 4px $color_chocolate_approx;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px;
+	h3 {
+		background: $url_39 repeat-x top;
+		padding: 10px;
+		font-size: 13px;
+		margin-bottom: 5px;
+		border-top: $red_berry 1px solid;
+		color: $white;
+		line-height: 20px;
+		font-weight: normal;
+		//Instead of the line below you could use @include border-top-right-radius($radius)
+		border-top-right-radius: 4px;
+		//Instead of the line below you could use @include border-top-left-radius($radius)
+		border-top-left-radius: 4px;
+	}
+	a {
+		color: $color_pumpkin_approx;
+		text-decoration: underline;
+		font-weight: bold;
+	}
+}
+#ground {
+	/*width: 100%;
+	clear: both;
+	border-top: 1px solid $black;
+	padding: 16px 0 0;
+	background: $color_hunter_green_approx;
+	font-size: 16px;
+	font-family: $font_14, $font_0, $font_8;*/
+	p {
+		margin-bottom: 0;
+	}
+	a {
+		color: $dark-gray;
+		text-decoration: none;
+	}
+	a:hover {
+		color: $dark-gray;
+		text-decoration: none;
+	}
+	height: 4em;
+    position:relative;
+    left:0px;
+    bottom:0px;
+    width: 100%;
+    $forty-gray: #999999;
+    $light-gray: #dedede;
+    $five-gray: #f2f2f2;
+    background: gray;
+    background: -moz-linear-gradient(top, $light-gray 0%, $light-gray 28%, $forty-gray 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, $light-gray), color-stop(28%, $light-gray), color-stop(100%, $forty-gray));
+    background: -webkit-linear-gradient(top, $light-gray 0%, $light-gray 28%, $forty-gray 100%);
+    background: -o-linear-gradient(top, $light-gray 0%, $light-gray 28%, $forty-gray 100%);
+    background: -ms-linear-gradient(top, $light-gray 0%, $light-gray 28%, $forty-gray 100%);
+    background: linear-gradient(to bottom, $light-gray 0%, $light-gray 28%, $forty-gray 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$light-gray', endColorstr='$forty-gray', GradientType=0 );
+    display: flex;
+}
+#footer-links-container {
+	/*color: $color_gallery_approx;*/
+	@include container(100%);
+	@include span(15 of 15);
+	@include breakpoint($small){
+		@include span(12 of 15);
+		font-size: 1.3em;
+	}
+	width: 100%;
+	/*text-align: left;*/
+	text-align: center;
+	font-size: 1.1em;
+	/*width: 450px;*/
+	float: left;
+	font-weight: bold;
+	height: 100%;
+	padding-top: 1.1em;
+	/*margin-top: 0.35em;*/
+	/*a {
+		color: $color_double_colonial_white_approx;
+	}*/
+	.link{
+		@include gallery(3 of 15);
+	}
+}
+#copyright-container{
+	display: none;
+	@include breakpoint($small){
+		display: inline;
+		@include span(3 at 13 of 15);
+	}	
+	.license-logo{
+		float: right;
+		margin-top: 0.9em;
+	}
+}
+.tag-left {
+	.tag {
+		margin-bottom: 1em;
+	}
+}
+.powered-link {
+	width: 450px;
+	float: left;
+	text-align: left;
+	a {
+		color: $color_half_baked_approx;
+	}
+}
+.notify-me {
+	float: left;
+}
+.form-error {
+	color: $color_red_berry_approx;
+	font-weight: normal;
+	vertical-align: bottom;
+}
+.deleted {
+	background: $color_dawn_pink_approx none repeat scroll 0 0;
+}
+.form-row {
+	line-height: 25px;
+}
+table {
+	&.form-as-table {
+		margin-top: 5px;
+		ul {
+			list-style-type: none;
+			display: inline;
+		}
+		li {
+			display: inline;
+		}
+		td {
+			text-align: right;
+		}
+		th {
+			text-align: left;
+			font-weight: normal;
+			vertical-align: bottom;
+			padding-bottom: 4px;
+		}
+		.errorlist {
+			display: block;
+			margin: 0;
+			padding: 0 0 0 5px;
+			text-align: left;
+			font-size: 10px;
+			color: $color_red_berry_approx;
+		}
+		input {
+			display: inline;
+			margin-left: 4px;
+		}
+	}
+	&.ab-subscr-form {
+		width: 45em;
+	}
+	&.settings {
+		width: 100%;
+		td {
+			vertical-align: top;
+			padding-bottom: 10px;
+		}
+	}
+}
+.errors {
+	line-height: 20px;
+	color: $color_red_berry_approx;
+}
+.error {
+	@extend %extend_56;
+}
+.fieldset {
+	border: none;
+	margin-top: 10px;
+	padding: 10px;
+}
+.favorites-empty {
+	width: 32px;
+	height: 45px;
+	float: left;
+}
+.narrow {
+	.summary {
+		float: left;
+		h3 {
+			padding: 0;
+			margin: 0;
+		}
+	}
+	.tags {
+		float: left;
+	}
+}
+.timeago {
+	font-weight: bold;
+	text-decoration: none;
+}
+.user-activity {
+	margin-top: 12px;
+	width: 100%;
+	td {
+		padding: 3px 11px;
+		vertical-align: top;
+	}
+	.timestamp {
+		width: 80px;
+	}
+	.action-type {
+		width: 150px;
+		font-size: 13px;
+	}
+	.description {
+		width: auto;
+	}
+}
+.hilite {
+	background-color: $yellow;
+}
+.hilite1 {
+	background-color: $yellow;
+}
+.hilite2 {
+	background-color: $magenta_fuchsia;
+}
+.hilite3 {
+	background-color: $cyan_aqua;
+}
+.gold {
+	color: $color_supernova_approx;
+}
+.badge1 {
+	color: $color_supernova_approx;
+}
+.silver {
+	color: $color_celeste_approx;
+}
+.badge2 {
+	color: $color_celeste_approx;
+}
+.bronze {
+	color: $color_hokey_pokey_approx;
+}
+.badge3 {
+	color: $color_hokey_pokey_approx;
+}
+.score {
+	font-weight: 800;
+	color: $color_mine_shaft_approx;
+}
+.system-messages {
+	color: $red;
+	background: $yellow;
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 25px;
+	padding: 0 5px;
+}
+.warning {
+	color: $red;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: none;
+}
+.noscript {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	padding: 5px 0;
+	text-align: center;
+	font-family: $font_8;
+	font-size: 120%;
+	font-weight: Bold;
+	color: $white;
+	background-color: $color_bright_red_approx;
+}
+.big {
+	font-size: 14px;
+}
+.strong {
+	font-weight: bold;
+}
+.orange {
+	color: $color_grenadier_approx;
+	font-weight: bold;
+}
+.grey {
+	color: $gray;
+}
+.highlight {
+	background-color: $color_beeswax_approx;
+}
+.nomargin {
+	margin: 0;
+}
+.margin-bottom {
+	margin-bottom: 10px;
+}
+.margin-top {
+	margin-top: 10px;
+}
+.inline-block {
+	display: inline-block;
+}
+.action-status {
+	margin: 0;
+	border: none;
+	display: none;
+	text-align: center;
+	line-height: 10px;
+	font-size: 12px;
+	padding: 0;
+	a {
+		font-weight: bold;
+	}
+	span {
+		padding: 3px 5px;
+		background-color: $color_sweet_corn_approx;
+		font-weight: normal;
+	}
+}
+.list-table {
+	border-spacing: 0;
+	td {
+		vertical-align: top;
+	}
+}
+.form-row-vertical {
+	display: block;
+	label {
+		display: block;
+	}
+}
+.text-align-right {
+	text-align: center;
+}
+.user-profile-tool-links {
+	font-weight: bold;
+	vertical-align: top;
+}
+.js-related-tags {
+	padding-left: 3px;
+}
+#hideIgnoredTagsControl {
+	margin: 5px 0 0;
+	label {
+		font-size: 12px;
+		color: $color_storm_dust_approx;
+	}
+}
+#hideIgnoredTagsCb {
+	margin: 0 2px 0 1px;
+}
+#recaptcha_widget_div {
+	width: 318px;
+	float: left;
+	clear: both;
+}
+.simple-subscribe-options {
+	ul {
+		list-style: none;
+		list-style-position: outside;
+		margin: 0;
+	}
+	input {
+		display: inline;
+	}
+}
+.search-result-summary {
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 22px;
+	margin: 0;
+	padding: 2px 0 0;
+	float: left;
+}
+.faq-rep-item {
+	text-align: right;
+	padding-right: 5px;
+}
+#responses {
+	clear: both;
+	line-height: 18px;
+	margin-bottom: 15px;
+	h2 {
+		line-height: 24px;
+		margin: 0;
+		padding: 0;
+	}
+	input {
+		float: left;
+	}
+	div.face {
+		float: left;
+		text-align: center;
+		width: 54px;
+		padding: 3px;
+		overflow: hidden;
+	}
+}
+.response-parent {
+	margin-top: 8px;
+	strong {
+		font-size: 20px;
+	}
+}
+.re {
+	min-height: 57px;
+	clear: both;
+	margin-top: 10px;
+}
+#re_sections {
+	margin-bottom: 6px;
+	.on {
+		font-weight: bold;
+	}
+}
+.avatar-page {
+	ul {
+		list-style: none;
+	}
+	li {
+		display: inline;
+	}
+}
+.userList {
+	font-size: 13px;
+}
+.user-list {
+	margin: 0;
+	list-style: none;
+	li {
+		margin: 5px 10px 15px 0;
+		display: inline-block;
+	}
+}
+.pln {
+	color: $black;
+}
+
+.tag{
+	float: left;
+  	height: 24px;
+  	line-height: 23px;
+  	position: relative;
+  	font-size: 11px;
+  	margin-left: 10px;
+  	margin-right: 10px;
+  	/*margin-top: 10px;*/
+  	padding: 0 7px 0 10px;
+  	background: #6d6d6d;
+  	color: #fff;
+  	text-decoration: none;
+  	-moz-border-radius-bottomright: 4px;
+  	-webkit-border-bottom-right-radius: 4px;
+  	border-bottom-right-radius: 4px;
+  	-moz-border-radius-topright: 4px;
+  	-webkit-border-top-right-radius: 4px;
+  	border-top-right-radius: 4px;
+  	text-decoration: none;
+}
+
+.tag:before{
+  content: "";
+  float: left;
+  position: absolute;
+  left: -12px;
+  border-color: transparent #6d6d6d transparent transparent;
+  border-style: solid;
+  border-width: 12px 12px 12px 0;
+}
+
+.tag:hover:before{
+    border-color: transparent $dark-gray transparent transparent;
+}
+
+.tag:link{
+    color: #fff;
+}
+
+.tag:visited{
+     color: #fff;
+}
+
+.tag:hover{
+    cursor: pointer;
+    color: #fff;
+    background: $dark-gray;
+    text-decoration: none;
+}
+
+.tag:active{
+     color: #fff;
+}
+
+
+.tag:after{
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  float: left;
+  width: 5px;
+  height: 5px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  background: #fff;
+  -moz-box-shadow: -1px -1px 2px #424242;
+  -webkit-box-shadow: -1px -1px 2px #424242;
+  box-shadow: -1px -1px 2px #424242;
+}
+
+@media screen {
+	.str {
+		color: $color_japanese_laurel_approx;
+	}
+	.kwd {
+		color: $color_navy_blue_approx;
+	}
+	.com {
+		color: $color_red_berry_approx;
+	}
+	.typ {
+		color: $color_pompadour_approx;
+	}
+	.lit {
+		color: $color_blue_stone_approx;
+	}
+	.pun {
+		color: $color_spicy_mustard_approx;
+	}
+	.opn {
+		color: $color_spicy_mustard_approx;
+	}
+	.clo {
+		color: $color_spicy_mustard_approx;
+	}
+	.tag {
+		color: $color_navy_blue_approx;
+	}
+	.atn {
+		color: $color_pompadour_approx;
+	}
+	.atv {
+		color: $color_japanese_laurel_approx;
+	}
+	.dec {
+		color: $color_pompadour_approx;
+	}
+	.var {
+		color: $color_pompadour_approx;
+	}
+	.fun {
+		color: $red;
+	}
+}
+@media print, projection {
+	.str {
+		color: $color_japanese_laurel_approx;
+	}
+	.kwd {
+		color: $color_arapawa_approx;
+		font-weight: bold;
+	}
+	.com {
+		color: $color_lonestar_approx;
+		font-style: italic;
+	}
+	.typ {
+		color: $color_loulou_approx;
+		font-weight: bold;
+	}
+	.lit {
+		color: $color_aqua_deep_approx;
+	}
+	.pun {
+		color: $color_bronze_olive_approx;
+	}
+	.opn {
+		color: $color_bronze_olive_approx;
+	}
+	.clo {
+		color: $color_bronze_olive_approx;
+	}
+	.tag {
+		color: $color_arapawa_approx;
+		font-weight: bold;
+	}
+	.atn {
+		color: $color_loulou_approx;
+	}
+	.atv {
+		color: $color_japanese_laurel_approx;
+	}
+}
+#leading-sidebar {
+	float: left;
+}
+#user-groups {
+	input[type="text"] {
+		height: 21px;
+		width: 100px;
+	}
+	ul {
+		margin-bottom: 0;
+	}
+	.js-delete-icon {
+		background: $url_23 no-repeat;
+		border: none;
+		display: inline-block;
+		height: 14px;
+		margin-top: 4px;
+		width: 14px;
+		&:hover {
+			background: $url_40 no-repeat;
+		}
+	}
+}
+.group-wiki {
+	.group-logo {
+		float: left;
+		margin: 0 5px 3px 0;
+	}
+	.controls {
+		margin: 0 0 10px 0;
+	}
+	.content > p:last-child {
+		margin-bottom: 5px;
+	}
+}
+#groups-list {
+	margin-left: 0;
+	.group-name {
+		padding-right: 20px;
+	}
+}
+#reject-edit-modal {
+	input {
+		width: 514px;
+	}
+	textarea {
+		width: 514px;
+	}
+}
+.select-box {
+	margin: 0;
+	li {
+		list-style-type: none;
+		list-style-position: inside;
+		padding-left: 7px;
+		font-size: 14px;
+		line-height: 25px;
+		input {
+			margin: 0 0 2px -5px;
+			font-size: 14px;
+			line-height: 14px;
+			vertical-align: middle;
+			color: $color_dove_gray_approx;
+		}
+		&.selected {
+			background-color: $color_solitaire_approx;
+			color: $color_tussock_approx;
+			&:hover {
+				background-color: $color_solitaire_approx;
+				color: $color_tussock_approx;
+			}
+		}
+		&:hover {
+			background-color: $color_celeste_approx;
+			color: $white;
+		}
+	}
+}
+.category-selector {
+	border-spacing: 0;
+	width: 100%;
+	td {
+		vertical-align: top;
+		width: 33.333%;
+	}
+	li {
+		position: relative;
+		color: $color_dove_gray_approx;
+		&.tree:after {
+			content: ">>";
+			position: absolute;
+			right: 5px;
+			font-weight: bold;
+		}
+		&.selected.tree:after {
+			color: $color_tussock_approx;
+		}
+	}
+	th {
+		color: $color_dove_gray_approx;
+		font-style: italic;
+		font-size: 16px;
+		font-weight: normal;
+		padding-top: 5px;
+		text-align: left;
+	}
+	ul.select-box {
+		height: 150px;
+		width: 100%;
+		overflow: auto;
+		border: $color_celeste_approx 3px solid;
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+	}
+}
+.editor-status {
+	float: right;
+	margin: 8px 350px 0 0;
+	font-weight: bold;
+	span {
+		display: none;
+	}
+}
+.tag-editor {
+	height: 32px;
+	border: $color_jagged_ice_approx 3px solid;
+	padding-left: 6px;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: inset 0 1px 1px $black_7;
+	ul.tags {
+		margin: 0;
+		li {
+			margin-top: 6px;
+			height: 13px;
+		}
+	}
+	input.new-tags-input {
+		@extend %extend_57;
+		&:focus {
+			@extend %extend_57;
+		}
+	}
+}
+.caret {
+	margin-bottom: 7px;
+}
+.btn-group {
+	text-align: left;
+}
+.btn-toolbar {
+	margin: 0;
+}
+.modal-footer {
+	text-align: left;
+}
+.modal {
+	h3 {
+		padding: 0;
+	}
+	p {
+		font-size: 14px;
+	}
+	&.merge-questions .modal-body {
+		label {
+			padding-right: 8px;
+		}
+		.body {
+			clear: both;
+			margin-top: 16px;
+		}
+		.tags {
+			clear: both;
+			margin-top: 12px;
+		}
+		h3 {
+			line-height: 22px;
+			margin-top: 12px;
+		}
+	}
+}
+.flip-content {
+	display: none;
+}
+.flip-tab {
+	display: none;
+}
+.flip-content-active {
+	display: block;
+}
+.flip-tab-active {
+	display: block;
+}
+.tag-subscriptions {
+	border-spacing: 10px;
+	border-collapse: separate;
+	form {
+		display: inline-block;
+		margin-bottom: 0;
+	}
+	td {
+		vertical-align: middle;
+	}
+	.action {
+		cursor: pointer;
+		/*color: $color_bismark_approx;*/
+		font-family: $font_14, $font_0, $font_8;
+		text-decoration: none;
+	}
+	ul.tags li {
+		margin: 2px 5px;
+	}
+}
+.settings-nav {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	margin: 6px 0 10px;
+	background: $color_green_white_approx;
+	border: 1px solid $color_swirl_approx;
+	float: left;
+	padding: 0;
+	width: 20%;
+	* {
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+	}
+	h2 {
+		background: $color_tapa_approx;
+		color: $color_gray_nurse_approx;
+		font-size: 16px;
+		font-weight: normal;
+		line-height: 1.35;
+		padding: 10px;
+	}
+	ul {
+		list-style: none;
+		margin: 10px 0;
+	}
+	li {
+		line-height: 1.45;
+		padding: 0 10px;
+		&.on {
+			background: $white;
+			a {
+				text-decoration: none;
+			}
+		}
+		&:hover {
+			background: $white;
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+}
+.settings-main {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	margin: 6px 0 10px;
+	float: right;
+	padding: 11px 0 11px 15px;
+	width: 80%;
+	* {
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+	}
+	.help {
+		font-size: 12px;
+		line-height: 1.3;
+		margin: 10px 0;
+	}
+	label {
+		font-weight: bold;
+		line-height: 1.2;
+	}
+	img {
+		margin: 0 0 10px 0;
+	}
+}
+#recaptcha_area {
+	line-height: 0!important;
+}
+#recaptcha_table {
+	line-height: 0!important;
+}
+.acInput {
+	width: 200px;
+}
+.acResults {
+	padding: 0;
+	border: 1px solid WindowFrame;
+	background-color: $white;
+	overflow: hidden;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 1px 1px $color_silver_approx;
+	ul {
+		width: 100%;
+		list-style-position: outside;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	li {
+		margin: 0;
+		padding: 2px 5px;
+		cursor: pointer;
+		display: block;
+		width: 100%;
+		font: menu;
+		font-size: 14px;
+		overflow: hidden;
+	}
+}
+.acLoading {
+	background: $url_41 right center no-repeat;
+}
+.acSelect {
+	background-color: Highlight;
+	color: HighlightText;
+}
+* {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+}
+/*#ContentLeft {
+	padding-left: 6px;
+}*/
+#ContentFull {
+	padding-left: 6px;
+	padding-right: 6px;
+}
+#ContentRight {
+	padding-right: 6px;
+	padding-top: 1em;
+}
+@media screen and(max-width: 960px) {
+	* {
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+	}
+	#ContentLeft {
+		padding-left: 6px;
+	}
+	#ContentFull {
+		padding-left: 6px;
+		padding-right: 6px;
+	}
+	#ContentRight {
+		padding-right: 6px;
+	}
+	.short-summary {
+		width: 100%;
+		.answers {
+			height: 51px;
+		}
+		.views {
+			height: 51px;
+		}
+		.votes {
+			height: 51px;
+		}
+	}
+	.question-page {
+		.vote-buttons {
+			margin-right: 2px;
+		}
+		.comments {
+			.comment-controls {
+				padding-left: 8px;
+			}
+			div.controls {
+				margin-left: 2px;
+			}
+		}
+	}
+	.js-tag-name {
+		height: 20px;
+	}
+}
+@media screen and(max-width: 800px) {
+	body {
+		padding: 0;
+	}
+	.content-wrapper {
+		width: 100%;
+	}
+	#ContentRight {
+		display: none;
+	}
+	#ContentLeft {
+		width: 100%;
+		padding-right: 6px;
+	}
+	.edit-question-page {
+		#ContentLeft {
+			padding: 0 10px;
+		}
+		.preview-toggle {
+			display: none;
+		}
+		.proxy-user-info {
+			display: none;
+		}
+		.answer-options {
+			display: none;
+		}
+		.question-options {
+			display: none;
+		}
+		.revision-comment {
+			display: none;
+		}
+		.wmd-preview {
+			display: none;
+		}
+		#wmd-hr-button {
+			display: none;
+		}
+		#wmd-heading-button {
+			display: none;
+		}
+		label[for="id_title"] {
+			display: none;
+		}
+		label[for="id_revision"] {
+			display: none;
+		}
+		#id_revision {
+			display: none;
+		}
+		input[type="submit"].searchBtn {
+			display: none;
+		}
+		#fmedit #id_title {
+			margin: 15px 0 0;
+		}
+	}
+	.edit-answer-page {
+		#ContentLeft {
+			padding: 0 10px;
+		}
+		.preview-toggle {
+			display: none;
+		}
+		.proxy-user-info {
+			display: none;
+		}
+		.answer-options {
+			display: none;
+		}
+		.question-options {
+			display: none;
+		}
+		.revision-comment {
+			display: none;
+		}
+		.wmd-preview {
+			display: none;
+		}
+		#wmd-hr-button {
+			display: none;
+		}
+		#wmd-heading-button {
+			display: none;
+		}
+		label[for="id_title"] {
+			display: none;
+		}
+		label[for="id_revision"] {
+			display: none;
+		}
+		#id_revision {
+			display: none;
+		}
+		#fmedit #id_title {
+			margin: 15px 0 0;
+		}
+	}
+	#metaNav {
+		float: left;
+		#navBadges {
+			display: none;
+		}
+		a {
+			/*&#navUsers {
+				@extend %extend_58;
+			}
+			&#navTags {
+				@extend %extend_58;
+			}
+			&#navGroups {
+				@extend %extend_58;
+			}*/
+		}
+	}
+	.copyright {
+		display: none;
+	}
+	.counts {
+		.views {
+			display: none;
+		}
+		.votes {
+			display: none;
+		}
+	}
+	.help {
+		display: none;
+	}
+	.rss {
+		display: none;
+	}
+	.scope-selector {
+		display: none;
+	}
+	.settings {
+		display: none;
+	}
+	/*.tabBar {
+		display: none;
+	}*/
+	.tags {
+		display: none;
+	}
+	.userinfo {
+		display: none;
+	}
+	.widgets {
+		display: none;
+	}
+	.ask-page {
+		.preview-toggle {
+			display: none;
+		}
+		.proxy-user-info {
+			display: none;
+		}
+		.answer-options {
+			display: none;
+		}
+		.question-options {
+			display: none;
+		}
+		.revision-comment {
+			display: none;
+		}
+		.wmd-preview {
+			display: none;
+		}
+		#wmd-hr-button {
+			display: none;
+		}
+		#wmd-heading-button {
+			display: none;
+		}
+		input[type="submit"].searchBtn {
+			display: none;
+		}
+	}
+	.question-page {
+		.comment-votes {
+			display: none;
+		}
+		.comments {
+			form.post-comments {
+				margin: 0 10px 0 0;
+			}
+			.comment .comment-body {
+				margin-left: 5px;
+			}
+		}
+		.post-update-info-container {
+			float: none;
+			width: 100%;
+		}
+		.post-update-info {
+			float: none;
+			margin-left: 0;
+			width: auto;
+			br {
+				display: none;
+			}
+			.badge1 {
+				display: none;
+			}
+			.badge2 {
+				display: none;
+			}
+			.badge3 {
+				display: none;
+			}
+			.gravatar {
+				display: none;
+			}
+			.reputation-score {
+				display: none;
+			}
+			.user-card {
+				display: none;
+			}
+			.badge-count {
+				display: none;
+			}
+		}
+	}
+	.footer-links-container {
+		text-align: center;
+		width: 100%;
+	}
+	.powered-link {
+		text-align: center;
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	#userToolsNav {
+		margin-left: 10px;
+	}
+	.short-summary {
+		width: 100%;
+		&:first-child {
+			padding-top: 0;
+		}
+	}
+	input[type="submit"].searchBtn {
+		margin-right: 0;
+	}
+	.openid-signin #ContentLeft {
+		padding: 0 10px;
+	}
+	.meta #ContentLeft {
+		padding: 0 10px;
+	}
+	.main-page h1 {
+		display: none;
+	}
+	.user-profile-page td {
+		display: block;
+	}
+	#secondaryHeader td.search-bar {
+		padding: 0 6px;
+	}
+}
+@media screen and(max-width: 540px) {
+	.question-page {
+		.post-controls {
+			float: left;
+			height: 32px;
+			margin-left: -8px;
+			padding-left: 0;
+			text-align: left;
+			.question-close {
+				display: none;
+			}
+		}
+		div.comments.empty {
+			margin-top: 8px !important;
+		}
+	}
+}
+@media screen and(max-width: 480px) {
+	.openid-signin {
+		h1 {
+			line-height: 1.1;
+			margin-bottom: 12px;
+		}
+		h2 {
+			line-height: 1.1;
+			margin-bottom: 12px;
+		}
+		textarea {
+			width: 100%;
+		}
+		input[type="text"] {
+			width: 100%;
+		}
+	}
+	.meta {
+		textarea {
+			width: 100%;
+		}
+		input[type="text"] {
+			width: 100%;
+		}
+	}
+	.users-page {
+		textarea {
+			width: 100%;
+		}
+		input[type="text"] {
+			width: 100%;
+		}
+	}
+	.user-profile-edit-page {
+		textarea {
+			width: 100%;
+		}
+		input[type="text"] {
+			width: 100%;
+		}
+	}
+	.user-profile-page {
+		textarea {
+			width: 100%;
+		}
+		input[type="text"] {
+			width: 100%;
+		}
+	}
+}
+@media screen and(max-width: 380px) {
+	.wmd-button-bar {
+		.wmd-hr-button {
+			display: none;
+		}
+		.wmd-heading-button {
+			display: none;
+		}
+	}
+	.editor-status {
+		margin-right: 0;
+	}
+}
+@media screen and(max-width: 338px) {
+	#scopeNav {
+		display: none;
+	}
+	.ask-page {
+		#id_post_author_username {
+			width: 100%;
+			margin: 6px 0;
+		}
+		#id_post_author_email {
+			width: 100%;
+			margin: 6px 0;
+		}
+	}
+	.question-page {
+		#id_post_author_username {
+			width: 100%;
+			margin: 6px 0;
+		}
+		#id_post_author_email {
+			width: 100%;
+			margin: 6px 0;
+		}
+		.post-controls .js-offensive-flag {
+			display: none;
+		}
+	}
+	.edit-question-page {
+		#id_post_author_username {
+			width: 100%;
+			margin: 6px 0;
+		}
+		#id_post_author_email {
+			width: 100%;
+			margin: 6px 0;
+		}
+	}
+	.edit-answer-page {
+		#id_post_author_username {
+			width: 100%;
+			margin: 6px 0;
+		}
+		#id_post_author_email {
+			width: 100%;
+			margin: 6px 0;
+		}
+	}
+}
+* html {
+	.clearfix {
+		height: 1;
+		overflow: visible;
+	}
+	.paginator {
+		height: 1;
+		overflow: visible;
+	}
+}
++ html {
+	.clearfix {
+		min-height: 1%;
+	}
+	.paginator {
+		min-height: 1%;
+	}
+}
+.clearfix:after {
+	@extend %extend_4;
+}
+.comment-controls .js-avatar {
+	height: 16px;
+	width: 16px;
+}
+.badge-context-toggle.active {
+	cursor: pointer;
+	text-decoration: underline;
+}
+#logo img {
+	padding: 5px 0;
+	height: 75px;
+	width: auto;
+	float: left;
+}
+.lang-de .lang-nav {
+	text-transform: capitalize;
+}
+.badges-pages input[type="submit"].searchBtn {
+	margin-top: 1px;
+}
+.badge-list .placeholder {
+	background: $color_silver_chalice_approx;
+	height: 5px;
+	list-style: none;
+}
+.cancelSearchBtn:hover {
+	color: $color_valencia_approx;
+}
+.statsWidget p {
+	color: $color_dove_gray_approx;
+	font-size: 16px;
+	border-bottom: $color_celeste_approx 1px solid;
+	font-size: 13px;
+	strong {
+		float: right;
+		padding-right: 10px;
+	}
+}
+.tabsB a {
+	background: $color_gallery_approx;
+	border: 1px solid $color_gallery_approx;
+	color: $color_tapa_approx;
+	display: block;
+	float: left;
+	height: 22px;
+	line-height: 28px;
+	margin: 5px 0 0 4px;
+	padding: 0 11px;
+	text-decoration: none;
+}
+.merge-questions .js-tag {
+	display: inline-block;
+}
+.expander .wait-icon-box {
+	display: inline-block;
+	margin: 0;
+}
+.snippet:hover .expander a {
+	text-decoration: underline;
+}
+#fmanswer input.submit {
+	@extend %extend_30;
+}
+.user-page .wmd-buttons {
+	width: 725px;
+}
+.facebook-share.icon {
+	@extend %extend_46;
+	background-position: -26px 0;
+	&:hover {
+		opacity: 0.8;
+		filter: alpha(opacity=80);
+	}
+}
+.twitter-share.icon {
+	@extend %extend_46;
+	margin-top: 10px;
+	background-position: 0 0;
+	&:hover {
+		opacity: 0.8;
+		filter: alpha(opacity=80);
+	}
+}
+.linkedin-share.icon {
+	@extend %extend_46;
+	background-position: -52px 0;
+	&:hover {
+		opacity: 0.8;
+		filter: alpha(opacity=80);
+	}
+}
+.identica-share.icon {
+	@extend %extend_46;
+	background-position: -78px 0;
+	&:hover {
+		opacity: 0.8;
+		filter: alpha(opacity=80);
+	}
+}
+.form-group .error {
+	display: block;
+}
+#award-list .user {
+	float: left;
+	margin: 5px;
+}
+span.text-counter {
+	margin-right: 20px;
+}
+.user-stats-table .narrow {
+	width: 660px;
+}
+.question-title-link a {
+	font-weight: bold;
+	color: $color_lochmara_approx;
+}
+.answer-title-link a {
+	color: $color_mine_shaft_approx;
+}
+.about div {
+	padding: 10px 5px;
+	border-top: 1px dashed $color_silver_chalice_approx;
+}
+.inbox-flags .action-status {
+	line-height: 38px;
+	height: 24px;
+}
+#question-controls .tags {
+	margin: 0 0 3px 0;
+}
+.post-update-info .user-info {
+	margin-top: -2px;
+}
+.tipped-input.blank {
+	color: $color_dove_gray_approx;
+}
+.modal-body > {
+	textarea {
+		width: 515px;
+		margin-bottom: 0;
+	}
+	input[type="text"] {
+		width: 515px;
+		font-style: normal;
+	}
+}
+.alert .close {
+	right: -38px;
+}
+.complete-registration form {
+	margin: 0 0 10px;
+}
+.recover-account form {
+	margin: 0 0 10px;
+}
+.auto-tweeting select {
+	width: auto;
+	margin-bottom: 0;
+}
+
+/* styles for newly added conponents */
+
+.desktop-hamburger{
+	float: left; 
+	padding-left: 1.8%;
+	margin-top: 3em;
+}
+#image-div{
+    background: $light-gray; 
+    padding: 2px 4px 2px 4px; 
+    border-radius: 5px 5px 5px 5px;
+}
+.desktop-hamburger-icon{
+    width: 32px; 
+    height: 32px;
+    padding-top: 0.06em;
+    padding-right: 0.04em;
+    color:$gray;
+}
+.normal-btn{
+	cursor:pointer;
+    box-shadow: 0px 3px 2px -2px #666666;
+    background-color: $fedora-blue;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    border: 3px solid #27408B;
+    color: $white;
+    font-size: 1.4em;
+    font-style: normal;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+}
+.menu-container{
+    background: #dbdbdb;
+    height: 2.5em;
+    .content{
+        height: 2.5em;
+        @include container(100%);
+        @include span(15 of 15);
+           @include breakpoint($small){
+            @include span(14 of 15);
+            @include pre(1);
+            padding-left: 0.5em;
+          }
+
+          @include breakpoint($medium){
+            @include span(11 of 15);
+            @include pre(1);
+            padding-left: 0.5em;
+          }
+
+          @include breakpoint(1200px){
+            padding-left: 0em;
+          }
+
+          .left, .right{
+            padding-top: 0.4em;
+            color: $gray;
+          }
+
+          .left{
+            display: none;
+            @include breakpoint($large){
+                display: inline;
+                @include span(5 of 15);
+            }
+          }
+
+          .right{
+            text-align: right;
+            @include span(15 of 15);
+            @include breakpoint($large){
+                @include span(10 at 6 of 15);
+            }
+
+            .menu-item{
+                @include gallery(3 of 15);
+                text-align: center;
+            }
+
+            #activity{
+                font-weight: bold;
+            }
+
+          }
+    } 
+}
+#header-container, #footer-container{
+	@include container(98%);
+	@include span(15 of 15);
+	@include breakpoint($small){
+        @include container(90%);
+    }
+    @include breakpoint($medium){
+        @include container(75%);
+    }
+    height: 100%;
+}
+#secondary-header-container{
+	@include container(98%);
+    @include breakpoint($small){
+        @include container(90%);
+    }
+    @include breakpoint($medium){
+        @include container(75%);
+    }
+    height: 9em;
+    #desktop-hamburger-container{
+    	display: none;
+    	@include breakpoint($small){
+    		display: inline;
+    		@include span(1 of 15);
+    	}
+    }
+    #search-bar-container{
+    	@include span(12 of 15);
+    	@include breakpoint($small){
+    		@include span(11 at 2 of 15);
+    	}
+    }
+    #ask-btn-container{
+    	@include span(3 at 13 of 15);
+    	@include breakpoint($small){
+    		@include span(3 at 13 of 15);
+    	}
+    }
+}
+#tertiaryHeader{
+	@include container(100%);
+	width: 100%;
+	background-color: $light-gray;
+	height: 3em;
+}
+#tertiary-header-container{
+	@include container(98%);
+    @include breakpoint($small){
+        @include container(90%);
+    }
+    @include breakpoint($medium){
+        @include container(75%);
+    }
+    height: 3em;
+}
+#tertiary-header-content{
+	@include span(15 of 15);
+	@include container(100%);
+	@include breakpoint($medium){
+		@include span(12 of 15);
+	}
+	height: 3em;
+}
+#left-tertiary-header{
+	display: none;
+	@include breakpoint($medium){
+		display: inline;
+		@include span(4 of 15);
+	}
+
+}
+#right-tertiary-header{
+	@include span(15 of 15);
+	@include breakpoint($medium){
+		@include span(11 at 5 of 15);
+	}
+}
+#body-container{
+	@include container(98%);
+    @include breakpoint($small){
+        @include container(90%);
+    }
+    @include breakpoint($medium){
+        @include container(75%);
+    }
+}
+
+/* css menu */
+
+#cssmenu {
+  height: 100%;
+}
+
+#cssmenu > ul {
+  list-style: inside none;
+  margin: 0;
+  padding: 0;
+  z-index: 999;
+}
+#cssmenu > ul > li {
+  list-style: inside none;
+  float: left;
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  z-index: 999;
+}
+#cssmenu.align-center > ul {
+  text-align: center;
+
+}
+#cssmenu.align-center > ul > li {
+  float: none;
+  margin-left: -3px;
+}
+#cssmenu.align-center ul ul {
+  text-align: left;
+}
+#cssmenu.align-center > ul > li:first-child > a {
+  border-radius: 0;
+}
+#cssmenu > ul > li > a {
+  outline: none;
+  display: block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+  font-size: 13px;
+  font-family: "Open sans", Helvetica, Arial;
+  /*border-right: 1px solid #080808;*/
+  /*color: #ffffff;*/
+  color: #dedede;
+  /*padding: 12px 20px;*/
+}
+#cssmenu > ul > li:first-child > a {
+  border-radius: 5px 5px 0 0;
+}
+#cssmenu > ul > li > a:after {
+  content: "";
+  position: absolute;
+  /*border-right: 1px solid;*/
+  top: -1px;
+  bottom: -1px;
+  right: -2px;
+  z-index: 99;
+  border-color: #3c3c3c;
+}
+#cssmenu ul li.has-sub:hover > a:after {
+  top: 0;
+  bottom: 0;
+}
+
+/*#cssmenu > ul > li.has-sub > a:before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 6px;
+  border: 5px solid transparent;
+  border-top: 5px solid #ffffff;
+}*/
+
+#cssmenu > ul > li.has-sub:hover > a:before {
+  top: 19px;
+}
+#cssmenu > ul > li.has-sub:hover > a {
+  /*padding-bottom: 14px;*/
+
+  z-index: 999;
+  border-color: #dedede;
+}
+#cssmenu ul li.has-sub:hover > ul,
+#cssmenu ul li.has-sub:hover > div {
+  display: block;
+}
+#cssmenu > ul > li.has-sub > a:hover,
+#cssmenu > ul > li.has-sub:hover > a {
+  background: #dedede;
+  border-color: #dedede;
+}
+#cssmenu ul li > ul,
+#cssmenu ul li > div {
+  display: none;
+  width: auto;
+  position: absolute;
+  /*top: 38px;*/
+  
+  background: #dedede;
+  border-radius: 0 5px 5px 5px;
+  z-index: 999;
+  padding: 10px 0;
+  margin-left: 0;
+}
+#cssmenu ul li > ul {
+  
+}
+#cssmenu ul ul ul {
+  position: absolute;
+}
+#cssmenu ul ul li:hover > ul {
+  left: 100%;
+  top: -10px;
+  /*border-radius: 5px;*/
+}
+#cssmenu ul li > ul li {
+  display: block;
+  list-style: inside none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+#cssmenu ul li > ul li a {
+  outline: none;
+  display: block;
+  position: relative;
+  /*font: 10pt Arial, Helvetica, sans-serif;*/
+  font-family: "Open sans", Helvetica, Arial;
+  font-size: 1.2em;
+  
+  color: #494949;
+  text-decoration: none;
+  /*text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);*/
+  margin: 0;
+  padding: 8px 20px;
+  /*height: 1.5em;*/
+}
+#cssmenu,
+#cssmenu ul ul > li:hover > a,
+#cssmenu ul ul li a:hover {
+  background: #999999;
+  /*background: -moz-linear-gradient(top, #3c3c3c 0%, #222222 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3c3c3c), color-stop(100%, #222222));
+  background: -webkit-linear-gradient(top, #3c3c3c 0%, #222222 100%);
+  background: -o-linear-gradient(top, #3c3c3c 0%, #222222 100%);
+  background: -ms-linear-gradient(top, #3c3c3c 0%, #222222 100%);
+  background: linear-gradient(top, #3c3c3c 0%, #222222 100%);*/
+}
+#cssmenu > ul > li > a:hover {
+  background: #080808;
+  color: #ffffff;
+}
+#cssmenu ul ul a:hover {
+  color: #ffffff;
+}
+#cssmenu > ul > li.has-sub > a:hover:before {
+  /*border-top: 5px solid #ffffff;*/
+}
+
