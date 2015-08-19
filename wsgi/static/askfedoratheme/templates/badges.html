@@ -10,19 +10,22 @@
 </p>
 <div id="medalList">
     {% for badge in badges %}
-    <div style="clear:both;line-height:30px">
-        {% if badge.id in my_badge_ids %}
-            <div style="float:left;min-width:30px;text-align:right;height:30px">
-                 <span style="font-size:175%; padding-right:5px; color:#5B9058; line-height:2.1em">&#10004;</span>
-            </div>
-        {% endif %}
-        <div style="float:left;width:230px;">
+    <div class="medalList-pane">
+        <div class="medalList-left">
+            {% if badge.id in my_badge_ids %}
+                <div style="float:left;min-width:30px;text-align:right;height:30px">
+                     <i class="fa fa-check" style="font-size:2em; padding-right:5px; color:#42a500; line-height:1.5em"></i>
+                </div>
+            {% endif %}
             <a href="{{badge.get_absolute_url()}}" 
                 title="{{ badge.get_type_display() }} : {{ badge.get_description() }}" 
-                class="medal {{ badge.get_css_class() }}"><!--<span class="{{ badge.get_css_class() }}">&#9679;</span>&nbsp;-->{{ badge.get_name() }}</a><strong style="line-height: 3.5em"> 
+                class="medal {{ badge.get_css_class() }}"
+                style="text-decoration: none"><!--<span class="{{ badge.get_css_class() }}">&#9679;</span>&nbsp;-->{{ badge.get_name() }}</a><strong style="line-height: 3.5em"> 
                 &#215; {{ badge.awarded_count|intcomma }}</strong>
         </div>
-        <p style="float:left;margin-top:1.1em;">{{ badge.get_description() }}</p>
+        <div class="medalList-right">
+            {{ badge.get_description() }}
+        </div>
     </div>
     {% endfor %}
 </div>
@@ -31,7 +34,7 @@
 <div class="box">
     <h2>{% trans %}Community badges{% endtrans %}</h2>
     <p>
-        <a style="cursor:default;" title="{% trans %}gold badge: the highest honor and is very rare{% endtrans %}" class="medal badge1"><!--<span class="badge1">&#9679;</span>&nbsp;-->{% trans %}gold{% endtrans %}</a>
+        <a style="cursor:default; text-decoration: none" title="{% trans %}gold badge: the highest honor and is very rare{% endtrans %}" class="medal badge1"><!--<span class="badge1">&#9679;</span>&nbsp;-->{% trans %}gold{% endtrans %}</a>
     </p>
     <p>
         <br><br><br>
@@ -40,7 +43,7 @@ profound knowledge and ability in addition to your active participation.{% endtr
     </p>
     <p>
         <a 
-            style="cursor:default;" 
+            style="cursor:default; text-decoration: none" 
             title="{% trans %}silver badge: occasionally awarded for the very high quality contributions{% endtrans %}" 
             class="medal badge2"><!--<span class="badge2">&#9679;</span>-->&nbsp;{% trans %}silver{% endtrans %}</a>
     </p>
@@ -49,7 +52,7 @@ profound knowledge and ability in addition to your active participation.{% endtr
         {% trans %}silver badge: occasionally awarded for the very high quality contributions{% endtrans %}
     </p>
     <p>
-        <a style="cursor:default;" title="{% trans %}bronze badge: often given as a special honor{% endtrans %}" class="medal badge3">
+        <a style="cursor:default; text-decoration: none" title="{% trans %}bronze badge: often given as a special honor{% endtrans %}" class="medal badge3">
         <!--<span class="badge3">&#9679;</span>&nbsp;-->{% trans %}bronze{% endtrans %}</a>
     </p>
     <p>

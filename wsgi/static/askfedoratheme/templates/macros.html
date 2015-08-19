@@ -3,15 +3,17 @@
 {%- macro share(site = None, site_label = None, icon = False) -%}
     <a class="{{ site }}-share{% if icon == True %} icon{% endif %}"
         title="{% trans %}Share this content on {{site}}{% endtrans %}"
-    >{% if icon == False %}{% if site_label %}{{ site_label }}{% else %}{{ site }}{% endif %}{% endif %}</a>
+    >
+    <i class="fa fa-{{ site }}"></i>
+    {% if icon == False %}{% if site_label %}{{ site_label }}{% else %}{{ site }}{% endif %}{% endif %}</a>
 {%- endmacro -%}
 
 {%- macro inbox_message_snippet(message) -%}
 <div class="message-details" data-message-id="{{ message.id }}">
     <input type="checkbox" />
     {{ gravatar(message.user, 24) }}
-    <a class="username" href="{{ message.user.get_absolute_url() }}">{{ message.user.username|escape }}</a>
-    <a class="forum-post-link" href="{{ message.url }}">{{ message.message_type }}</a>
+    <a class="username" href="{{ message.user.get_absolute_url() }}" style="text-decoration: none">{{ message.user.username|escape }}</a>
+    <a class="forum-post-link" href="{{ message.url }}" style="text-decoration: none">{{ message.message_type }}</a>
     ({{ timeago(message.timestamp) }})
     {#<div class="snippet">{{ message.snippet }}</div>#}
     <div class="post-content">{{ message.content }}</div>
@@ -35,18 +37,13 @@
 {%- endmacro -%}
 
 {%- macro post_vote_buttons(post = None) -%}
-<div id="{{post.post_type}}-img-upvote-{{ post.id }}"
-    class="{{post.post_type}}-img-upvote post-vote upvote">
-</div>
+<div id="{{post.post_type}}-img-upvote-{{ post.id }}" class="arrow-up"></div>
 <div 
     id="{{post.post_type}}-vote-number-{{ post.id }}"
     class="vote-number"
     title="{% trans %}current number of votes{% endtrans %}"
 >{{ post.score }}</div>
-<div
-    id="{{post.post_type}}-img-downvote-{{ post.id }}"
-    class="{{post.post_type}}-img-downvote post-vote downvote">
-</div>
+<div id="{{post.post_type}}-img-downvote-{{ post.id }}" class="arrow-down"></div>
 <script type="text/javascript">
     askbot['functions']['renderPostVoteButtons']('{{post.post_type}}', '{{post.id}}');
 </script>
@@ -337,7 +334,7 @@ for the purposes of the AJAX comment editor #}
     {% else %}
         {% set remaining_comment_count = 0 %}
     {% endif %}
-    <a id="add-comment-to-post-{{post.id}}" class="button"></a>
+    <a id="add-comment-to-post-{{post.id}}" class="button"><i class="fa fa-comment"></i>&nbsp;</a>
     <script type="text/javascript">
         askbot['data']['{{widget_id}}'] = {
             truncated: {% if post.comment_count > max_comments %}true{% else %}false{% endif %}
@@ -373,11 +370,10 @@ for the purposes of the AJAX comment editor #}
     {% endif %}
     {% set comments_count = comments|length %}
     {% if comments_count > 0 %}
-        <h2 class="comment-title">{% trans %}Comments{% endtrans %}</h2>
         <div class="clean"></div> 
     {% endif %}
     {% set widget_id = 'comments-for-' + post.post_type + '-' + post.id|string %}
-    <div class="comments{% if comments_count == 0 %} empty{% endif %}" id="{{ widget_id }}">
+    <div class="comments{% if comments_count == 0 %} empty{% endif %}" id="{{ widget_id }}" style="margin-top: 3em;">
         <div class="content">
             {% for comment in comments %}
                 {# Warning! Any changes to the comment markup IN THIS `FOR` LOOP must be duplicated in post.js
@@ -407,7 +403,8 @@ for the purposes of the AJAX comment editor #}
                             <span 
                                 class="delete-icon"
                                 title="{% trans %}delete this comment{% endtrans %}"
-                            ></span>
+                                style="padding: 0.2em 0.5em 0.3em 0.3em; border-radius: 4px; margin-left: -0.5em;"
+                            ><i class="fa fa-times"></i></span>
                         </div>
                         {% if comment.needs_moderation() %}
                             <p class="moderated">{% trans %}This post is awaiting moderation{% endtrans %}</p>
@@ -419,9 +416,11 @@ for the purposes of the AJAX comment editor #}
                                 href="{{comment.author.get_profile_url()}}"
                             >{{comment.author.username|escape}}</a>
                             <span class="age">&nbsp;({{ timeago(comment.added_at) }})</span>
+                            <br><br>
                             <a 
                                 id="post-{{comment.id}}-edit"
                                 class="edit"
+                                style="text-decoration: none"
                             >{% trans %}edit{% endtrans %}</a>
                             <form 
                                 action="{% url comment_to_answer %}"
@@ -431,7 +430,7 @@ for the purposes of the AJAX comment editor #}
                             >
                                 <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
                                 <input type="hidden" value="{{comment.id}}" name="comment_id" id="id_comment_id">
-                                <input type="submit" value="{% trans %}convert to answer{% endtrans %}">
+                                <input type="submit" value="{% trans %}convert to answer{% endtrans %}" style="font-size: 1em; margin-bottom: 0.3em">
                             </form>
                         </div>
                     </div>
@@ -554,15 +553,15 @@ for the purposes of the AJAX comment editor #}
 {%- macro follow_toggle(follow, name, alias, id) -%}
     {# follow - boolean; name - object type name; alias - e.g. users name; id - object id #}
     <div 
-        class="button follow-toggle follow-user-toggle" 
+        class="button follow-toggle follow-user-toggle normal-btn" 
         id="follow-{{ name|escape }}-{{ id }}"
     >
         {% if follow %}
-        <div class="follow">{% trans %}follow {{alias}}{% endtrans %}</div>
+        <div class="follow">{% trans %}Follow{% endtrans %}</div>
         {% else %}
         <div class="unfollow">
-          <div class="unfollow-red">{% trans %}unfollow {{alias}}{% endtrans %}</div>
-          <div class="unfollow-green">{% trans %}following {{alias}}{% endtrans %}</div>
+          <div class="unfollow-red">{% trans %}Unfollow{% endtrans %}</div>
+          <!--<div class="unfollow-green">{% trans %}following {{alias}}{% endtrans %}</div>-->
         </div>
         {% endif %}
     </div>

@@ -5,10 +5,11 @@
     {% trans %}subscriptions{% endtrans %}
 {% endblock %}
 {% block usercontent %}
-    <h2>{% trans %}Email subscription settings{% endtrans %}</h2>
-    <p class="message">
+    <div id="email-subscriptions"> 
+    <h2 style="font-size: 1.2em">{% trans %}Email subscription settings{% endtrans %}</h2>
+    <p class="message" style="margin-top: 0.5em">
 {% trans %}<span class='big strong'>Adjust frequency of email updates.</span> Receive updates on interesting content by email. If you do not wish to receive emails - select 'no email' on all items below.<br/>Updates are only sent when there is any new activity on selected items.{% endtrans %}</p>
-    <div>
+    <div style="margin-top: 1em">
     {% if action_status %}
         <p class="action-status"><span>{{action_status}}</span></p>
     {% endif %}
@@ -19,9 +20,9 @@
         <table class='form-as-table ab-tag-filter-form'>
         {{tag_filter_selection_form}}
         </table>
-        <div class="submit-row text-align-right">
-            <input type="submit" name="save" value="{% trans %}Update{% endtrans %}"/>&nbsp;
-            <input type="submit" name="stop_email" value="{% trans %}Stop Email{% endtrans %}"/>
+        <div class="submit-row">
+            <input class="normal-btn" type="submit" name="save" value="{% trans %}Update{% endtrans %}"/>&nbsp;
+            <input class="normal-btn" type="submit" name="stop_email" value="{% trans %}Stop Email{% endtrans %}"/>
         </div>
     </form>
     </div>
@@ -60,7 +61,9 @@
             </div>
         </div>
     {%endif%}
+    </div>
 {% endblock %}
+{% block sidebar %}{% endblock %}
 {% block userjs %}
     <script type='text/javascript'>
         search = new FullTextSearch();

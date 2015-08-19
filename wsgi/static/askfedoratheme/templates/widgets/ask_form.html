@@ -1,5 +1,5 @@
 {% import "macros.html" as macros %}
-<form id="fmask" action="{% url "ask" %}" method="post" >{% csrf_token %}
+<form id="fmask" action="{% url "ask" %}" method="post" style="margin-bottom: 0">{% csrf_token %}
     <div class="form-item ask-form-bar">
         <label for="id_title">
             {{ form.title.help_text }}
@@ -8,7 +8,7 @@
             {% endif %}
         </label>
         <div id="askFormBar">
-            <input id="id_title" class="questionTitleInput" name="title" autocomplete="off"
+            <input id="id_title" name="title" autocomplete="off"
                 value="{% if form.initial.title %}{{form.initial.title|escape}}{% endif %}"/>
         </div>
     </div>
@@ -26,7 +26,7 @@
         <label for="editor">{% trans %}Add details{% endtrans %}</label>
     {% endif %}
 
-    <div class="folded-editor{% if editor_is_folded == False %} unfolded{% endif %}">
+    <!--<div class="folded-editor{% if editor_is_folded == False %} unfolded{% endif %}">-->
         <div class="editor-proper">
         {{
             macros.edit_post(
@@ -38,37 +38,40 @@
                 user = request.user
             )
         }}
+            <div class="after-editor">
+                {{ form.group_id }}
+                <div class="question-options">
+                    {% if settings.WIKI_ON %}
+                        {{ macros.checkbox_in_div(form.wiki) }}
+                    {% endif %}
+                    {% if settings.ALLOW_ASK_ANONYMOUSLY %}
+                        {{ macros.checkbox_in_div(form.ask_anonymously) }}
+                    {% endif %}
+                    {% if settings.GROUPS_ENABLED and
+                        request.user.is_authenticated() and
+                        request.user.can_make_group_private_posts()
+                    %}
+                        {{ macros.checkbox_in_div(form.post_privately) }}
+                    {% endif %}
+                    {% if settings.MULTILINGUAL %}
+                    <div class="lang-selector">
+                        <label for="id_language">{% trans %}Select language{% endtrans %}</label>
+                        {{ form.language }}
+                    </div>
+                    {% endif %}
+                </div>
+                {% if form.recaptcha %}
+                    <div>{{ macros.form_field_with_errors(form.recaptcha) }}</div>
+                    <div class="clearfix"></div>
+                {% endif %}
+                {% if request.user.is_anonymous() and not settings.ALLOW_ASK_UNREGISTERED %}
+                    <input class="normal-btn" type="submit" name="post_anon" value="{% trans %}Login/Signup to Post{% endtrans %}" />
+                {% else %}
+                  <input class="normal-btn" type="submit" name="post" value="{{ settings.WORDS_ASK_YOUR_QUESTION|escape }}" />
+                {% endif %}
+                <div class="clean"></div>
+            </div>
         </div>
-    </div>
-    {{ form.group_id }}
-    <div class="question-options">
-        {% if settings.WIKI_ON %}
-            {{ macros.checkbox_in_div(form.wiki) }}
-        {% endif %}
-        {% if settings.ALLOW_ASK_ANONYMOUSLY %}
-            {{ macros.checkbox_in_div(form.ask_anonymously) }}
-        {% endif %}
-        {% if settings.GROUPS_ENABLED and
-            request.user.is_authenticated() and
-            request.user.can_make_group_private_posts()
-        %}
-            {{ macros.checkbox_in_div(form.post_privately) }}
-        {% endif %}
-        {% if settings.MULTILINGUAL %}
-        <div class="lang-selector">
-            <label for="id_language">{% trans %}Select language{% endtrans %}</label>
-            {{ form.language }}
-        </div>
-        {% endif %}
-    </div>
-    {% if form.recaptcha %}
-        <div>{{ macros.form_field_with_errors(form.recaptcha) }}</div>
-        <div class="clearfix"></div>
-    {% endif %}
-    {% if request.user.is_anonymous() and not settings.ALLOW_ASK_UNREGISTERED %}
-        <input type="submit" name="post_anon" value="{% trans %}Login/Signup to Post{% endtrans %}" />
-    {% else %}
-      <input type="submit" name="post" value="{{ settings.WORDS_ASK_YOUR_QUESTION|escape }}" />
-    {% endif %}
-    <div class="clean"></div>
+    <!--</div>-->
+    
 </form>

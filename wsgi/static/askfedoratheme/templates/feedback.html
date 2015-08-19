@@ -9,7 +9,7 @@
   {{form.errors.__all__}}
 </span>
 {%endif%}
-<form method="post" action="{% url feedback %}" accept-charset="utf-8">{% csrf_token %}
+<form id="feedback-form" method="post" action="{% url feedback %}" accept-charset="utf-8">{% csrf_token %}
     {% if user.is_authenticated() %}
         <p class="message">
         {% trans user_name=user.username|escape %}
@@ -57,8 +57,8 @@
     {% endif %}
     {{form.next}}
     <div class="submit-row">
-        <input type="submit" value="{% trans %}Send Feedback{% endtrans %}"/>&nbsp;
-        <input type="submit" class="cancel" name="cancel" value="{% trans %}Cancel{% endtrans %}"/>
+        <input class="normal-btn" type="submit" value="{% trans %}Send Feedback{% endtrans %}"/>&nbsp;
+        <input class="normal-btn" type="submit" class="cancel" name="cancel" value="{% trans %}Cancel{% endtrans %}"/>
     </div>
 </form>
 {% endblock %}

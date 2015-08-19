@@ -20,7 +20,7 @@
 </div>
 {# need label element for resizable input, b/c form validation won't find span #}
 {% if post_type == 'question' %}
-    <div class="form-item question-tags">
+    <div class="form-item question-tags" style="margin-top: 0.5em">
         {% if use_category_selector %}
             {% include "widgets/three_column_category_selector.html" %}
             <div class="tags-desc">{% trans %}Tags{% endtrans %}</div>
@@ -29,7 +29,7 @@
             {% if tags_are_required %}
                 <label for="id_tags">
                 {% if mandatory_tags %}
-                    <strong>{% trans %}tags{% endtrans %}</strong>
+                    <strong>{% trans %}Tags{% endtrans %}</strong>
                     {% trans %}, one of these is required{% endtrans %}
                     {{
                         tag_list_widget(
@@ -39,12 +39,12 @@
                         )
                     }}
                 {% else %}
-                    <strong>{% trans %}tags:{% endtrans %}</strong> 
+                    <strong>{% trans %}Tags{% endtrans %}</strong> 
                     {% trans %}(required){% endtrans %}
                 {% endif %}
                 </label>
             {% else %}
-                <strong>{% trans %}tags:{% endtrans %}</strong>
+                <strong>{% trans %}Tags{% endtrans %}</strong>
             {% endif %}
             <span class="form-error">{{ post_form.tags.errors }}</span><br/>
             {{ post_form.tags }}
@@ -74,7 +74,7 @@
         </span>
     </div>
     <!--<div class="clearfix"></div>-->
-    <div id="previewer" class="wmd-preview"></div>
+    <div id="previewer" class="wmd-preview" style="background-color: white;"></div>
 {% endif %}
 
 {% if user and user.is_authenticated() and user.is_administrator() %}

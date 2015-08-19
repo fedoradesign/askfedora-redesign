@@ -12,7 +12,7 @@
         <div class="message{% if message.is_new %} highlight new{% else %} seen{% endif %}"
             data-message-id="{{ message.id }}"
         >
-            <h2>"{{ message.title.strip()|escape}}"</h2>
+            <h2 style="font-size: 1.4em">"{{ message.title.strip()|escape}}"</h2>
             {{ macros.inbox_message_snippet(message) }}
         </div>
         {# "nested" messages are further response messages to the same question #}

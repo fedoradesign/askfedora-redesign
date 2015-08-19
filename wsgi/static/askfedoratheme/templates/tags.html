@@ -1,6 +1,7 @@
 {% extends "two_column_body.html" %}
 <!-- tags.html -->
 {% block title %}{% spaceless %}{% trans %}Tags{% endtrans %}{% endspaceless %}{% endblock %}
+{% block tertiary_header %}{% include "tags/tags_tertiary_header.html" %}{% endblock %}
 {% block content %}
 {% include "tags/content.html" %}
 {% endblock %}

@@ -9,29 +9,31 @@
     {% include "user_profile/user_info.html" %}
     <a name="questions"></a>
     {% spaceless %}
-        <h2>
-            <span class="count">{{ question_count }}</span>
+        <h2 style="font-size: 1.4em; line-height: 1.4em; margin-bottom: 1.2em; margin-top: 1em">
             {{ settings.WORDS_QUESTIONS_COUNTABLE_FORMS|py_pluralize(question_count)|capitalize }}
+            <span class="count" style="font-size: 1em; line-height: 1.4em; margin-bottom: 0.5em;"> ({{ question_count }}) </span>
         </h2>
     {% endspaceless %}
     {% include "user_profile/users_questions.html" %}
     <a name="answers"></a>
     {% spaceless %}
-        <h2 style="clear:both;">
-            <span class="count">{{ top_answer_count }}</span>
+        <h2 style="font-size: 1.4em; line-height: 1.4em; margin-bottom: 0.5em;">
             {{ settings.WORDS_ANSWERS_COUNTABLE_FORMS|py_pluralize(top_answer_count)|capitalize }}
+            <span class="count" style="font-size: 1em; line-height: 1.4em; margin-bottom: 0.5em;"> ({{ top_answer_count }}) </span>
         </h2>
     {% endspaceless %}
     {% include "user_profile/users_answers.html" %}
-    <a name="votes"></a>
+
+    <!--<a name="votes"></a>
     {% spaceless %}
         <h2>{% trans cnt=total_votes %}<span class="count">{{cnt}}</span> Vote{% pluralize %}<span class="count">{{cnt}}</span> Votes {% endtrans %}</h2>
     {% endspaceless %}
     <div class="user-stats-table">
         <div class="up-votes">{{ up_votes }}</div>
         <div class="down-votes">{{ down_votes }}</div>
-    </div>
-    <a name="tags"></a>
+    </div>-->
+
+    <!--<a name="tags"></a>
     {% spaceless %}
         <h2>{% trans counter=user_tags|length %}<span class="count">{{counter}}</span> Tag{% pluralize %}<span class="count">{{counter}}</span> Tags{% endtrans %}</h2>
     {% endspaceless %}
@@ -96,7 +98,8 @@
             {% endif %}
         {% endfor %}
     </div>
-    {% endif %}
+    {% endif %}-->
+
 {% endblock %}
 {% block endjs %}
     {{ super() }}

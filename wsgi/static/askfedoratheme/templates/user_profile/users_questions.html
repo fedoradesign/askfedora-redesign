@@ -1,6 +1,6 @@
 <!-- users_questions.html -->
 {% import "macros.html" as macros %}
-<div class="user-stats-table">
+<div class="user-stats-table" style="margin-top: 1.5em">
     <div class="users-questions">
     {% for question in questions %}
         {{ question.thread.get_summary_html(
@@ -10,8 +10,7 @@
     {% endfor %}
     </div>
     {% if question_count > page_size %}
-        <div class="clearfix"></div>
-        <div id="pager" class="pager user-questions-pager">
+        <div id="pager" class="pager user-questions-pager" style="margin-bottom: 2em; padding-top: 2em;">
             {{ macros.paginator(q_paginator_context) }}
             <div class="clearfix"></div>
         </div>

@@ -90,22 +90,28 @@
                 {% if login_form.password_login_failed %}
                     <p class="error">{% trans %}Login failed, please try again{% endtrans %}</p>
                 {% endif %}
-                <table class="login">
-                    <tr>
-                        <td><label for="id_username">{% trans %}Login or email{% endtrans %}</label></td>
-                        <td>{{login_form.username}}</td>
-                    </tr>
-                    <tr>
-                        <td><label for="id_password">{% trans %}Password{% endtrans %}</label></td>
-                        <td>{{login_form.password}}</td>
-                    </tr>
-                </table>
-                <p id="local_login_buttons">
-                    <input name="login_with_password" type="submit" value="{% trans %}Sign in{% endtrans %}" />
-                    {% if settings.USE_LDAP_FOR_PASSWORD_LOGIN == False %}
-                    <a class="create-password-account" style="vertical-align:middle" href="{% url user_signup_with_password %}?login_provider=local">{% trans %}Create a password-protected account{% endtrans %}</a>
-                    {% endif %}
-                </p>
+                <div id="login-pane">
+                    <table class="login">
+                        <tr>
+                            <td><label for="id_username">{% trans %}Login or email{% endtrans %}</label></td>
+                            <td style="padding-right: 0">{{login_form.username}}</td>
+                        </tr>
+                        <tr>
+                            <td><label for="id_password">{% trans %}Password{% endtrans %}</label></td>
+                            <td style="padding-right: 0">{{login_form.password}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 0">
+                                <input class="submit normal-btn" name="login_with_password" type="submit" value="{% trans %}Sign in{% endtrans %}" />
+                            </td>
+                            <td style="padding-right: 0; padding-bottom: 0">
+                                {% if settings.USE_LDAP_FOR_PASSWORD_LOGIN == False %}
+                                <a class="create-password-account" style="vertical-align:middle" href="{% url user_signup_with_password %}?login_provider=local">{% trans %}Create a password-protected account{% endtrans %}</a>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             {% elif settings.USE_LDAP_FOR_PASSWORD_LOGIN == False %}
                 <h2 id="password-heading">
                     {% trans %}To change your password - please enter the new one twice, then submit{% endtrans %}
@@ -131,7 +137,7 @@
                     </tr>
                 </table>
                 <p id="local_login_buttons">
-                    <input name="change_password" type="submit" value="{% trans %}Change password{% endtrans %}" />
+                    <input class="normal-btn" name="change_password" type="submit" value="{% trans %}Change password{% endtrans %}" />
                 </p>
             {% endif %}
         </fieldset>

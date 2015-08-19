@@ -15,6 +15,7 @@
 {% block tertiary_header %}{% include "widgets/tertiary_header.html" %}{% endblock %}
 {% block content %}
     {# ==== BEGIN: main_page/content.html === #}
+    {% include "widgets/tagged.html" %}
     <div id="question-list">
         {% include "main_page/questions_loop.html" %}
     </div>

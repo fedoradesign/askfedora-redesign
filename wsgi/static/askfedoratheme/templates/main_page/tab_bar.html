@@ -12,10 +12,86 @@
     >{% trans %}RSS{% endtrans %}
 </a>-->
 {% endif %}
-<div class="tabBar">
-    <div id="sort_tabs" class="tabsA">
+<div class="tabBar" style="margin-bottom: 0.5em; margin-top: 0.5em; padding-left: 0.5em;">
+    <!--<div id="mobile-tabbar" class="tabsA sort_tabs" style="heigth: auto">
+        <table width="100%">
+            <tr>
+                <td width="33.33%">
+                    <div style="margin-top: 0"><span class="label" style="margin-left: 0">{% trans %}SORT BY{% endtrans %}</span></div>
+                </td>
+                <td width="33.33%" style="verical-align: top">
+                    {% if show_sort_by_relevance %}
+                        {% set asc_relevance_tooltip = gettext('most relevant questions') %}
+                        {% set desc_relevance_tooltip = gettext('click to see most relevant questions') %}
+                        {% set relevance_label = gettext('relevance') %}
+                        {% if query %}
+                        <div><a id="by_relevance"
+                            {% if sort == "relevance-desc" %}
+                                href="{{ search_state.change_sort('relevance-desc').full_url() }}"
+                                class="on"
+                                title="{{asc_relevance_tooltip}}"><span>{{relevance_label}} &#9660;</span>
+                            {% else %}
+                                href="{{ search_state.change_sort('relevance-desc').full_url() }}"
+                                class="off"
+                                title="{{desc_relevance_tooltip}}"><span>{{relevance_label}}</span>
+                            {% endif %}
+                        </a></div>
+                        {% endif %}
+                        <script type="text/javascript">
+                            askbot['data']['sortButtonData'] = askbot['data']['sortButtonData'] || {};
+                            askbot['data']['sortButtonData']['relevance'] = {
+                                asc_tooltip: "{{asc_relevance_tooltip}}",
+                                desc_tooltip: "{{desc_relevance_tooltip}}",
+                                label: "{{relevance_label}}"
+                            };
+                        </script>
+                    {% endif %}
+                    <div style="padding-bottom: 0.3em">{{macros.reversible_sort_button(
+                            button_sort_criterium = 'age',
+                            label = gettext('Date'),
+                            asc_tooltip = gettext('click to see the oldest questions'),
+                            desc_tooltip = gettext('click to see the newest questions'),
+                            current_sort_method = sort,
+                            search_state = search_state,
+                        )
+                    }}</div>
+                    <div>{{macros.reversible_sort_button(
+                            button_sort_criterium = 'activity',
+                            label = gettext('Activity'),
+                            asc_tooltip = gettext('click to see the least recently updated questions'),
+                            desc_tooltip = gettext('click to see the most recently updated questions'),
+                            current_sort_method = sort,
+                            search_state = search_state,
+                        )
+                    }}</div>
+                </td>
+                <td width="33.33%" style="verical-align: top">
+                    <div style="padding-bottom: 0.3em">{{macros.reversible_sort_button(
+                            button_sort_criterium = 'answers',
+                            label = gettext('Answers'),
+                            asc_tooltip = gettext('click to see the least answered questions'),
+                            desc_tooltip = gettext('click to see the most answered questions'),
+                            current_sort_method = sort,
+                            search_state = search_state,
+                        )
+                    }}</div>
+                    <div>{{macros.reversible_sort_button(
+                            button_sort_criterium = 'votes',
+                            label = gettext('Votes'),
+                            asc_tooltip = gettext('click to see least voted questions'),
+                            desc_tooltip = gettext('click to see most voted questions'),
+                            current_sort_method = sort,
+                            search_state = search_state,
+                        )
+                    }}</div>
+                </td>
+            </tr>
+        </table>
+    </div>-->
+    
+    <div id="desktop-tabbar" class="tabsA sort_tabs">
         <!--<span class="label">{% trans %}Sort by &raquo;{% endtrans %}</span>-->
-        <div class="tab-link"><span class="label">{% trans %}SORT BY{% endtrans %}</span></div>
+        <div class="tabBar-sortby tab-link" style="margin-top: 0"><span class="label" style="margin: 0">{% trans %}SORT BY{% endtrans %}</span></div>
         {% if show_sort_by_relevance %}
             {% set asc_relevance_tooltip = gettext('most relevant questions') %}
             {% set desc_relevance_tooltip = gettext('click to see most relevant questions') %}
@@ -44,7 +120,7 @@
         {% endif %}
         <div class="tab-link">{{macros.reversible_sort_button(
                 button_sort_criterium = 'age',
-                label = gettext('by date'),
+                label = gettext('Date'),
                 asc_tooltip = gettext('click to see the oldest questions'),
                 desc_tooltip = gettext('click to see the newest questions'),
                 current_sort_method = sort,
@@ -53,25 +129,25 @@
         }}</div>
         <div class="tab-link">{{macros.reversible_sort_button(
                 button_sort_criterium = 'activity',
-                label = gettext('by activity'),
+                label = gettext('Activity'),
                 asc_tooltip = gettext('click to see the least recently updated questions'),
                 desc_tooltip = gettext('click to see the most recently updated questions'),
                 current_sort_method = sort,
                 search_state = search_state,
             )
         }}</div>
-        <div class="tab-link">{{macros.reversible_sort_button(
+        <div id="tab-link-answers" class="tab-link">{{macros.reversible_sort_button(
                 button_sort_criterium = 'answers',
-                label = gettext('by answers'),
+                label = gettext('Answers'),
                 asc_tooltip = gettext('click to see the least answered questions'),
                 desc_tooltip = gettext('click to see the most answered questions'),
                 current_sort_method = sort,
                 search_state = search_state,
             )
         }}</div>
-        <div class="tab-link">{{macros.reversible_sort_button(
+        <div id="tab-link-votes" class="tab-link">{{macros.reversible_sort_button(
                 button_sort_criterium = 'votes',
-                label = gettext('by votes'),
+                label = gettext('Votes'),
                 asc_tooltip = gettext('click to see least voted questions'),
                 desc_tooltip = gettext('click to see most voted questions'),
                 current_sort_method = sort,

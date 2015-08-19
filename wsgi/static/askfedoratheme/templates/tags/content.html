@@ -6,9 +6,9 @@
     {% endif %}
     {% if tags.object_list %}
         <div class='clearfix'></div>
-        <ul class='tags'>
+        <div class='tags-pane'>
             {% for tag in tags.object_list %}
-            <li>
+            <div class="tags-pane-sub">
                 {{ macros.tag_widget(
                             tag=tag.name,
                             html_tag='div',
@@ -17,9 +17,9 @@
                                             tag.used_count|intcomma ~ '</span>'
                     )
                 }}
-            </li>
+            </div>
             {% endfor %}
-        </ul>
+        </div>
         <div class="clean"></div>
         <div class="pager">
             {{macros.paginator(paginator_context)}}

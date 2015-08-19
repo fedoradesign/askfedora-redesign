@@ -28,6 +28,11 @@
         {% include "meta/fonts.html" %} {# may contain external files #}
         {% block forestyle %}{% endblock %}
         {% include "meta/html_head_javascript.html" %}
+
+        <!--{% include "meta/bottom_scripts.html" %}-->
+        <script type="text/javascript" src="{{"/js/jquery-1.7.2.min.js"|media}}"></script>
+
+        {% block hamburgerjs %}{% endblock %}
         {% block forejs %}{% endblock %}
         {% if settings.USE_CUSTOM_HTML_HEAD %}
             {{ settings.CUSTOM_HTML_HEAD }}
@@ -55,12 +60,10 @@
             {{ settings.LEADING_SIDEBAR }}
         </div>
         {% endif %}
-        <!--<div class="content-wrapper">-->
         <div id="body-container">
             {% block body %}
             {% endblock %}
         </div>
-        <!--</div>-->
         {% if settings.FOOTER_MODE == 'default' %}
             {% include "widgets/footer.html" %}
         {% elif settings.FOOTER_MODE == 'customize' %}

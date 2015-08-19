@@ -1,4 +1,6 @@
-{% extends "one_column_body.html" %}
+{% extends "two_column_body.html" %}
+{% import "macros.html" as macros %}
+{% import "user_profile/macros.html" as user_profile_macros %}
 <!-- user.html -->
 {% block title %}{% spaceless %}{{ page_title }}{% endspaceless %}{% endblock %}
 {% block forestyle %}
@@ -6,13 +8,15 @@
     .history-table td { padding: 5px; }
 </style>
 {% endblock %}
+{% block tertiary_header %}
+    {% include "user_profile/user_tabs.html" %}
+{% endblock %}
 {% block content %}
     <h1 class="section-title">
         {% spaceless %}
-        {% trans username=view_user.username|escape %}{{username}}'s profile{% endtrans %} - {% block profilesection %}{% endblock %}
+        {% trans username=view_user.username|escape %}{{username}}'s profile{% endtrans %} {% block profilesection %}{% endblock %}
         {% endspaceless %}
     </h1>
-    {% include "user_profile/user_tabs.html" %}
     <div>
         {% block usercontent %}
         {% endblock %}
@@ -37,6 +41,14 @@
     {% endblock %}
 {% endblock %}
 {% block sidebar %}
+    <div class="col3 user-about">
+    {% if view_user.about and (not view_user.is_blocked()) %}
+        {{view_user.about|linebreaks}}
+    {% endif %}
+    </div>
+
+    {% include "user_profile/accordian.html" %}
+
     {% if 'SIDEBAR_PROFILE'|show_block_to(request.user) %}
     <div class="box">
         {{ settings.SIDEBAR_PROFILE }}
