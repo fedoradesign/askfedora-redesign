@@ -1564,6 +1564,7 @@ ul {
 			margin: 0 8px 8px 0;
 			padding: 0;
 			height: 20px;
+			line-height: 20px;
 		}
 	}
 	&.js-related-tags {
@@ -1684,6 +1685,11 @@ li {
 	}
 	&.L9 {
 		background: $color_gallery_approx;
+	}
+}
+#searchTags {
+	li {
+		font-size: 0.82em;
 	}
 }
 dl {
@@ -2494,7 +2500,7 @@ h2{
 	margin: 5px 0 8px;
 }
 .hovercard {
-	background: $white;
+	/*background: $white;
 	border: 3px solid $color_alto_approx;
 	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
 	box-shadow: 0 0 3px $color_mountain_mist_approx;
@@ -2504,8 +2510,19 @@ h2{
 	padding: 10px;
 	position: absolute;
 	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-	border-radius: 5px;
+	border-radius: 5px;*/
+
 	z-index: 1001;
+	max-width: 250px;
+	border: solid;
+    border-color: #494949 transparent;
+    border-width: 6px 6px 0 6px;
+    background: rgba(73,73,73,1);
+    border-radius: 5px;
+    color: #fff;
+    content: attr(title);
+    padding: 5px 15px 15px 15px;
+    position: absolute;
 	ul {
 		margin-bottom: 0;
 		li {
@@ -2517,7 +2534,7 @@ h2{
 	.triangle {
 		border-left: 5px solid transparent;
 		border-right: 10px solid transparent;
-		border-bottom: 10px solid $color_alto_approx;
+		border-bottom: 10px solid #494949;
 		height: 0;
 		margin: -20px 0 10px;
 		width: 0;
@@ -2542,11 +2559,7 @@ h2{
 	}
 }
 #header {
-	margin-top: 0;
-	/*background: $color_hunter_green_approx;
-	font-family: $font_14, $font_0, $font_8;*/
-	/*position:fixed;*/
-    /*width: 100%;*/
+	/*margin-top: 0;
     background: gray;
     background: -moz-linear-gradient(top, #fafafa 0%, #f0f0f0 28%, #dbdbdb 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, #fafafa), color-stop(28%, #f0f0f0), color-stop(100%, #dbdbdb));
@@ -2563,8 +2576,25 @@ h2{
     justify-content: space-between;
     padding: 0.4em 0;
     font-size: 1.7em;
-    z-index: 1000;
-    /*height: 2em;*/
+    z-index: 1000;*/
+
+    background: #fafafa;
+    background: -moz-linear-gradient(top, #fafafa 0%, #f0f0f0 28%, #dbdbdb 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #fafafa), color-stop(28%, #f0f0f0), color-stop(100%, #dbdbdb));
+    background: -webkit-linear-gradient(top, #fafafa 0%, #f0f0f0 28%, #dbdbdb 100%);
+    background: -o-linear-gradient(top, #fafafa 0%, #f0f0f0 28%, #dbdbdb 100%);
+    background: -ms-linear-gradient(top, #fafafa 0%, #f0f0f0 28%, #dbdbdb 100%);
+    background: linear-gradient(to bottom, #fafafa 0%, #f0f0f0 28%, #dbdbdb 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#dbdbdb', GradientType=0 );
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
+    color: #6F6C6A;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+    font-size: 1.7em;
+    position: relative;
 
 	&.with-logo #userToolsNav {
 		position: absolute;
@@ -3831,7 +3861,7 @@ input[type="reset"] {
 	float: left;
 	width: 100%;
 	#stats{
-		padding-left: 0;
+		/*padding-left: 0;*/
 	}
 	a {
 		@extend %extend_12;
@@ -3978,6 +4008,14 @@ input[type="reset"] {
     	@include breakpoint($small){
     		display: none;
     	}
+    	.counts-ans {
+    		a {
+    			color: $gray;
+    		}
+    		a:hover {
+    			color: $gray;
+    		}
+    	}
     }
     #question-header-tags{
     	@include span(13 at 3 of 15);
@@ -4037,8 +4075,14 @@ input[type="reset"] {
 			font-size: 1.7em;
     		padding-top: 0.2em;
     		text-align: center;
-			.fa-icons{
+			.fa-icons {
 				margin-top: 0.4em;
+				a {
+					color: $gray;
+				}
+				a:hover {
+					color: $gray;
+				}
 			}
 		}
 		.item-count {
@@ -5283,7 +5327,7 @@ input[type="reset"] {
     padding: 1em;
     margin-top: 1em;
 }
-.arrow-up {
+.arrow-up, .votes-arrow-up {
     margin-left: auto;
     margin-right: auto;
     width: 0; 
@@ -5292,13 +5336,17 @@ input[type="reset"] {
     border-right: 15px solid transparent;
     border-bottom: 15px solid $dark-gray;
     margin-bottom: 0.5em;
-
+}
+.votes-arrow-up {
+	margin-bottom: 0;
+	float: left;
+	border-bottom: 15px solid $button-green;
 }
 .arrow-up:hover{
         cursor: pointer;
         border-bottom: 15px solid $button-green;
 }
-.arrow-down {
+.arrow-down, .votes-arrow-down {
     width: 0; 
     height: 0; 
     margin-left: auto;
@@ -5308,9 +5356,20 @@ input[type="reset"] {
     border-top: 15px solid $dark-gray;
     margin-top: 0.5em;
 }
+.votes-arrow-down {
+	margin-bottom: 0;
+	float: left;
+	border-top: 15px solid #db4437;
+}
 .arrow-down:hover{
         cursor: pointer;
         border-top: 15px solid #db4437;
+}
+#votes-table {
+	width: 100%;
+	@include breakpoint($small){
+		width: auto;
+	}
 }
 #id_user {
 	@extend %extend_28;
@@ -5889,63 +5948,35 @@ table.login{
 		a {
 			color: $fedora-blue;
     		text-decoration: none;
+    		font-size: 1.1em;
+    		line-height: 1.5em;
+		}
+		a:hover {
+			color: $dark-gray;
 		}
 	}
 }
-.karma-gained {
-	/*font-weight: bold;
-	background: $color_gallery_approx;
-	width: 25px;
-	margin-right: 5px;
-	color: $color_japanese_laurel_approx;
-	padding: 3px;
-	display: block;
-	float: left;
-	text-align: center;
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-	border-radius: 3px;*/
 
-	display: inline;
-    /*padding: .2em .6em .3em;*/
-    font-size: 75%;
-    font-weight: 700;
-    line-height: 1;
-    color: #fff;
+.karma-gained, .karma-lost {
+	font-weight: bold;
+    width: 1.5em;
+    margin-right: 5px;
+    color: white;
+    padding: 0.1em;
+    display: block;
+    float: left;
     text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: .25em;
-    background-color: $button-green;
-    margin-right: 0.5em;
-    padding: 0.2em 0.3em 0.2em 0.3em;
+    border-radius: 3px;
+    -ms-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+}
+.karma-gained {
+    background: $button-green;
 }
 .karma-lost {
-	/*font-weight: bold;
-	background: $color_gallery_approx;
-	width: 25px;
-	color: $red;
-	padding: 3px;
-	display: block;
-	margin-right: 5px;
-	float: left;
-	text-align: center;
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-	border-radius: 3px;*/
-
-
-	display: inline;
-    /*padding: .2em .6em .3em;*/
-    font-size: 75%;
-    font-weight: 700;
-    line-height: 1;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: .25em;
-    background-color: #db4437;
-    margin-right: 0.5em;
-    padding: 0.2em 0.3em 0.2em 0.3em;
+	background: #db4437;
 }
 .submit-row {
 	margin-top: 0.5em;
@@ -6025,7 +6056,7 @@ ins {
 	}
 }
 .vote-notification {
-	z-index: 1;
+	/*z-index: 1;
 	background-color: $red_berry;
 	color: $white;
 	cursor: pointer;
@@ -6040,9 +6071,23 @@ ins {
 	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
 	box-shadow: 0 2px 4px $color_chocolate_approx;
 	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-	border-radius: 4px;
+	border-radius: 4px;*/
+	z-index: 1001;
+    max-width: 250px;
+    border: solid;
+    border-color: #494949 transparent;
+    border-width: 6px 6px 0 6px;
+    background: rgba(73,73,73,1);
+    border-radius: 5px;
+    color: #fff;
+    content: attr(title);
+    padding: 5px 15px 15px 15px;
+    position: absolute;
+    text-align: left;
+    cursor: pointer;
+    margin-top: 0.6em;
 	h3 {
-		background: $url_39 repeat-x top;
+		/*background: $url_39 repeat-x top;
 		padding: 10px;
 		font-size: 13px;
 		margin-bottom: 5px;
@@ -6053,7 +6098,11 @@ ins {
 		//Instead of the line below you could use @include border-top-right-radius($radius)
 		border-top-right-radius: 4px;
 		//Instead of the line below you could use @include border-top-left-radius($radius)
-		border-top-left-radius: 4px;
+		border-top-left-radius: 4px;*/
+		font-size: 13px;
+		line-height: 20px;
+	    font-weight: normal;
+	    padding: 0;
 	}
 	a {
 		color: $color_pumpkin_approx;
@@ -7970,7 +8019,7 @@ span.text-counter {
 }
 #id_email, #id_title, #id_tags, #id_name, #retag_tags, #id_username, #id_revision, #id_password, #id_password1, #id_password2, #id_new_password, #id_new_password_retyped, #id_realname, #id_website, #id_city, #id_country, #id_birthday {
 	width: 100%;
-    /*height: 2.5em;*/
+    height: 2.5em;
     /*background: #f5f5f5;*/
     font-size: 0.8rem;
     -moz-border-radius: 3px;
@@ -8413,7 +8462,14 @@ input[type="text"]{
 	display: none;
 	@include breakpoint($large){
 		display: table;
+		@include container(100%);
 	}
+}
+.desktop-user-links {
+	@include gallery(4 of 20);
+	text-align: left;
+	padding-top: 0.1em;
+    padding-bottom: 0.1em;
 }
 #mobile-footer {
 	@include breakpoint($small){
@@ -8426,12 +8482,7 @@ input[type="text"]{
 		display: block;
 	}
 }
-.desktop-user-links {
-	text-align: left;
-	padding-right: 1.2em;
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
-}
+
 #mobile-user-activity {
 	@include breakpoint($small){
 		display: none;
@@ -8534,6 +8585,9 @@ input[type="text"]{
 		display: inline;
 	}
 }*/
+#follow-btn{
+    float: left;
+}
 .followed {
 	/*float: left;*/
 	text-decoration: none;
@@ -8667,6 +8721,7 @@ input[type="text"]{
     ul li i {
       position: absolute;
       transform: translate(-6px, 0);
+      -webkit-transform: translate(-6px, 0);
       margin-top: 0.25em;
       right: 0;
     }
@@ -8746,4 +8801,38 @@ input[type="text"]{
 	-webkit-box-shadow: 0 8px 6px -6px $dark-gray;
 	-moz-box-shadow: 0 8px 6px -6px $dark-gray;
 	box-shadow: 0 8px 6px -6px $dark-gray;
+}
+
+/** tooltip styles **/
+.main-tooltip{
+    display: inline;
+    position: relative;
+}
+
+.main-tooltip:hover:before{
+    border: solid;
+    border-color: #333 transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: 20px;
+    content: "";
+    left: 50%;
+    position: absolute;
+    z-index: 99;
+}
+
+.main-tooltip:hover:after{
+    background: #333;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    bottom: 26px;
+    color: #fff;
+    content: attr(title);
+    left: 20%;
+    padding: 0.2em 0.5em;
+    position: absolute;
+    z-index: 98;
+    font-size: 0.8em;
+    @include breakpoint($small){
+    	font-size: 0.4em;
+    }
 }

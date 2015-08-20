@@ -292,11 +292,11 @@
             {{ tag|replace('*', '&#10045;')|escape }}
         {%- endif %}</{% if not is_link or tag[-1] == '*' %}span{% else %}a{% endif %}>
         {% if deletable %}
-            <div class="delete-icon"
+            <span class="delete-icon"
                 {% if delete_link_title %}
                     title="{{ delete_link_title }}"
                 {% endif %}
-            >x</div>
+            >x</span>
         {% endif %}
     </{{ html_tag }}>
     {{ extra_content }}
@@ -555,6 +555,7 @@ for the purposes of the AJAX comment editor #}
     <div 
         class="button follow-toggle follow-user-toggle normal-btn" 
         id="follow-{{ name|escape }}-{{ id }}"
+        style="display: table"
     >
         {% if follow %}
         <div class="follow">{% trans %}Follow{% endtrans %}</div>

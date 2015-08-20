@@ -21,13 +21,33 @@
                         some-answers
                     {%- endif -%}
                     {%- endif -%}"> 
-                    <span 
-                        class="item-count"
-                    >{{ answer_count|humanize_counter }}{% if thread.accepted_answer_id %}{% endif %}</span>
+                    {% if answer_count == 0 %}
+                        <span class="item-count">0</span>
+                    {% else %}
+                        <span class="item-count">
+                            {{ answer_count|humanize_counter }}{% if thread.accepted_answer_id %}{% endif %}
+                        </span>
+                    {% endif %}
+
+                    <div class="fa-icons" style="margin-top: 0.3em">
+                        <a href="#" title="Answers" class="main-tooltip">
+                            <span title="">
+                                <i class="fa fa-pencil icon" style="font-size: 2em;"></i>
+                            </span>
+                        </a>
+                    </div>
+                    
                     <!--<div>
                         {{ settings.WORDS_ANSWERS_COUNTABLE_FORMS|py_pluralize(answer_count) }}
                     </div>-->
-                    <br><i class="fa fa-pencil icon" style="font-size: 2em;"></i>
+                    <!--<br>
+                    <a href="#" title="Answers" class="main-tooltip">
+                        <span title="">
+                            <i class="fa fa-pencil icon" style="font-size: 2em;"></i>
+                        </span>
+                    </a>-->
+
+
                 </div>
                 <!--<div class="clearfix"></div>-->
             </div>
@@ -39,33 +59,81 @@
                 </div>
                 <div class="counts" id="counts-div">
                     <div class="counts-sub">
-                         <span class="item-count">{{ thread.view_count|humanize_counter }}</span>
+                         
+
+
+                        {% if thread.view_count == 0 %}
+                            <span class="item-count">0</span>
+                        {% else %}
+                            <span class="item-count">{{ thread.view_count|humanize_counter }}</span>
+                        {% endif %}
+
+
+
                         <!--<div>
                         {% trans cnt=thread.view_count %}view{% pluralize %}views{% endtrans %}
                         </div>-->
                         <div class="fa-icons" style="font-size: 1.2em">
-                            <i class="fa fa-eye icon"></i>
+
+                            <a href="#" title="Views" class="main-tooltip">
+                                <span title="">
+                                    <i class="fa fa-eye icon"></i>
+                                </span>
+                            </a>
+
+                            
                         </div>
                     </div>
                     {% set answer_count = thread.get_answer_count(visitor) %}
-                    <div class="counts-sub"> 
-                        <span 
-                            class="item-count"
-                        >{{ answer_count|humanize_counter }}{% if thread.accepted_answer_id %}{% endif %}</span>
+                    <div class="counts-sub">
+                        
+
+
+
+                        {% if answer_count == 0 %}
+                            <span class="item-count">0</span>
+                        {% else %}
+                            <span 
+                                class="item-count"
+                            >{{ answer_count|humanize_counter }}{% if thread.accepted_answer_id %}{% endif %}</span>
+                        {% endif %}
+
+
                         <!--<div>
                         {{ settings.WORDS_ANSWERS_COUNTABLE_FORMS|py_pluralize(answer_count) }}
                         </div>-->
                         <div class="fa-icons" style="font-size: 1.2em">
-                            <i class="fa fa-pencil icon"></i>
+
+
+                            <a href="#" title="Answers" class="main-tooltip">
+                                <span title="">
+                                    <i class="fa fa-pencil icon"></i>
+                                </span>
+                            </a>
+
+                            
                         </div>
                     </div>
                     <div class="counts-sub">
-                        <span class="item-count">{{question.score|humanize_counter}}</span>
+                        
+
+                        {% if question.score == 0 %}
+                            <span class="item-count">0</span>
+                        {% else %}
+                            <span class="item-count">{{question.score|humanize_counter}}</span>
+                        {% endif %}
                         <!--<div>
                         {% trans cnt=question.score %}vote{% pluralize %}votes{% endtrans %}
                         </div>-->
                         <div class="fa-icons" style="font-size: 1.2em">
-                            <i class="fa fa-thumbs-up icon"></i>
+
+                            <a href="#" title="Votes" class="main-tooltip">
+                                <span title="">
+                                    <i class="fa fa-thumbs-up icon"></i>
+                                </span>
+                            </a>
+
+                            
                         </div>
                     </div>
                     <div class="clearfix"></div>

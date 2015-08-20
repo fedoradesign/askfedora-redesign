@@ -9,7 +9,7 @@
             <div id="diagram" class="karma-diagram"></div>
             <div class="karma-details">
                 {% if view_user.id == user.id %}
-                <h2 style="font-size: 1.5em;">{% trans %}Your karma change log.{% endtrans %}</h2>
+                <h2 style="font-size: 1.5em; margin-bottom: 0.5em">{% trans %}Your karma change log.{% endtrans %}</h2>
                 {% else %}
                 <h2 style="font-size: 1.5em; margin-bottom: 0.5em">{% trans user_name=view_user.username|escape %}{{user_name}}'s karma change log{% endtrans %}</h2>
                 {% endif %}

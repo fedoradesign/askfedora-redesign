@@ -132,7 +132,7 @@ a {
 }
 a:hover {
   color: #494949;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 .row {
   margin-left: -20px;
