@@ -1,10 +1,8 @@
 {% import "macros.html" as macros %}
 {% import "user_profile/macros.html" as user_profile_macros %}
-
 <div class="accordian">
 	<ul>
 	  <li>
-	    
 	    <input type="checkbox" checked="">
 	    <i></i>
 		<a name="tags"></a>
@@ -38,15 +36,10 @@
 	    {% if subscribed_tag_names %}
 	        {{ user_profile_macros.tag_selection(subscribed_tag_names, 'subscribed') }}
 	    {% endif %}
-
 	  </li>
-
-
 	  <li>
 	    <input type="checkbox" checked="">
 	    <i class="badges"></i>
-	    
-
 	    {% if settings.BADGES_MODE == 'public' %}
 	    <a name="badges"></a>
 	    {% spaceless %}
@@ -61,9 +54,6 @@
 	                style="text-decoration: none"
 	            >{% trans name=badge.get_name() %}{{name}}{% endtrans %}
 	            </a>
-	            <!--<span class="tag-number">&#215;
-	                <span class="badge-context-toggle">{{ badge_user_awards|length|intcomma }}</span>
-	            </span>-->
 	            <ul id="badge-context-{{ badge.id }}" class="badge-context-list" style="display:none">
 	                {% for award in badge_user_awards %}
 	                    {% if award.content_object and award.content_object_is_post %}
@@ -81,8 +71,6 @@
 	        {% endfor %}
 	    </div>
 	    {% endif %}
-
-	    
 	  </li>
 	</ul>
 </div>

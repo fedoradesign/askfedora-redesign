@@ -1,22 +1,16 @@
 <!-- template footer.html -->
 {% import "macros.html" as macros%}
 <div id="ground">
-    <!--<div class="content-wrapper content-wrapper-footer">-->
     <div id="footer-container" class="content-wrapper-footer">
-        
         <div id="footer-links-container">
-
             <table id="mobile-footer" style="width: 100%; margin-bottom: 3em">
                 <tr>
                     <td width="50%" style="font-size: 1.1em">
-
                         <a 
                       id="navTags"
                       href="{% url tags %}"
                       {% if active_tab == 'tags' %}class="on"{% endif %}
                      style="font-weight: bold">{% trans %}TAGS{% endtrans %}</a><br>
-
-                    
                         {% if settings.GROUPS_ENABLED %}
                         <span class="dropdown">
                         <a
@@ -33,9 +27,6 @@
                           {% if active_tab == 'users' %}class="on"{% endif %}
                          style="font-weight: bold">{% trans %}USERS{% endtrans %}</a><br>
                         {% endif %}
-
-
-                    
                         {% if settings.BADGES_MODE == 'public' %}
                         <a 
                           id="navBadges"
@@ -43,14 +34,8 @@
                           {% if active_tab == 'badges' %}class="on"{% endif %}
                          style="font-weight: bold">{% trans %}BADGES{% endtrans %}</a><br>
                         {% endif %}
-                    
-
-                    
                         <a href="{% url help %}" title="{% trans %}help{% endtrans %}">{% trans %}Help{% endtrans %}</a><br>
-                    
                     </td>
-
-
                     <td width="50%" style="font-size: 1.1em">
                         <a href="{% url about %}">{% trans %}About{% endtrans %}</a><br>
                         <a href="{% url faq %}">{% trans %}Faq{% endtrans %}</a><br>
@@ -68,7 +53,6 @@
                         {% endspaceless %}
                     </td>
                 </tr>
-
                 <tr>
                     <td colspan="2" style="padding-top: 1.5em; padding-bottom: 0.5em">
                         {% if settings.USE_LICENSE %}{# could be factored out into separate template #}
@@ -100,7 +84,6 @@
                         {% endif %}
                     </td>
                 </tr>
-
                 <tr>
                     <td colspan="2">
                         <div class="powered-link">
@@ -125,11 +108,6 @@
                     </td>
                 </tr>
             </table>
-
-
-
-
-
             <table id="desktop-footer" style="width: 100%; margin-bottom: 3em">
                 <tr>
                     <td class="footer-td footer-td-bold"><a 
@@ -137,7 +115,6 @@
                       href="{% url tags %}"
                       {% if active_tab == 'tags' %}class="on"{% endif %}
                     >{% trans %}TAGS{% endtrans %}</a></td>
-
                     <td class="footer-td footer-td-bold">
                         {% if settings.GROUPS_ENABLED %}
                         <span class="dropdown">
@@ -156,7 +133,6 @@
                         >{% trans %}USERS{% endtrans %}</a>
                         {% endif %}
                     </td>
-
                     <td class="footer-td footer-td-bold">
                         {% if settings.BADGES_MODE == 'public' %}
                         <a 
@@ -175,7 +151,6 @@
                         Other
                     </td>
                 </tr>
-
                 <tr class="footer-hidden-tr">
                     <td class="other-td">
                         <a href="{% url about %}">{% trans %}about{% endtrans %}</a>
@@ -200,12 +175,8 @@
                         {% endspaceless %}
                     </td>
                 </tr>
-
                 <tr>
-
                     <td colspan="4" style="padding-right: 4em">
-
-
                         <table style="width: 100%; margin-top: 1em">
                             <tr>
                                 <td class="copyright-td">
@@ -243,8 +214,6 @@
                                             Powered by Askbot version {{settings.ASKBOT_VERSION}}
                                         </a>
                                     </div>
-
-
                                     {% if settings.USE_LICENSE %}{# could be factored out into separate template #}
                                         {% if settings.LICENSE_USE_URL %}
                                             <div class="copyright-hidden-desc" style="margin-top: 0.5em">
@@ -263,8 +232,6 @@
                                 </td>
                             </tr>
                         </table>
-
-                        
                     </td>
                     <td id="footer-td-hidden" style="padding-top: 1.3em; font-size: 1.1em">
                         <a href="{% url about %}">{% trans %}about{% endtrans %}</a>
@@ -285,14 +252,10 @@
                         </a>
                         {% endspaceless %}
                     </td>
-
                 </tr>
             </table>
-
-
         </div>
         <div class="clean"></div>
     </div>
-    <!--</div>-->
 </div>
 <!-- end template footer.html -->

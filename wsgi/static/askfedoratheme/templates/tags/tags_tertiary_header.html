@@ -4,7 +4,7 @@
 			<div id="tags-tertiary-header-content">
 				<div class="tabBar tabBar-tags" style="padding-top: 0.15em">
 			        <div class="tabsA tags-tabA">
-			            <div class="tags-tab-link"><span class="label">{% trans %}SORT BY <!--&raquo;-->{% endtrans %}</span></div>
+			            <div class="tags-tab-link"><span class="label">{% trans %}SORT BY {% endtrans %}</span></div>
 			            <div class="tags-tab-link"><a
 			                id="sort_name"
 			                href="{% url tags %}?sort=name{% if tag_query %}&query={{ tag_query }}{% endif %}"

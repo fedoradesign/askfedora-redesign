@@ -2,62 +2,6 @@
 	<div id="tertiary-header-container">
 		<div id="tertiary-header-content">
 			<div class="tabBar" style="padding-bottom: 0.6em">
-				<!--<div id="mobile-user-tabbar"style="heigth: auto">
-					<table width="100%">
-			            <tr>
-			                <td width="33.33%" style="verical-align: top; padding-top: 0.3em;">
-			                	{#% if settings.GROUPS_ENABLED and user_groups %}
-						             <div style="padding-top: 0; padding-left: 0.5em"><span class="label" style="margin-left: 0; font-weight: bold">{% trans %}SELECT/SORT BY{% endtrans %}</span></div>
-						            {% for a_group in user_groups %}
-						                <a 
-						                    href="{% url users_by_group group_id=a_group.id, group_slug=a_group.name|slugify %}"
-						                    {% if group.name == a_group.name  %}class="on"{% endif %}
-						                    title="{% trans name=a_group.name|escape %}people in group {{name}}{% endtrans %}"
-						                    style="color: #494949;text-decoration: none;"
-						                ><span>{{ a_group.name|replace('-',' ')|escape }}</span></a>
-						            {% endfor %}
-						        {% else %#}
-						             <div style="padding-top: 0"><span class="label" style="margin-left: 0">{% trans %}SORT BY{% endtrans %}</span></div>
-						        {#% endif %#}
-			                </td>
-			                <td width="33.33%" style="verical-align: top; padding-top: 0.3em;">
-			                	{% if settings.KARMA_MODE == 'public' %}
-					            <div style="padding-bottom: 0.3em"><a 
-					                id="sort_reputation"
-					                href="{{ request.path|escape }}?sort=reputation"
-					                {% if tab_id == 'reputation' %}class="on"{% endif %}
-					                title="{% trans %}see people with the highest reputation{% endtrans %}"
-					                style="color: #494949;text-decoration: none;"
-					            ><span>{% trans %}Karma{% endtrans %}</span></a></div>
-					            {% endif %}
-					            <div><a 
-					                id="sort_newest"
-					                href="{{ request.path|escape }}?sort=newest"
-					                {% if tab_id == 'newest' %}class="on"{% endif %}
-					                class="off" title="{% trans %}see people who joined most recently{% endtrans %}"
-					                style="color: #494949;text-decoration: none;"
-					            ><span>{% trans %}Recent{% endtrans %}</span></a></div>
-			                </td>
-			                <td width="33.33%" style="verical-align: top; padding-top: 0.3em;">
-			                	<div style="padding-bottom: 0.3em"><a 
-					                id="sort_last"
-					                href="{{ request.path|escape }}?sort=last"
-					                {% if tab_id == 'last' %}class="on"{% endif %}
-					                class="off" title="{% trans %}see people who joined the site first{% endtrans %}"
-					                style="color: #494949;text-decoration: none;"
-					            ><span>{% trans %}Oldest{% endtrans %}<span></a></div>
-					            <div><a 
-					                id="sort_user"
-					                href="{{ request.path|escape }}?sort=user"
-					                {% if tab_id == 'user' %}class="on"{% endif %}
-					                title="{% trans %}see people sorted by name{% endtrans %}"
-					                style="color: #494949;text-decoration: none;"
-					            ><span>{% trans %}Username{% endtrans %}</span></a></div>
-			                </td>
-			            </tr>
-			        </table>
-				</div>-->
-
 		        <div class="tabsA sort_tabs">
 		        {#% if settings.GROUPS_ENABLED and user_groups %}
 		             <div id="users-sort-by" class="tabBar-sortby tab-link" style="padding-top: 0"><span class="label">{% trans %}SELECT/SORT BY{% endtrans %}</span></div>

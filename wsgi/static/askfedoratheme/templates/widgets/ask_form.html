@@ -25,53 +25,49 @@
     {% else %}
         <label for="editor">{% trans %}Add details{% endtrans %}</label>
     {% endif %}
-
-    <!--<div class="folded-editor{% if editor_is_folded == False %} unfolded{% endif %}">-->
-        <div class="editor-proper">
-        {{
-            macros.edit_post(
-                form,
-                post_type = 'question',
-                mandatory_tags = mandatory_tags,
-                use_category_selector = (settings.TAG_SOURCE == 'category-tree'),
-                editor_type = settings.EDITOR_TYPE,
-                user = request.user
-            )
-        }}
-            <div class="after-editor">
-                {{ form.group_id }}
-                <div class="question-options">
-                    {% if settings.WIKI_ON %}
-                        {{ macros.checkbox_in_div(form.wiki) }}
-                    {% endif %}
-                    {% if settings.ALLOW_ASK_ANONYMOUSLY %}
-                        {{ macros.checkbox_in_div(form.ask_anonymously) }}
-                    {% endif %}
-                    {% if settings.GROUPS_ENABLED and
-                        request.user.is_authenticated() and
-                        request.user.can_make_group_private_posts()
-                    %}
-                        {{ macros.checkbox_in_div(form.post_privately) }}
-                    {% endif %}
-                    {% if settings.MULTILINGUAL %}
-                    <div class="lang-selector">
-                        <label for="id_language">{% trans %}Select language{% endtrans %}</label>
-                        {{ form.language }}
-                    </div>
-                    {% endif %}
+    <div class="editor-proper">
+    {{
+        macros.edit_post(
+            form,
+            post_type = 'question',
+            mandatory_tags = mandatory_tags,
+            use_category_selector = (settings.TAG_SOURCE == 'category-tree'),
+            editor_type = settings.EDITOR_TYPE,
+            user = request.user
+        )
+    }}
+        <div class="after-editor">
+            {{ form.group_id }}
+            <div class="question-options">
+                {% if settings.WIKI_ON %}
+                    {{ macros.checkbox_in_div(form.wiki) }}
+                {% endif %}
+                {% if settings.ALLOW_ASK_ANONYMOUSLY %}
+                    {{ macros.checkbox_in_div(form.ask_anonymously) }}
+                {% endif %}
+                {% if settings.GROUPS_ENABLED and
+                    request.user.is_authenticated() and
+                    request.user.can_make_group_private_posts()
+                %}
+                    {{ macros.checkbox_in_div(form.post_privately) }}
+                {% endif %}
+                {% if settings.MULTILINGUAL %}
+                <div class="lang-selector">
+                    <label for="id_language">{% trans %}Select language{% endtrans %}</label>
+                    {{ form.language }}
                 </div>
-                {% if form.recaptcha %}
-                    <div>{{ macros.form_field_with_errors(form.recaptcha) }}</div>
-                    <div class="clearfix"></div>
                 {% endif %}
-                {% if request.user.is_anonymous() and not settings.ALLOW_ASK_UNREGISTERED %}
-                    <input class="normal-btn" type="submit" name="post_anon" value="{% trans %}Login/Signup to Post{% endtrans %}" />
-                {% else %}
-                  <input class="normal-btn" type="submit" name="post" value="{{ settings.WORDS_ASK_YOUR_QUESTION|escape }}" />
-                {% endif %}
-                <div class="clean"></div>
             </div>
+            {% if form.recaptcha %}
+                <div>{{ macros.form_field_with_errors(form.recaptcha) }}</div>
+                <div class="clearfix"></div>
+            {% endif %}
+            {% if request.user.is_anonymous() and not settings.ALLOW_ASK_UNREGISTERED %}
+                <input class="normal-btn" type="submit" name="post_anon" value="{% trans %}Login/Signup to Post{% endtrans %}" />
+            {% else %}
+              <input class="normal-btn" type="submit" name="post" value="{{ settings.WORDS_ASK_YOUR_QUESTION|escape }}" />
+            {% endif %}
+            <div class="clean"></div>
         </div>
-    <!--</div>-->
-    
+    </div>
 </form>

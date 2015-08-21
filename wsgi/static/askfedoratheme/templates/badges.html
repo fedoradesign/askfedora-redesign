@@ -20,7 +20,7 @@
             <a href="{{badge.get_absolute_url()}}" 
                 title="{{ badge.get_type_display() }} : {{ badge.get_description() }}" 
                 class="medal {{ badge.get_css_class() }}"
-                style="text-decoration: none"><!--<span class="{{ badge.get_css_class() }}">&#9679;</span>&nbsp;-->{{ badge.get_name() }}</a><strong style="line-height: 3.5em"> 
+                style="text-decoration: none">{{ badge.get_name() }}</a><strong style="line-height: 3.5em"> 
                 &#215; {{ badge.awarded_count|intcomma }}</strong>
         </div>
         <div class="medalList-right">
@@ -34,7 +34,7 @@
 <div class="box">
     <h2>{% trans %}Community badges{% endtrans %}</h2>
     <p>
-        <a style="cursor:default; text-decoration: none" title="{% trans %}gold badge: the highest honor and is very rare{% endtrans %}" class="medal badge1"><!--<span class="badge1">&#9679;</span>&nbsp;-->{% trans %}gold{% endtrans %}</a>
+        <a style="cursor:default; text-decoration: none" title="{% trans %}gold badge: the highest honor and is very rare{% endtrans %}" class="medal badge1">{% trans %}gold{% endtrans %}</a>
     </p>
     <p>
         <br><br><br>
@@ -45,7 +45,7 @@ profound knowledge and ability in addition to your active participation.{% endtr
         <a 
             style="cursor:default; text-decoration: none" 
             title="{% trans %}silver badge: occasionally awarded for the very high quality contributions{% endtrans %}" 
-            class="medal badge2"><!--<span class="badge2">&#9679;</span>-->&nbsp;{% trans %}silver{% endtrans %}</a>
+            class="medal badge2">&nbsp;{% trans %}silver{% endtrans %}</a>
     </p>
     <p>
         <br><br><br>
@@ -53,7 +53,8 @@ profound knowledge and ability in addition to your active participation.{% endtr
     </p>
     <p>
         <a style="cursor:default; text-decoration: none" title="{% trans %}bronze badge: often given as a special honor{% endtrans %}" class="medal badge3">
-        <!--<span class="badge3">&#9679;</span>&nbsp;-->{% trans %}bronze{% endtrans %}</a>
+            {% trans %}bronze{% endtrans %}
+        </a>
     </p>
     <p>
         <br><br><br>

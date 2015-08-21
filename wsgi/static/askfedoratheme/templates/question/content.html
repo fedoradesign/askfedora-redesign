@@ -1,23 +1,17 @@
 {% import "macros.html" as macros %}
-
 {% include "question/question_card.html" %}
-
 {% if answers %}
     <div class="clean"></div>
-
     {% include "question/answer_tab_bar.html" %}
-
     <div class="clean"></div>
     {{ macros.paginator(paginator_context, anchor='#sort-top') }}
     <div class="clean"></div>
-
     {% for answer in answers %}
         {% include "question/answer_card.html" %}
         {% if loop.index == 1 and 'QUESTION_PAGE_ANSWER_BANNER'|show_block_to(request.user) %}
             <div class="banner">{{ settings.QUESTION_PAGE_ANSWER_BANNER|safe }}</div>
         {% endif %}
     {% endfor %}
-
     {{ macros.paginator(paginator_context, anchor='#sort-top') }}
     <div class="clean"></div>
 {% elif settings.QUESTION_PAGE_ALWAYS_SHOW_ANSWER_BANNER %}
@@ -26,7 +20,6 @@
         <div class="banner">{{ settings.QUESTION_PAGE_ANSWER_BANNER|safe }}</div>
     {% endif %}
 {% endif %}
-
 {# buttons below cannot be cached yet #}
 {% if new_answer_allowed %}
     {% include "question/new_answer_form.html" %}

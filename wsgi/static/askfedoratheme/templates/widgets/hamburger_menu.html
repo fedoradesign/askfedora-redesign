@@ -1,31 +1,16 @@
 {% import "macros.html" as macros%}
-
-
 {% block hamburgerjs %}
 <link rel="stylesheet" href="{% static "askfedoratheme/media/js/sidr/stylesheets/jquery.sidr.dark.css" %}">
-<!--<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
-<!--<script type="text/javascript" src="{{"/js/sidr/jquery.sidr.min.js"|media }}"></script>-->
-<!--<script type="text/javascript" src="{{"/js/jquery-1.7.2.min.js"|media}}"></script>-->
 <script type='text/javascript' src='{% static "askfedoratheme/media/js/new.js" %}'></script>
 {% endblock %}
-
 <div class="mobile-hamburger" >
     <a id="simple-menu-back" href="#sidr" style="padding-left: 1%">
         <i class="fa fa-bars fa-2x mobile-hamburger-icon"></i>
     </a>
     <div class="pop-up" id="sidr">
-            <!--<div class="pop-up-hamburger">
-                <a id="simple-menu-front" href="#sidr">
-                    <i class="fa fa-bars fa-2x mobile-hamburger-icon"></i>
-                </a>
-            </div>-->
         <div class="profile">
             <div class="stat">
-
                 {%- if request.user.is_authenticated() -%}
-                    
-                    
                     <table>
                         <tr>
                             <td style="white-space:nowrap;" class="pop-td image">
@@ -56,8 +41,6 @@
                             </td>
                         </tr>
                     </table>
-
-
                 {% elif settings.USE_ASKBOT_LOGIN_SYSTEM %}
                     <table>
                         <tr>
@@ -67,9 +50,6 @@
                         </tr>
                     </table>
                 {% endif %}
-
-
-
             </div>
         </div>
         <div class="menu-items">

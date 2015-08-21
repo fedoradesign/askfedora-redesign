@@ -6,7 +6,6 @@
 {% endblock %}
 {% block usercontent %}
     <div id="user-activity-pane">
-
         <table id="mobile-user-activity" class="user-activity">
         {% for act in activities %}
             <tr class="user-action-{{ act.type_id }}">
@@ -54,9 +53,6 @@
             </tr>
         {% endfor %}
         </table>
-
-
-
         <table id="desktop-user-activity" class="user-activity">
         {% for act in activities %}
             <tr class="user-action-{{ act.type_id }}">

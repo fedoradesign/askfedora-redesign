@@ -21,15 +21,6 @@
     />
     {% block tooltip %}
     {% endblock %}
-    <!--<input type="submit" value="" name="search" class="searchBtn" />
-    <input type="button"
-        value="X"
-        name="reset_query"
-        class="cancelSearchBtn"
-        {% if not query %}{# query is only defined by questions view (active_tab) #}
-            style="display: none;"
-        {% endif %}
-    />-->
 </div>
 {% endspaceless %}
 {% else %}
@@ -52,14 +43,5 @@
             id="keywords"
         />
         <div class="input-tool-tip">search or ask your question</div>
-        <!--<input type="submit" value="" name="search" class="searchBtn" />
-        <input type="button"
-            value="X"
-            name="reset_query"
-            class="cancelSearchBtn"
-            {% if not query %}{# query is only defined by questions view (active_tab) #}
-                style="display: none;"
-            {% endif %}
-        />-->
     </div>
 {% endif %}
