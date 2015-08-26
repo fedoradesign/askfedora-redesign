@@ -7158,7 +7158,7 @@ button::-moz-focus-inner {
 /* line 6421, ../sass/style.scss */
 #ContentRight {
   padding-top: 1em;
-  padding-left: 1em;
+  padding-left: 1.5em;
 }
 
 /* line 6425, ../sass/style.scss */
@@ -8215,7 +8215,7 @@ span.text-counter {
 @media (min-width: 820px) {
   /* line 7114, ../sass/style.scss */
   #secondary-header-container #ask-btn-container {
-    padding-left: 1em;
+    padding-left: 1.5em;
   }
 }
 

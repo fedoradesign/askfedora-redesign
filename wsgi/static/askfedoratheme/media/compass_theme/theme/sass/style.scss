@@ -6420,7 +6420,7 @@ button::-moz-focus-inner {
 }
 #ContentRight {
 	padding-top: 1em;
-	padding-left: 1em;
+	padding-left: 1.5em;
 }
 #admin-settings{
 	display: none;
@@ -7117,7 +7117,7 @@ span.text-counter {
     		@include span(3 at 13 of 15);
     	}
     	@include breakpoint($medium){
-			padding-left: 1em;
+			padding-left: 1.5em;
 		}
     }
 }
