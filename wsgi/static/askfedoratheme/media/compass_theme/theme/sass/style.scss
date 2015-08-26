@@ -191,6 +191,7 @@ $url_41: url(../images/indicator.gif);
 
 /** New urls **/
 $url_header: url(../images/header.png);
+$url_callout_black: url(../images/callout_black.gif);
 
 //@extend-elements
 //original selectors
@@ -1731,8 +1732,9 @@ a {
 		margin-right: 10px;
 		margin-top: 10px;
 		padding: 0 7px 0 10px;
-		background: #6d6d6d;
-		color: #fff;
+		/*background: #6d6d6d;*/
+		background: #cbcbcb;
+		color: #494949;
 		text-decoration: none;
 		-moz-border-radius-bottomright: 4px;
 		-webkit-border-bottom-right-radius: 4px;
@@ -1748,7 +1750,8 @@ a {
 	    left: -9px;
 	    border-style: solid;
 	    border-width: 12px 9px 12px 0;
-	    border-color: #6d6d6d;
+	    /*border-color: #6d6d6d;*/
+	    border-color: #cbcbcb;
 
 	    -moz-border-radius-bottomleft: 4px;
 		-webkit-border-bottom-left-radius: 4px;
@@ -1761,10 +1764,10 @@ a {
 	    border-color: $dark-gray;
 	}
 	&.medal:link{
-	    color: #fff;
+	    color: $dark-gray;
 	}
 	&.medal:visited{
-	     color: #fff;
+	     color: $dark-gray;
 	}
 	&.medal:hover{
 	    cursor: pointer;
@@ -2177,6 +2180,7 @@ h2{
 	display: table;
 	background-color: #f5f5f5;
 	border-radius: 0.5em;
+	border: solid 0.1em #dbdbdb;
 	-webkit-box-shadow: 0 8px 6px -6px $dark-gray;
 	-moz-box-shadow: 0 8px 6px -6px $dark-gray;
 	box-shadow: 0 8px 6px -6px $dark-gray;
@@ -3553,6 +3557,7 @@ input[type="reset"] {
     padding: 1em;
     border-radius: 0.5em;
     background-color: #f1f1f1;
+    border: solid 0.1em #dbdbdb;
     display: flex;
     webkit-box-shadow: 0px 6px 4px -4px rgba(0, 0, 0, 0.8), 0px 10px 0px 0px #D4D4D4;
     -moz-box-shadow: 0px 6px 4px -4px rgba(0, 0, 0, 0.8), 0px 10px 0px 0px #D4D4D4;
@@ -5718,18 +5723,21 @@ table {
 }
 .badge1 {
 	color: $color_supernova_approx;
+	font-size: 1.3em
 }
 .silver {
 	color: $color_celeste_approx;
 }
 .badge2 {
 	color: $color_celeste_approx;
+	font-size: 1.3em
 }
 .bronze {
 	color: $color_hokey_pokey_approx;
 }
 .badge3 {
 	color: $color_hokey_pokey_approx;
+	font-size: 1.3em
 }
 .score {
 	font-weight: 800;
@@ -5927,6 +5935,7 @@ button::-moz-focus-inner {
 .pln {
 	color: $black;
 }
+/** Tag styles **/
 .tag{
 	float: left;
   	height: 24px;
@@ -5936,8 +5945,8 @@ button::-moz-focus-inner {
   	margin-left: 10px;
   	margin-right: 10px;
   	padding: 0 7px 0 10px;
-  	background: #6d6d6d;
-  	color: #fff;
+  	/*background: #6d6d6d;
+  	color: #fff;*/
   	text-decoration: none;
   	-moz-border-radius-bottomright: 4px;
   	-webkit-border-bottom-right-radius: 4px;
@@ -5946,29 +5955,40 @@ button::-moz-focus-inner {
   	-webkit-border-top-right-radius: 4px;
   	border-top-right-radius: 4px;
   	text-decoration: none;
+
+  	/*border: solid 0.1em #ababab;*/
+  	background-color: #cbcbcb;
 }
 .tag:before{
   content: "";
   float: left;
   position: absolute;
   left: -12px;
-  border-color: transparent #6d6d6d transparent transparent;
+  border-color: transparent #cbcbcb transparent transparent;
   border-style: solid;
   border-width: 12px 12px 12px 0;
+
+  /*border: solid 0.1em #494949;*/
 }
 .tag:hover:before{
-    border-color: transparent $dark-gray transparent transparent;
+    border-color: transparent $gray transparent transparent;
+
+    /*border: solid 0.1em #494949;*/
 }
 .tag:link{
-    color: #fff;
+    /*color: #fff;*/
+
+    color: $dark-gray;
 }
 .tag:visited{
-     color: #fff;
+     /*color: #fff;*/
+
+     color: $dark-gray;
 }
 .tag:hover{
     cursor: pointer;
     color: #fff;
-    background: $dark-gray;
+    background: $gray;
     text-decoration: none;
 }
 .tag:active{
@@ -6400,6 +6420,7 @@ button::-moz-focus-inner {
 }
 #ContentRight {
 	padding-top: 1em;
+	padding-left: 1em;
 }
 #admin-settings{
 	display: none;
@@ -7095,6 +7116,9 @@ span.text-counter {
     	@include breakpoint($small){
     		@include span(3 at 13 of 15);
     	}
+    	@include breakpoint($medium){
+			padding-left: 1em;
+		}
     }
 }
 #tertiaryHeader{
@@ -7173,6 +7197,7 @@ span.text-counter {
 .login-pane, .openid-pane{
     background: #f5f5f5;
     border-radius: 0.5em;
+    border: solid 0.1em #dbdbdb;
 	-webkit-box-shadow: 0 8px 6px -6px $dark-gray;
 	-moz-box-shadow: 0 8px 6px -6px $dark-gray;
 	box-shadow: 0 8px 6px -6px $dark-gray;
@@ -7204,6 +7229,7 @@ span.text-counter {
     margin-bottom: 1em;
     background-color: #f5f5f5;
     border-radius: 0.5em;
+    border: solid 0.1em #dbdbdb;
 	-webkit-box-shadow: 0 8px 6px -6px $dark-gray;
 	-moz-box-shadow: 0 8px 6px -6px $dark-gray;
 	box-shadow: 0 8px 6px -6px $dark-gray;
@@ -7232,6 +7258,7 @@ span.text-counter {
 		margin-bottom: 1em;
 		background-color: #f5f5f5;
 		border-radius: 0.5em;
+		border: solid 0.1em #dbdbdb;
 		-webkit-box-shadow: 0 8px 6px -6px $dark-gray;
 		-moz-box-shadow: 0 8px 6px -6px $dark-gray;
 		box-shadow: 0 8px 6px -6px $dark-gray;
@@ -7297,6 +7324,7 @@ table.login td{
 	padding: 1.2em;
     bbackground: #f5f5f5;
     border-radius: 0.5em;
+    border: solid 0.1em #dbdbdb;
 	-webkit-box-shadow: 0 8px 6px -6px $dark-gray;
 	-moz-box-shadow: 0 8px 6px -6px $dark-gray;
 	box-shadow: 0 8px 6px -6px $dark-gray;
@@ -7351,6 +7379,7 @@ table.login td{
     padding: 1em;
     margin-top: 1em;
     border-radius: 0.5em;
+    border: solid 0.1em #dbdbdb;
 	-webkit-box-shadow: 0 8px 6px -6px $dark-gray;
 	-moz-box-shadow: 0 8px 6px -6px $dark-gray;
 	box-shadow: 0 8px 6px -6px $dark-gray;
@@ -7367,6 +7396,7 @@ table.login td{
     padding: 1.5em;
     margin-top: 1em;
     border-radius: 0.5em;
+    border: solid 0.1em #dbdbdb;
 	-webkit-box-shadow: 0 8px 6px -6px $dark-gray;
 	-moz-box-shadow: 0 8px 6px -6px $dark-gray;
 	box-shadow: 0 8px 6px -6px $dark-gray;
@@ -7516,6 +7546,7 @@ h2 {
     font-size: 1.2em;
     padding-right: 1.5em;
     border-radius: 0.5em;
+    border: solid 0.1em #dbdbdb;
 	-webkit-box-shadow: 0 8px 6px -6px $dark-gray;
 	-moz-box-shadow: 0 8px 6px -6px $dark-gray;
 	box-shadow: 0 8px 6px -6px $dark-gray;
@@ -7704,6 +7735,7 @@ input[type="text"]{
     padding: 1.5em;
     width:100%;
     border-radius: 0.5em;
+    border: solid 0.1em #dbdbdb;
 	-webkit-box-shadow: 0 8px 6px -6px $dark-gray;
 	-moz-box-shadow: 0 8px 6px -6px $dark-gray;
 	box-shadow: 0 8px 6px -6px $dark-gray;
@@ -7948,6 +7980,7 @@ input[type="text"]{
 	background-color: #f5f5f5;
     padding: 1em;
     border-radius: 0.5em;
+    border: solid 0.1em #dbdbdb;
 	-webkit-box-shadow: 0 8px 6px -6px $dark-gray;
 	-moz-box-shadow: 0 8px 6px -6px $dark-gray;
 	box-shadow: 0 8px 6px -6px $dark-gray;
@@ -7957,6 +7990,7 @@ input[type="text"]{
 .main-tooltip{
     display: inline;
     position: relative;
+    padding-top: 2em;
 }
 .main-tooltip:hover:before{
     border: solid;

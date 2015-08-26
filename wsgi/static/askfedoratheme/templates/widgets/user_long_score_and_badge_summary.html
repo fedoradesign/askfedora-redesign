@@ -7,7 +7,7 @@
       class="user-micro-info reputation" 
       href="{{user.get_absolute_url()}}?sort=reputation"
       data-url="{% url 'get_perms_data' %}"
-      style="text-decoration: none"
+      style="text-decoration: none; padding-right: 0.5em"
     >{% trans %}Karma:{% endtrans %} {{user.reputation}}</a>{% if settings.BADGES_MODE == 'public' and have_badges %} {% endif -%}
     {%- endif -%}
     {%- if settings.BADGES_MODE == 'public' and have_badges -%}
@@ -17,11 +17,11 @@
       ><span title="{{ user.get_badge_summary() }}">
           {% if user.gold %}
           <span class='badge1'>&#9679;</span>
-          <span class="badgecount">{{user.gold}}</span>
+          <span class="badgecount" style="padding-right: 0.2em">{{user.gold}}</span>
           {% endif %}
           {% if user.silver %}
           <span class='badge2'>&#9679;</span>
-          <span class="badgecount">{{user.silver}}</span>
+          <span class="badgecount" style="padding-right: 0.2em">{{user.silver}}</span>
           {% endif %}
           {% if user.bronze %}
           <span class='badge3'>&#9679;</span>
