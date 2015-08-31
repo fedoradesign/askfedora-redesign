@@ -2278,7 +2278,7 @@ Comment.prototype.setContent = function(data){
 
     // 2) create the comment deleter if it is not there
     if (this._comment_delete === undefined) {
-        this._comment_delete = $('<div class="comment-delete"></div>');
+        this._comment_delete = $('<div class="comment-delete"><span class="delete-icon comment-delete-icon" title="delete this comment"><i class="fa fa-times"></i></span></div>');
         if (this._deletable){
             this._delete_icon = new DeleteIcon(this._delete_prompt);
             this._delete_icon.setHandler(this.getDeleteHandler());

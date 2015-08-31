@@ -2379,7 +2379,7 @@ h2{
 	white-space: nowrap;
 	font-size: 16px;
 	float: right;
-	margin-top: 0.25em;
+	/* margin-top: 0.25em; */
 	line-height: 1.8em;
 	a {
 		height: 35px;
@@ -2957,12 +2957,17 @@ input[type="submit"] {
 	.tabBar a#stats {
 		margin-left: 0;
 	}
-	img.gravatar {
-		margin: 2px 0 3px;
-	}
 	.vote-notification h3 {
 		padding: 10px;
 	}
+}
+img.gravatar {
+		margin: 2px 0 3px;
+}
+.comment-delete-icon {
+	padding: 0.2em 0.5em 0.3em 0.3em; 
+	border-radius: 4px;
+	margin-left: -0.5em;
 }
 .meta {
 	@extend %extend_48;
