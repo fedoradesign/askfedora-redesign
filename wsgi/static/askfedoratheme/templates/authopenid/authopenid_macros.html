@@ -13,7 +13,7 @@
       name="{{login_provider.name}}"
       type="image"
       class="{{login_provider.type}}"
-      src="{% static "askfedoratheme/media/images/%s.png"|format(login_provider.name) %}"
+      src="{% "askfedoratheme/media/images/%s.png"|format(login_provider.name)|media }}"
       alt="{{login_provider.tooltip_text}}"
       title="{{login_provider.tooltip_text}}"
       height="35"
